@@ -1,341 +1,493 @@
 <!doctype html>
-<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Rodaje TenderYou · 6-nov</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap"><style>
-/* Layout: memo en una columna. Cada slide es una fila que empareja un esquema 1:1 con su texto
-   exacto; van numeradas porque el nombre de fichero que se entrega está numerado de verdad.
-   Marca: pack Billber (packs/clientes/billber) — color por PAPEL, no por nombre.
-   Compromiso deliberado de tema único claro: el pack define una sola paleta y declara como HUECO
-   que no existe guía de modo oscuro; inventar hexes de marca es justo lo que ese pack evita. */
-:root{
-  color-scheme: light;
-  --accion:#0923F3;          /* rol.accion — lo único pulsable */
-  --accion-hover:#272485;
-  --texto:#2C2C31;           /* rol.texto */
-  --fondo:#FAFAFA;           /* rol.fondo — no es blanco puro, a propósito */
-  --fondo-profundo:#272485;  /* rol.fondo-profundo */
-  --sobre-accion:#FAFAFA;    /* MEDIDO: tinta sobre azul da 2,27 y no pasa AA-grande */
-  --acento-1:#F7FFA5;        /* kicker, numeración y filetes. NUNCA un CTA */
-  --acento-2:#B764E5;
-  --tenue:#6B6B74;
-  --linea:#DDDCE2;
-  --lienzo:#F1F0F4;
-  --display:"WF Visual Sans","Helvetica Neue",Arial,system-ui,sans-serif;
-  --realce:"Instrument Serif",Georgia,serif;
-  --r:14px; --pill:999px;
-}
-*{box-sizing:border-box}
-body{
-  background:var(--fondo); color:var(--texto);
-  font:16px/1.6 var(--display);
-  padding:0 20px; margin:0;
-  -webkit-font-smoothing:antialiased;
-}
-.wrap{max-width:900px;margin:0 auto;padding-block:56px 80px;display:flex;flex-direction:column;gap:72px}
-
-/* ---------- cabecera: la franja respira por arriba y por abajo ---------- */
-.hero{background:var(--fondo-profundo);color:var(--sobre-accion);margin:0 -20px;padding:84px 20px 80px}
-.hero-in{max-width:900px;margin:0 auto}
-.kicker{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--acento-1);margin-bottom:30px}
-h1{font:700 clamp(29px,5.4vw,48px)/1.12 var(--display);margin:0;letter-spacing:-.02em;max-width:22ch}
-h1 em{font-family:var(--realce);font-style:italic;font-weight:400}
-h1 .l2{display:block}
-
-/* ---------- secciones ---------- */
-section{display:flex;flex-direction:column;gap:26px}
-.eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--tenue);margin:0}
-h2{font:700 clamp(25px,4.4vw,36px)/1.1 var(--display);margin:0;letter-spacing:-.015em;text-wrap:balance}
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>Rodaje TenderYou · 6 de noviembre</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap">
+<style>
+:root{--accion:#0923F3;--texto:#2C2C31;--fondo:#FAFAFA;--prof:#272485;--ac1:#F7FFA5;--ac2:#B764E5;--tenue:#6B6B74;--linea:#DDDCE2;--lienzo:#F1F0F4;
+--violeta:#6D28D9;--lila:#A98BF0;--glicina:#E4D9FB;--display:"Helvetica Neue",Helvetica,Arial,system-ui,sans-serif;--realce:"Instrument Serif",Georgia,serif;--r:16px;color-scheme:light}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--fondo);color:var(--texto);font:16px/1.6 var(--display);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--accion)}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+em{font-family:var(--realce);font-style:italic;font-weight:400}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+section{padding:88px 0;scroll-margin-top:64px}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--tenue);margin:0 0 14px}
+h2{font:700 clamp(28px,4.4vw,44px)/1.08 var(--display);letter-spacing:-.02em;margin:0 0 18px;max-width:22ch}
 h3{font:700 19px/1.3 var(--display);margin:0}
-p{margin:0;max-width:65ch}
+p{margin:0 0 14px;max-width:66ch}
 .sub{color:var(--tenue)}
-ul{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:9px}
-strong{font-weight:700}
+main{transition:filter 1.1s ease}
+html.bn main{filter:grayscale(1)}
 
-/* ---------- destacado: a quién le aparece ---------- */
-.destacado{
-  background:var(--lienzo);border-radius:var(--r);padding:34px 36px;margin-top:16px;
-  display:flex;flex-direction:column;gap:18px;border-left:8px solid var(--acento-2);
-}
-.destacado h3{font-size:19px}
-.destacado .guia{font-size:17px;font-weight:700;margin:0}
-.destacado .minilabel{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--tenue);margin:0}
-.destacado .cierre{font-size:15px;color:var(--tenue);max-width:60ch}
+/* nav */
+.nav{position:sticky;top:0;z-index:30;background:rgba(39,36,133,.96);backdrop-filter:blur(8px);color:#fff}
+.nav .wrap{display:flex;align-items:center;gap:22px;height:56px;overflow-x:auto;scrollbar-width:none}
+.nav .wrap::-webkit-scrollbar{display:none}
+.nav b{white-space:nowrap;font-size:14px;color:var(--ac1)}
+.nav a{color:#fff;text-decoration:none;font-size:14px;white-space:nowrap;opacity:.82}
+.nav a:hover,.nav a.act{opacity:1;text-decoration:underline;text-underline-offset:5px}
+.nav a.cta{margin-left:auto;background:var(--ac1);color:var(--prof);opacity:1;padding:6px 14px;border-radius:999px;font-weight:700;text-decoration:none}
 
-/* ---------- tabla de entregables ---------- */
+/* hero */
+.hero{background:var(--prof);color:#FAFAFA;padding:72px 0 0;overflow:hidden}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ac1);margin:0 0 24px}
+.hero h1{font:700 clamp(36px,6.6vw,72px)/1.04 var(--display);letter-spacing:-.025em;margin:0 0 22px;max-width:16ch}
+.hero .lead{font-size:18px;opacity:.9;max-width:58ch}
+.edif{display:grid;grid-template-columns:1.2fr 1fr;gap:14px;margin-top:40px}
+.edif figure{margin:0;position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:16/10}
+.edif img{width:100%;height:100%;object-fit:cover;transform:scale(1.04);transition:transform 6s ease}
+.edif figure:hover img{transform:scale(1)}
+.edif figcaption{position:absolute;left:14px;bottom:14px;background:rgba(17,16,20,.72);padding:8px 12px;border-radius:10px;font-size:13px;line-height:1.35}
+.edif figcaption b{display:block;color:var(--ac1)}
+.cifras{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:34px 0 0}
+.cifra{background:rgba(255,255,255,.08);border-radius:var(--r);padding:22px}
+.cifra b{display:block;font:700 46px/1 var(--display);letter-spacing:-.02em;color:var(--ac1)}
+.cifra span{font-size:14px;opacity:.85}
+.atajo{display:inline-flex;margin-top:26px;background:var(--ac1);color:var(--prof);font-weight:700;padding:12px 20px;border-radius:999px;text-decoration:none}
+
+/* carrusel */
+.carr{background:#17153f;padding:48px 0 56px;color:#fff}
+.carr-cab{display:flex;align-items:end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:22px}
+.carr-cab h2{color:#fff;margin:0}
+.carr-cab p{color:#cfcde8;margin:6px 0 0;max-width:60ch;font-size:14.5px}
+.flechas{display:flex;gap:8px}
+.flechas button{width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.1);color:#fff;font-size:20px}
+.flechas button:hover{background:var(--ac1);color:var(--prof)}
+.pista{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 20px 14px;scrollbar-width:thin;scroll-padding:0 20px}
+.slide{margin:0;flex:0 0 auto;scroll-snap-align:start;width:min(360px,78vw)}
+.slide img{width:100%;aspect-ratio:3/2;object-fit:contain;border-radius:12px;background:#2a2760}
+.slide figcaption{font-size:13px;color:#cfcde8;margin-top:8px}
+.slide figcaption b{color:var(--ac1);margin-right:4px}
+.contador{font-size:13px;color:#cfcde8;margin-top:10px}
+
+/* usos */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:26px 0 18px}
+.tabs button{padding:9px 16px;border-radius:999px;background:var(--lienzo);font-size:14px;font-weight:600}
+.tabs button[aria-selected=true]{background:var(--prof);color:#fff}
+.pane{display:none}.pane.on{display:block;animation:sube .5s ease}
+.pane-nota{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--violeta)}
+@keyframes sube{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.mock{border-radius:var(--r);overflow:hidden;background:#fff;box-shadow:0 18px 50px -24px rgba(39,36,133,.35);border:1px solid var(--linea)}
+.web .barra{display:flex;align-items:center;gap:6px;padding:10px 14px;background:var(--lienzo);font-size:12px;color:var(--tenue)}
+.web .barra i{width:10px;height:10px;border-radius:50%;background:#d0cfd8}.web .barra span{margin-left:10px}
+.web-in{padding:34px;background:linear-gradient(180deg,#F6F5F9,#EEE8FC)}
+.w-k{color:var(--violeta);font-weight:700;font-size:13px;margin:0 0 6px}
+.web-in h4,.prensa h4,.slide169 h4{font:700 clamp(22px,3vw,32px)/1.12 var(--display);margin:0 0 22px;color:#1E1030;letter-spacing:-.015em;max-width:24ch}
+.web-in h4 em{color:var(--violeta)}
+.team{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+.tc{background:#fff;border-radius:14px;overflow:hidden;font-size:12.5px;line-height:1.3}
+.tc img{aspect-ratio:4/5;object-fit:cover;object-position:top;filter:grayscale(1)}
+.tc b,.tc span{display:block;padding:0 10px}.tc b{padding-top:8px}.tc span{color:var(--tenue);padding-bottom:10px}
+.lis{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:22px;background:#F3F2EF;border:0}
+.li{background:#fff;border-radius:12px;overflow:hidden;text-align:center;padding-bottom:16px;font-size:13px;opacity:0;transform:translateY(24px)}
+.pane.on .li{animation:sube .6s ease forwards;animation-delay:var(--d)}
+.li-ban{height:64px;background:linear-gradient(90deg,#4C1D95,#A98BF0)}
+.li img{width:96px;height:96px;border-radius:50%;object-fit:cover;object-position:50% 18%;margin:-48px auto 10px;border:4px solid #fff}
+.li b{display:block;font-size:15px}.li span{display:block;color:#444;padding:2px 12px}.li small{display:block;color:#888;margin:4px 0 10px}
+.li em{font-family:var(--display);font-style:normal;display:inline-block;border:1.5px solid #0a66c2;color:#0a66c2;border-radius:999px;padding:4px 16px;font-weight:700}
+.ads{display:flex;gap:22px;justify-content:center;padding:26px;background:var(--lienzo);border:0;flex-wrap:wrap}
+.tel{width:300px;background:#fff;border-radius:22px;padding:12px;box-shadow:0 10px 30px -14px rgba(0,0,0,.3)}
+.tel-top{display:flex;justify-content:space-between;font-size:12px;padding:2px 4px 10px}.tel-top span{color:#888}
+.ad45{position:relative;aspect-ratio:4/5;border-radius:10px;overflow:hidden}
+.ad45 img,.ad916 img{width:100%;height:100%;object-fit:cover;object-position:30% 50%}
+.ad45 p{position:absolute;right:10px;top:16px;width:46%;font:700 19px/1.15 var(--display);color:#1E1030;margin:0}
+.ad45 p em{color:var(--violeta)}
+.tel-cta{margin-top:10px;background:var(--lienzo);border-radius:8px;padding:9px;text-align:center;font-weight:700;font-size:13px}
+.tel.st{width:200px;padding:8px}
+.ad916{position:relative;aspect-ratio:9/16;border-radius:14px;overflow:hidden}
+.ad916 p{position:absolute;left:10px;right:10px;top:12%;font:700 15px/1.2 var(--display);background:rgba(255,255,255,.88);padding:8px 10px;border-radius:8px;margin:0}
+.mail{max-width:620px;margin:0 auto}
+.m-h{padding:16px 20px;border-bottom:1px solid var(--linea);font-size:13px}.m-h span{display:block;font-size:16px;font-weight:700;margin-top:4px}
+.m-b{padding:20px}.m-hero{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:16px;margin-bottom:14px}
+.firma{display:flex;gap:12px;align-items:center;border-top:1px solid var(--linea);padding-top:14px}
+.firma img{width:52px;height:52px;border-radius:50%;object-fit:cover;object-position:50% 18%}
+.firma span{display:block;font-size:13px;color:var(--tenue)}
+.prensa{max-width:760px;margin:0 auto;padding:30px;font-family:Georgia,serif}
+.p-cab{font:700 12px var(--display);letter-spacing:.12em;color:#b00;text-transform:uppercase}
+.prensa h4{font-family:Georgia,serif}
+.prensa img{width:100%;aspect-ratio:3/2;object-fit:cover}.p-pie{font-size:13px;color:#666;margin-top:8px}
+.slide169{position:relative;aspect-ratio:16/9;max-width:860px;margin:0 auto;background:#F6F5F9}
+.slide169 img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.s-t{position:absolute;left:5%;top:22%;width:42%;background:rgba(255,255,255,.86);padding:20px;border-radius:14px}
+.s-t p{color:var(--violeta);font-weight:700;font-size:13px;margin:0 0 6px}.s-t h4{font-size:clamp(16px,2.3vw,26px);margin:0}
+
+/* estilo */
+.principios{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:24px 0 30px}
+.principios div{background:var(--lienzo);border-radius:14px;padding:18px;font-size:14px;line-height:1.45}
+.principios b{display:block;font-size:15px;margin-bottom:6px}
+.refs{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.refs figure{margin:0}.refs img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:12px}
+.refs figcaption{font-size:13px;color:var(--tenue);margin-top:8px;line-height:1.4}.refs b{color:var(--texto)}
+
+/* retratos (scroll) */
+.retratos{position:relative;height:300vh;padding:0;background:#F1F0F4}
+.ret-sticky{position:sticky;top:56px;height:calc(100vh - 56px);display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:40px;overflow:hidden}
+.ret-foto{height:86%;display:flex;justify-content:center}
+.ret-foto img{height:100%;width:auto;max-width:100%;object-fit:cover;border-radius:22px;box-shadow:0 30px 70px -30px rgba(0,0,0,.45)}
+.ret-txt{position:relative;height:220px}
+.ret-txt p{position:absolute;inset:0;margin:0;font:700 clamp(34px,5.6vw,68px)/1.04 var(--display);letter-spacing:-.025em;opacity:0;transform:translateY(30px);transition:all .7s ease;max-width:12ch}
+.ret-txt p.on{opacity:1;transform:none}
+.ret-txt small{display:block;font:400 16px/1.5 var(--display);color:var(--tenue);margin-top:16px;letter-spacing:0;max-width:34ch}
+
+/* fichas */
+.bloque-cab{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin:46px 0 16px;scroll-margin-top:70px}
+.bloque-cab .tag{background:var(--prof);color:var(--ac1);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:6px 12px;border-radius:8px}
+.bloque-cab .donde{color:var(--tenue);font-size:14px}
+.fichas{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.ficha{background:#fff;border:1px solid var(--linea);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;scroll-margin-top:70px}
+.portada{position:relative;display:block}
+.portada img{width:100%;aspect-ratio:3/2;object-fit:contain;background:var(--lienzo)}
+.lupa{position:absolute;right:10px;bottom:10px;background:rgba(17,16,20,.75);color:#fff;font-size:12px;padding:4px 10px;border-radius:999px;opacity:0;transition:.2s}
+.portada:hover .lupa{opacity:1}
+.minis{display:flex;gap:6px;padding:8px;overflow-x:auto;background:var(--lienzo)}
+.minis button{flex:0 0 auto}.minis img{height:58px;width:auto;border-radius:6px}
+.txt{padding:18px 20px 20px}
+.fid{display:inline-block;background:var(--ac1);font-weight:700;font-size:13px;padding:3px 10px;border-radius:7px;margin:0 0 8px}
+.txt h3{margin-bottom:10px}
+.txt dl{display:grid;grid-template-columns:84px 1fr;gap:5px 12px;margin:0;font-size:14px;line-height:1.45}
+.txt dt{font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--tenue);padding-top:3px}.txt dd{margin:0}
+
+/* extras */
+.extras-cab{display:grid;grid-template-columns:auto 1fr;gap:34px;align-items:center}
+.reloj{width:150px;height:150px}
+.reloj .min{transform-origin:75px 75px;animation:gira 6s linear infinite}
+.reloj .hora{transform-origin:75px 75px;animation:gira 72s linear infinite}
+@keyframes gira{to{transform:rotate(360deg)}}
+.extras{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}
+.extra{margin:0}.extra img{width:100%;aspect-ratio:3/2;object-fit:contain;background:var(--lienzo);border-radius:12px;border:1px dashed var(--lila)}
+.extra figcaption{font-size:14px;margin-top:8px}.extra figcaption b{color:var(--violeta)}.extra figcaption span{display:block;color:var(--tenue);font-size:13px}
+
+/* horario */
+.timeline{list-style:none;margin:26px 0 0;padding:0;border-left:3px solid var(--linea)}
+.timeline li{display:grid;grid-template-columns:76px 1fr;gap:14px;padding:12px 0 12px 22px;position:relative}
+.timeline li::before{content:"";position:absolute;left:-9px;top:20px;width:15px;height:15px;border-radius:50%;background:var(--prof)}
+.timeline time{font-weight:700;font-variant-numeric:tabular-nums;font-size:18px}
+.timeline b{display:block}.timeline span{color:var(--tenue);font-size:14.5px}
+.timeline .h-pausa::before{background:var(--linea)}.timeline .h-margen{background:#FBFDE6;border-radius:12px}
+.timeline .h-margen::before{background:var(--ac2)}
+.destacado{background:var(--lienzo);border-left:8px solid var(--ac2);border-radius:var(--r);padding:26px 30px;margin-top:28px}
+.destacado b{font-size:17px}
+
+/* tablas */
 .tscroll{overflow-x:auto}
-table{border-collapse:collapse;width:100%;min-width:560px;font-size:15px}
+table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px}
 th{text-align:left;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--tenue);padding:0 14px 10px 0}
-td{padding:13px 14px 13px 0;vertical-align:top;border-top:2px solid var(--linea)}
-td:first-child{font-weight:700}
-tbody tr:last-child td{border-bottom:2px solid var(--linea)}
-td.fmt{font-variant-numeric:tabular-nums;white-space:nowrap}
+td{padding:10px 14px 10px 0;border-top:2px solid var(--linea);vertical-align:middle}
+td:first-child{font-weight:700;display:flex;align-items:center;gap:10px}
+.av{width:38px;height:38px;border-radius:50%;object-fit:cover;object-position:50% 18%}
 
-/* ---------- fila de pieza: un patrón único, esquema a la izquierda y su texto a la derecha ---------- */
-.pieza{display:grid;grid-template-columns:260px 1fr;gap:34px;align-items:start;padding-top:40px;border-top:2px solid var(--linea)}
-.pieza:first-of-type{border-top:none;padding-top:8px}
-.pieza > div{min-width:0}
-.num{font:700 13px/1 var(--display);letter-spacing:.1em;color:var(--acento-2);margin-bottom:10px}
-.fich{display:inline-block;background:var(--acento-1);color:var(--texto);font-size:12.5px;font-weight:700;padding:4px 10px;border-radius:6px;margin-bottom:12px}
-.rol{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--tenue);margin:0 0 8px}
-
-/* esquema 1:1 — wireframe NEUTRO: marca posición, no color. El color lo pone Triskell. */
-.mock{
-  aspect-ratio:1;width:100%;max-width:100%;
-  background:var(--lienzo);border:2px solid var(--linea);border-radius:10px;
-  padding:15px;display:flex;flex-direction:column;gap:8px;position:relative;overflow:hidden;
-}
-.mock .tag{position:absolute;top:11px;left:14px;font-size:8px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--tenue)}
-.mock .tit{font-weight:700;font-size:15px;line-height:1.18;letter-spacing:-.01em}
-.mock .tit.pad{margin-top:18px}
-.mock .ap{font-size:11px;line-height:1.35;color:var(--tenue)}
-.mock .cta{align-self:flex-start;background:var(--accion);color:var(--sobre-accion);font-size:10.5px;font-weight:700;padding:6px 13px;border-radius:var(--pill)}
-.mock .datos{font-size:9.5px;line-height:1.4;color:var(--tenue)}
-.mock .bot{margin-top:auto;display:flex;flex-direction:column;gap:7px}
-/* sticker abajo a la derecha, con la invitación a deslizar */
-.mock .swipe{align-self:flex-end;text-align:right;font-size:8.5px;font-weight:700;color:var(--tenue);line-height:1.3}
-.mock .st{align-self:flex-end;text-align:right;font-size:8.5px;font-weight:700;line-height:1.25;color:var(--tenue);border:1.5px dashed var(--tenue);border-radius:5px;padding:4px 7px}
-.mock .pon{display:flex;flex-direction:column;gap:6px;margin-top:2px}
-.mock .pon i{display:flex;gap:7px;align-items:center;font-style:normal}
-.mock .pon b{width:25px;height:25px;border-radius:50%;background:var(--linea);flex:none;font-size:7px;font-weight:700;color:var(--tenue);display:flex;align-items:center;justify-content:center}
-.mock .pon u{text-decoration:none;font-size:8.5px;line-height:1.3;color:var(--tenue)}
-/* pie de ponentes de los estáticos: fotos pequeñas con nombre debajo, abajo a la derecha */
-.mock .pie{margin-top:auto;align-self:flex-end;display:flex;gap:9px}
-.mock .pie figure{margin:0;display:flex;flex-direction:column;align-items:center;gap:3px}
-.mock .pie span{width:22px;height:22px;border-radius:50%;background:var(--linea);display:block}
-.mock .pie figcaption{font-size:6.5px;color:var(--tenue);text-align:center;line-height:1.2}
-.mockcap{font-size:12px;color:var(--tenue);margin-top:9px}
-
-.copy{display:flex;flex-direction:column;gap:14px}
-.campo{display:flex;flex-direction:column;gap:5px}
-.campo dt{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--tenue)}
-.campo dd{margin:0;font-size:17px;line-height:1.35;font-weight:700}
-.campo dd.n{font-weight:400;font-size:15.5px;line-height:1.5}
-.nota{font-size:14px;line-height:1.5;color:var(--tenue);border-left:4px solid var(--acento-2);padding-left:14px}
-
-/* ---------- retargeting ---------- */
-.retinfo{background:var(--fondo-profundo);color:var(--sobre-accion);border-radius:var(--r);padding:32px 36px;margin-bottom:12px;display:flex;flex-direction:column;gap:12px}
-.retinfo h3{color:var(--acento-1)}
-.retinfo p{max-width:62ch;opacity:.92}
-
-/* ---------- formatos verificados ---------- */
-.fmtbox{background:var(--acento-1);border-radius:var(--r);padding:32px 36px;margin-top:12px;display:flex;flex-direction:column;gap:16px}
-.fmtbox h3{font-size:18px}
-.fmtbox .linea{display:flex;flex-direction:column;gap:4px}
-.fmtbox dt{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
-.fmtbox dd{margin:0;font-size:15.5px;line-height:1.5}
-
-a{color:var(--accion);text-underline-offset:3px}
-:focus-visible{outline:3px solid var(--accion);outline-offset:3px}
-footer{font-size:13px;color:var(--tenue);line-height:1.6}
-
-@media (max-width:620px){
-  .pieza{grid-template-columns:1fr;gap:18px}
-  .mock{max-width:330px}
-}
-@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
-
-
-/* ---------- componentes del briefing de rodaje ---------- */
-.cifras{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.cifra{background:var(--lienzo);border-radius:var(--r);padding:22px 22px 20px;display:flex;flex-direction:column;gap:6px}
-.cifra b{font:700 40px/1 var(--display);letter-spacing:-.02em}
-.cifra span{font-size:14px;line-height:1.4;color:var(--tenue)}
-.cifra.osc{background:var(--fondo-profundo);color:var(--sobre-accion)}
-.cifra.osc span{color:#D9D8F0}
-.refs{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.refs.tres{grid-template-columns:repeat(3,1fr)}
-figure.ref{margin:0;display:flex;flex-direction:column;gap:8px}
-figure.ref img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:10px;display:block;background:var(--lienzo)}
-figure.ref.alto img{aspect-ratio:4/5}
-figure.ref.libre img{aspect-ratio:auto}
-figure.ref figcaption{font-size:13.5px;line-height:1.45;color:var(--tenue)}
-figure.ref figcaption b{color:var(--texto)}
-.bloque{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;padding-top:6px}
-.bloque .tag{background:var(--fondo-profundo);color:var(--acento-1);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 11px;border-radius:6px}
-.bloque .donde{font-size:14px;color:var(--tenue)}
-.foto{display:grid;grid-template-columns:64px 1fr;gap:18px;padding:18px 0;border-top:2px solid var(--linea)}
-.foto .id{font:700 15px/1 var(--display);background:var(--acento-1);border-radius:8px;height:40px;display:flex;align-items:center;justify-content:center}
-.foto.extra .id{background:var(--lienzo);color:var(--tenue)}
-.foto h3{font-size:17px;margin:2px 0 8px}
-.foto dl{display:grid;grid-template-columns:110px 1fr;gap:5px 14px;margin:0;font-size:14.5px;line-height:1.45}
-.foto dt{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--tenue);padding-top:3px}
-.foto dd{margin:0}
-.horario td:first-child{white-space:nowrap;font-variant-numeric:tabular-nums}
-.horario tr.pausa td{color:var(--tenue);font-weight:400}
-.horario tr.margen td{background:#FBFDE6}
-.check{list-style:none;padding:0;display:flex;flex-direction:column;gap:12px}
-.check li{display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start}
-.check li::before{content:"";width:18px;height:18px;border:2px solid var(--fondo-profundo);border-radius:5px;margin-top:3px}
-.dos{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.caja{background:var(--lienzo);border-radius:var(--r);padding:24px 26px;display:flex;flex-direction:column;gap:10px}
-.caja h3{font-size:16.5px}
-.caja p,.caja li{font-size:14.5px}
-.paleta{display:flex;gap:8px;flex-wrap:wrap;margin-top:4px}
+/* localizaciones, ropa, checklist */
+.locs{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:22px}
+.locs figure{margin:0}.locs img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px}
+.locs figcaption{font-size:13px;color:var(--tenue);margin-top:8px;line-height:1.4}.locs b{color:var(--texto)}
+.dos{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:20px}
+.caja{background:var(--lienzo);border-radius:var(--r);padding:24px 26px}
+.caja h3{margin-bottom:10px}.caja ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:8px;font-size:15px}
+.paleta{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
 .paleta i{display:flex;align-items:center;gap:7px;font-style:normal;font-size:13px;color:var(--tenue)}
-.paleta i::before{content:"";width:22px;height:22px;border-radius:50%;background:var(--c);border:1px solid var(--linea)}
-.tec td{font-size:13.5px;line-height:1.45}
-.tec td:first-child{white-space:nowrap}
-.esquema{background:var(--lienzo);border-radius:var(--r);padding:18px}
-.esquema svg{width:100%;height:auto;display:block}
-.aviso{border-left:6px solid var(--acento-2);padding:4px 0 4px 16px;font-size:15px}
-@media (max-width:620px){
-  .cifras,.refs,.refs.tres,.dos{grid-template-columns:1fr}
-  .foto{grid-template-columns:1fr}
-  .foto dl{grid-template-columns:1fr}
-}
-</style><style>@media (max-width:620px){table{min-width:0 !important;font-size:14px}th,td{padding-right:8px}.wrap{max-width:100%}body{overflow-x:hidden}}</style></head><body>
+.paleta i::before{content:"";width:26px;height:26px;border-radius:50%;background:var(--c);border:1px solid var(--linea)}
+.check{list-style:none;padding:0;margin:22px 0 0;display:flex;flex-direction:column;gap:10px}
+.check label{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid var(--linea);border-radius:12px;padding:14px 16px;cursor:pointer}
+.check input{width:22px;height:22px;accent-color:var(--prof);flex:none;margin-top:2px}
+.check input:checked+span{color:var(--tenue);text-decoration:line-through}
+.progreso{font-weight:700;color:var(--violeta)}
+.entrega{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:22px}
+.entrega div{background:var(--prof);color:#fff;border-radius:14px;padding:18px;font-size:14px;line-height:1.45}
+.entrega b{display:block;color:var(--ac1);margin-bottom:6px}
+footer{padding:40px 0 60px;color:var(--tenue);font-size:13px}
 
-<header class="hero"><div class="hero-in">
+/* lightbox */
+.lb{position:fixed;inset:0;background:rgba(17,16,20,.92);z-index:50;display:none;align-items:center;justify-content:center;flex-direction:column;padding:20px}
+.lb.on{display:flex}.lb img{max-height:84vh;max-width:94vw;border-radius:10px}
+.lb p{color:#fff;margin-top:12px}.lb button{position:absolute;top:16px;right:20px;color:#fff;font-size:30px}
+
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.reveal.vis{opacity:1;transform:none}
+.aviso-sb{display:inline-block;background:rgba(247,255,165,.14);border:1px solid rgba(247,255,165,.4);color:var(--ac1);border-radius:10px;padding:8px 12px;font-size:13px;margin-top:6px}
+
+@media (max-width:860px){
+  .principios{grid-template-columns:1fr 1fr}.refs,.locs{grid-template-columns:1fr 1fr}
+  .team{grid-template-columns:repeat(3,1fr)}.lis{grid-template-columns:1fr}.entrega{grid-template-columns:1fr 1fr}
+  .ret-sticky{grid-template-columns:1fr;gap:10px;align-content:center}.ret-foto{height:52vh}.ret-txt{height:170px}
+  .extras{grid-template-columns:1fr 1fr}
+}
+@media (max-width:620px){
+  section{padding:64px 0}.edif,.cifras,.fichas,.dos{grid-template-columns:1fr}
+  .cifra b{font-size:38px}.extras-cab{grid-template-columns:1fr}.reloj{width:110px;height:110px}
+  .txt dl{grid-template-columns:1fr}.principios,.refs,.locs,.entrega{grid-template-columns:1fr}
+  table{min-width:0;font-size:14px}.nav a.cta{display:none}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}.li{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style></head><body>
+<nav class="nav"><div class="wrap"><b>Rodaje TenderYou · 6-nov</b>
+<a href="#fotos">Lista de fotos</a><a href="#horario">Horario</a><a href="#equipo">Equipo</a><a href="#usos">Usos</a><a href="#ropa">Ropa</a><a href="#antes">Antes de mañana</a><a class="cta" href="#fotos">Ir a la lista</a></div></nav>
+<main>
+<header class="hero"><div class="wrap">
   <p class="kicker">Briefing de rodaje · TenderYou · viernes 6 de noviembre</p>
   <h1>Fotos del equipo para usarlas en <em>todas</em> partes</h1>
-</div></header>
-<main class="wrap">
-
-<section>
-  <p class="eyebrow">Qué vamos a hacer</p>
-  <h2>Una mañana, dos edificios y unas 45 fotos editadas</h2>
-  <p>El viernes, de 8:30 a 13:00, hacemos las fotos del equipo que vamos a usar en los próximos meses: en la web, en LinkedIn, en los anuncios, en los correos, en las presentaciones a clientes y cada vez que TenderYou salga en prensa o en un premio. Empezamos en vuestra oficina del Edificio Impulsa y terminamos en la Laboral.</p>
-  <p>Este documento recoge qué fotos vamos a hacer, a quién y a qué hora le toca, qué ropa traer y lo poco que necesitamos de vosotros antes de mañana. <strong>Si queréis cambiar algo, decídnoslo hoy</strong> y lo ajustamos.</p>
-  <div class="cifras">
-    <div class="cifra osc"><b>44</b><span>fotos editadas que nos llevamos seguro</span></div>
-    <div class="cifra"><b>+6</b><span>extras si el día acompaña</span></div>
-    <div class="cifra"><b>11</b><span>retratos en color y en blanco y negro</span></div>
+  <p class="lead">Una mañana, de 8:30 a 13:00, en dos edificios. Aquí tenéis qué fotos vamos a hacer, a quién y a qué hora le toca, qué ropa traer y lo poco que necesitamos de vosotros. <b>Si queréis cambiar algo, decídnoslo hoy.</b></p>
+  <div class="edif">
+    <figure><img src="img/loc-impulsa-exterior.jpg" alt="Edificio Impulsa"><figcaption><b>8:30 – 11:05</b>Edificio Impulsa · Parque Científico Tecnológico</figcaption></figure>
+    <figure><img src="img/loc-laboral-equipo.jpg" alt="Universidad Laboral"><figcaption><b>11:25 – 12:35</b>Laboral Ciudad de la Cultura</figcaption></figure>
   </div>
-</section>
+  <div class="cifras">
+    <div class="cifra"><b>44</b><span>fotos editadas que nos llevamos seguro</span></div>
+    <div class="cifra"><b>+6</b><span>extras si el día acompaña</span></div>
+    <div class="cifra"><b>11</b><span>retratos, en color y en blanco y negro</span></div>
+  </div>
+  <a class="atajo" href="#fotos">Ver la lista de fotos ↓</a>
+</div>
+<div class="carr" style="margin-top:56px"><div class="wrap carr-cab"><div><p class="eyebrow" style="color:#cfcde8">Storyboard</p><h2>Las 44 fotos, de un vistazo</h2>
+<p>Dibujadas a partir de vuestras fotos y de los espacios reales. Sirven para ver el encuadre, la luz y el aire para el texto. Las poses y la ropa son orientativas.</p></div>
+<div><div class="flechas"><button class="ant" aria-label="Anteriores">←</button><button class="sig" aria-label="Siguientes">→</button></div><p class="contador">1 / 44</p></div></div>
+<div class="pista"><figure class="slide"><button class="zoom" data-src="sb/A1-miguel.jpg" data-cap="A1 · Retrato de busto, mirando a cámara · Miguel"><img src="sb/A1-miguel.jpg" alt="A1 · Retrato de busto, mirando a cámara · Miguel" loading="lazy"></button><figcaption><b>A1</b> Retrato de busto, mirando a cámara · Miguel</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/A1-diego.jpg" data-cap="A1 · Retrato de busto, mirando a cámara · Diego"><img src="sb/A1-diego.jpg" alt="A1 · Retrato de busto, mirando a cámara · Diego" loading="lazy"></button><figcaption><b>A1</b> Retrato de busto, mirando a cámara · Diego</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/A1-ramon.jpg" data-cap="A1 · Retrato de busto, mirando a cámara · Ramón"><img src="sb/A1-ramon.jpg" alt="A1 · Retrato de busto, mirando a cámara · Ramón" loading="lazy"></button><figcaption><b>A1</b> Retrato de busto, mirando a cámara · Ramón</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/A1-nicolas.jpg" data-cap="A1 · Retrato de busto, mirando a cámara · Nicolás"><img src="sb/A1-nicolas.jpg" alt="A1 · Retrato de busto, mirando a cámara · Nicolás" loading="lazy"></button><figcaption><b>A1</b> Retrato de busto, mirando a cámara · Nicolás</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/A1-ivan.jpg" data-cap="A1 · Retrato de busto, mirando a cámara · Iván"><img src="sb/A1-ivan.jpg" alt="A1 · Retrato de busto, mirando a cámara · Iván" loading="lazy"></button><figcaption><b>A1</b> Retrato de busto, mirando a cámara · Iván</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/A1-alfonso.jpg" data-cap="A1 · Retrato de busto, mirando a cámara · Alfonso"><img src="sb/A1-alfonso.jpg" alt="A1 · Retrato de busto, mirando a cámara · Alfonso" loading="lazy"></button><figcaption><b>A1</b> Retrato de busto, mirando a cámara · Alfonso</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/A1-javier.jpg" data-cap="A1 · Retrato de busto, mirando a cámara · Javier"><img src="sb/A1-javier.jpg" alt="A1 · Retrato de busto, mirando a cámara · Javier" loading="lazy"></button><figcaption><b>A1</b> Retrato de busto, mirando a cámara · Javier</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/A1-pedro.jpg" data-cap="A1 · Retrato de busto, mirando a cámara · Pedro"><img src="sb/A1-pedro.jpg" alt="A1 · Retrato de busto, mirando a cámara · Pedro" loading="lazy"></button><figcaption><b>A1</b> Retrato de busto, mirando a cámara · Pedro</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/A1-mario.jpg" data-cap="A1 · Retrato de busto, mirando a cámara · Mario"><img src="sb/A1-mario.jpg" alt="A1 · Retrato de busto, mirando a cámara · Mario" loading="lazy"></button><figcaption><b>A1</b> Retrato de busto, mirando a cámara · Mario</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/A1-alejandro.jpg" data-cap="A1 · Retrato de busto, mirando a cámara · Alejandro"><img src="sb/A1-alejandro.jpg" alt="A1 · Retrato de busto, mirando a cámara · Alejandro" loading="lazy"></button><figcaption><b>A1</b> Retrato de busto, mirando a cámara · Alejandro</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/A1-jose.jpg" data-cap="A1 · Retrato de busto, mirando a cámara · José"><img src="sb/A1-jose.jpg" alt="A1 · Retrato de busto, mirando a cámara · José" loading="lazy"></button><figcaption><b>A1</b> Retrato de busto, mirando a cámara · José</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/A2-miguel.jpg" data-cap="A2 · Plano medio con aire a un lado · Miguel"><img src="sb/A2-miguel.jpg" alt="A2 · Plano medio con aire a un lado · Miguel" loading="lazy"></button><figcaption><b>A2</b> Plano medio con aire a un lado · Miguel</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/A2-diego.jpg" data-cap="A2 · Plano medio con aire a un lado · Diego"><img src="sb/A2-diego.jpg" alt="A2 · Plano medio con aire a un lado · Diego" loading="lazy"></button><figcaption><b>A2</b> Plano medio con aire a un lado · Diego</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/A2-ramon.jpg" data-cap="A2 · Plano medio con aire a un lado · Ramón"><img src="sb/A2-ramon.jpg" alt="A2 · Plano medio con aire a un lado · Ramón" loading="lazy"></button><figcaption><b>A2</b> Plano medio con aire a un lado · Ramón</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/A2-nicolas.jpg" data-cap="A2 · Plano medio con aire a un lado · Nicolás"><img src="sb/A2-nicolas.jpg" alt="A2 · Plano medio con aire a un lado · Nicolás" loading="lazy"></button><figcaption><b>A2</b> Plano medio con aire a un lado · Nicolás</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/A2-ivan.jpg" data-cap="A2 · Plano medio con aire a un lado · Iván"><img src="sb/A2-ivan.jpg" alt="A2 · Plano medio con aire a un lado · Iván" loading="lazy"></button><figcaption><b>A2</b> Plano medio con aire a un lado · Iván</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/A2-alfonso.jpg" data-cap="A2 · Plano medio con aire a un lado · Alfonso"><img src="sb/A2-alfonso.jpg" alt="A2 · Plano medio con aire a un lado · Alfonso" loading="lazy"></button><figcaption><b>A2</b> Plano medio con aire a un lado · Alfonso</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/A2-javier.jpg" data-cap="A2 · Plano medio con aire a un lado · Javier"><img src="sb/A2-javier.jpg" alt="A2 · Plano medio con aire a un lado · Javier" loading="lazy"></button><figcaption><b>A2</b> Plano medio con aire a un lado · Javier</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/A2-pedro.jpg" data-cap="A2 · Plano medio con aire a un lado · Pedro"><img src="sb/A2-pedro.jpg" alt="A2 · Plano medio con aire a un lado · Pedro" loading="lazy"></button><figcaption><b>A2</b> Plano medio con aire a un lado · Pedro</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/A2-mario.jpg" data-cap="A2 · Plano medio con aire a un lado · Mario"><img src="sb/A2-mario.jpg" alt="A2 · Plano medio con aire a un lado · Mario" loading="lazy"></button><figcaption><b>A2</b> Plano medio con aire a un lado · Mario</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/A2-alejandro.jpg" data-cap="A2 · Plano medio con aire a un lado · Alejandro"><img src="sb/A2-alejandro.jpg" alt="A2 · Plano medio con aire a un lado · Alejandro" loading="lazy"></button><figcaption><b>A2</b> Plano medio con aire a un lado · Alejandro</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/A2-jose.jpg" data-cap="A2 · Plano medio con aire a un lado · José"><img src="sb/A2-jose.jpg" alt="A2 · Plano medio con aire a un lado · José" loading="lazy"></button><figcaption><b>A2</b> Plano medio con aire a un lado · José</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/A3-miguel.jpg" data-cap="A3 · Cuerpo entero sobre fondo liso, para recortar · Miguel"><img src="sb/A3-miguel.jpg" alt="A3 · Cuerpo entero sobre fondo liso, para recortar · Miguel" loading="lazy"></button><figcaption><b>A3</b> Cuerpo entero sobre fondo liso, para recortar · Miguel</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/A3-diego.jpg" data-cap="A3 · Cuerpo entero sobre fondo liso, para recortar · Diego"><img src="sb/A3-diego.jpg" alt="A3 · Cuerpo entero sobre fondo liso, para recortar · Diego" loading="lazy"></button><figcaption><b>A3</b> Cuerpo entero sobre fondo liso, para recortar · Diego</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/A3-javier.jpg" data-cap="A3 · Cuerpo entero sobre fondo liso, para recortar · Javier"><img src="sb/A3-javier.jpg" alt="A3 · Cuerpo entero sobre fondo liso, para recortar · Javier" loading="lazy"></button><figcaption><b>A3</b> Cuerpo entero sobre fondo liso, para recortar · Javier</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/A3-mario.jpg" data-cap="A3 · Cuerpo entero sobre fondo liso, para recortar · Mario"><img src="sb/A3-mario.jpg" alt="A3 · Cuerpo entero sobre fondo liso, para recortar · Mario" loading="lazy"></button><figcaption><b>A3</b> Cuerpo entero sobre fondo liso, para recortar · Mario</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/A4.jpg" data-cap="A4 · Miguel, retrato para prensa"><img src="sb/A4.jpg" alt="A4 · Miguel, retrato para prensa" loading="lazy"></button><figcaption><b>A4</b> Miguel, retrato para prensa</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/B1.jpg" data-cap="B1 · Equipo completo"><img src="sb/B1.jpg" alt="B1 · Equipo completo" loading="lazy"></button><figcaption><b>B1</b> Equipo completo</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/B2-dev.jpg" data-cap="B2 · Por áreas: desarrollo, y ventas con Miguel"><img src="sb/B2-dev.jpg" alt="B2 · Por áreas: desarrollo, y ventas con Miguel" loading="lazy"></button><figcaption><b>B2</b> Por áreas: desarrollo, y ventas con Miguel</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/B2-ventas.jpg" data-cap="B2 · Por áreas: desarrollo, y ventas con Miguel"><img src="sb/B2-ventas.jpg" alt="B2 · Por áreas: desarrollo, y ventas con Miguel" loading="lazy"></button><figcaption><b>B2</b> Por áreas: desarrollo, y ventas con Miguel</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/C1.jpg" data-cap="C1 · El equipo trabajando en sus puestos"><img src="sb/C1.jpg" alt="C1 · El equipo trabajando en sus puestos" loading="lazy"></button><figcaption><b>C1</b> El equipo trabajando en sus puestos</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/C2-t1.jpg" data-cap="C2 · Dos personas decidiendo en la mesa (dos tomas)"><img src="sb/C2-t1.jpg" alt="C2 · Dos personas decidiendo en la mesa (dos tomas)" loading="lazy"></button><figcaption><b>C2</b> Dos personas decidiendo en la mesa (dos tomas)</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/C2-t2.jpg" data-cap="C2 · Dos personas decidiendo en la mesa (dos tomas)"><img src="sb/C2-t2.jpg" alt="C2 · Dos personas decidiendo en la mesa (dos tomas)" loading="lazy"></button><figcaption><b>C2</b> Dos personas decidiendo en la mesa (dos tomas)</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/C3.jpg" data-cap="C3 · Una persona sola con el portátil junto a la ventana"><img src="sb/C3.jpg" alt="C3 · Una persona sola con el portátil junto a la ventana" loading="lazy"></button><figcaption><b>C3</b> Una persona sola con el portátil junto a la ventana</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/C4.jpg" data-cap="C4 · Manos con un pliego impreso y el portátil, sin cara"><img src="sb/C4.jpg" alt="C4 · Manos con un pliego impreso y el portátil, sin cara" loading="lazy"></button><figcaption><b>C4</b> Manos con un pliego impreso y el portátil, sin cara</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/C5.jpg" data-cap="C5 · De pie, mirando el móvil"><img src="sb/C5.jpg" alt="C5 · De pie, mirando el móvil" loading="lazy"></button><figcaption><b>C5</b> De pie, mirando el móvil</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/D1-diego.jpg" data-cap="D1 · Comercial en una llamada · Diego"><img src="sb/D1-diego.jpg" alt="D1 · Comercial en una llamada · Diego" loading="lazy"></button><figcaption><b>D1</b> Comercial en una llamada · Diego</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/D1-ramon.jpg" data-cap="D1 · Comercial en una llamada · Ramón"><img src="sb/D1-ramon.jpg" alt="D1 · Comercial en una llamada · Ramón" loading="lazy"></button><figcaption><b>D1</b> Comercial en una llamada · Ramón</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/D1-nicolas.jpg" data-cap="D1 · Comercial en una llamada · Nicolás"><img src="sb/D1-nicolas.jpg" alt="D1 · Comercial en una llamada · Nicolás" loading="lazy"></button><figcaption><b>D1</b> Comercial en una llamada · Nicolás</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/D2.jpg" data-cap="D2 · Demo: un comercial enseña una licitación en pantalla"><img src="sb/D2.jpg" alt="D2 · Demo: un comercial enseña una licitación en pantalla" loading="lazy"></button><figcaption><b>D2</b> Demo: un comercial enseña una licitación en pantalla</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/D3.jpg" data-cap="D3 · Sonriendo al móvil, como cuando llega un aviso"><img src="sb/D3.jpg" alt="D3 · Sonriendo al móvil, como cuando llega un aviso" loading="lazy"></button><figcaption><b>D3</b> Sonriendo al móvil, como cuando llega un aviso</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/D4.jpg" data-cap="D4 · El equipo de ventas conversando"><img src="sb/D4.jpg" alt="D4 · El equipo de ventas conversando" loading="lazy"></button><figcaption><b>D4</b> El equipo de ventas conversando</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/E1.jpg" data-cap="E1 · Miguel bajo la arquería"><img src="sb/E1.jpg" alt="E1 · Miguel bajo la arquería" loading="lazy"></button><figcaption><b>E1</b> Miguel bajo la arquería</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/E2.jpg" data-cap="E2 · Miguel caminando bajo los arcos"><img src="sb/E2.jpg" alt="E2 · Miguel caminando bajo los arcos" loading="lazy"></button><figcaption><b>E2</b> Miguel caminando bajo los arcos</figcaption></figure></div></div>
+</header>
 
-<section>
+<section id="usos"><div class="wrap">
   <p class="eyebrow">Dónde se van a usar</p>
   <h2>Cada foto sale pensando en su <em>sitio</em></h2>
-  <p>No hacemos «fotos de equipo» en general: cada toma de la lista responde a un sitio concreto donde vuestras caras ya aparecen o van a aparecer, y se encuadra con el formato y el hueco para texto que ese sitio pide.</p>
-  <div class="tscroll"><table><thead><tr><th>Dónde se van a usar</th><th>Qué foto necesita</th><th>Formato</th></tr></thead><tbody><tr><td>Web: «Sobre nosotros» y «Habla con un experto»</td><td>Retrato de cada persona, todos con la misma luz</td><td>Vertical 4:5, en color y en blanco y negro</td></tr><tr><td>LinkedIn (perfiles personales y empresa)</td><td>Retrato de busto y foto de equipo</td><td>1:1 (se ve en círculo) y horizontal</td></tr><tr><td>Posts de bienvenida y carruseles del equipo</td><td>Retrato en color y fotos trabajando</td><td>4:5</td></tr><tr><td>Anuncios en Meta y LinkedIn</td><td>Persona real trabajando o retrato con aire para el texto</td><td>4:5 y 9:16 (Stories y Reels)</td></tr><tr><td>Correos del ciclo de vida y firmas</td><td>Escenas de trabajo, firma con cara y recortes</td><td>4:5, cuadrado pequeño y recorte</td></tr><tr><td>Prensa, premios y programas (La Nueva España, Lanzadera…)</td><td>Retrato de Miguel y foto de equipo en alta resolución</td><td>Vertical y horizontal, con fondo limpio</td></tr><tr><td>Presentaciones a clientes y outbound</td><td>Plano medio con aire y fotos por áreas</td><td>Horizontal 16:9</td></tr><tr><td>Vídeo y YouTube</td><td>Miguel con fondo limpio o arquitectura</td><td>16:9 con la cara a un lado</td></tr></tbody></table></div>
-</section>
+  <p>No hacemos «fotos de equipo» en general: cada toma responde a un sitio donde vuestras caras ya aparecen o van a aparecer. Así se verían con el storyboard puesto en su sitio.</p>
+  <div class="tabs" role="tablist"><button role="tab" aria-selected="true" data-t="0">Web «Sobre nosotros»</button><button role="tab" aria-selected="false" data-t="1">LinkedIn</button><button role="tab" aria-selected="false" data-t="2">Anuncios</button><button role="tab" aria-selected="false" data-t="3">Correos</button><button role="tab" aria-selected="false" data-t="4">Prensa y premios</button><button role="tab" aria-selected="false" data-t="5">Presentaciones</button></div><div class="panes"><div class="pane on" data-p="0"><p class="pane-nota">A1 · 4:5 · también en blanco y negro</p><div class="mock web"><div class="barra"><i></i><i></i><i></i><span>tenderyou.com/sobre-nosotros</span></div>
+<div class="web-in"><p class="w-k">Sobre nosotros</p><h4>Detrás de los datos hay un equipo al que <em>puedes llamar</em></h4>
+<div class="team"><div class="tc"><img src="sbl/A1-miguel.jpg" alt="" loading="lazy"><b>Miguel López</b><span>CEO</span></div><div class="tc"><img src="sbl/A1-diego.jpg" alt="" loading="lazy"><b>Diego Rollán</b><span>Director de Ventas</span></div><div class="tc"><img src="sbl/A1-ivan.jpg" alt="" loading="lazy"><b>Iván García</b><span>Director Tecnológico</span></div><div class="tc"><img src="sbl/A1-alfonso.jpg" alt="" loading="lazy"><b>Alfonso Alonso</b><span>Director de Desarrollo</span></div><div class="tc"><img src="sbl/A1-javier.jpg" alt="" loading="lazy"><b>Javier Novella</b><span>Programador jefe</span></div><div class="tc"><img src="sbl/A1-ramon.jpg" alt="" loading="lazy"><b>Ramón Somolinos</b><span>Equipo comercial</span></div></div></div></div></div><div class="pane" data-p="1"><p class="pane-nota">A1 en círculo · B1 para la página de empresa</p><div class="mock lis"><div class="li" style="--d:0.0s"><div class="li-ban"></div><img src="sbl/A1-miguel.jpg" alt=""><b>Miguel López</b><span>CEO en TenderYou · Licitaciones públicas con IA</span><small>Gijón, Asturias · 500+ contactos</small><em>Conectar</em></div><div class="li" style="--d:0.18s"><div class="li-ban"></div><img src="sbl/A1-diego.jpg" alt=""><b>Diego Rollán</b><span>Director de Ventas en TenderYou</span><small>Gijón, Asturias · 500+ contactos</small><em>Conectar</em></div><div class="li" style="--d:0.36s"><div class="li-ban"></div><img src="sbl/A1-ivan.jpg" alt=""><b>Iván García</b><span>Director Tecnológico en TenderYou</span><small>Gijón, Asturias · 500+ contactos</small><em>Conectar</em></div></div></div><div class="pane" data-p="2"><p class="pane-nota">D1 en 4:5 · E2 en 9:16</p><div class="mock ads">
+<div class="tel"><div class="tel-top"><b>tenderyou</b><span>Publicidad</span></div><div class="ad45"><img src="sbl/D1-diego.jpg" alt=""><p>¿Te llamamos y te enseñamos <em>tus</em> licitaciones?</p></div><div class="tel-cta">Más información</div></div>
+<div class="tel st"><div class="ad916"><img src="sbl/E2.jpg" alt=""><p>Miguel López, CEO de TenderYou</p></div></div></div></div><div class="pane" data-p="3"><p class="pane-nota">C3 de cabecera · A1 en la firma</p><div class="mock mail"><div class="m-h"><b>TenderYou</b> &lt;hola@tenderyou.com&gt;<span>Tienes licitaciones nuevas que encajan contigo</span></div>
+<div class="m-b"><img class="m-hero" src="sbl/C3.jpg" alt=""><p>Hola, esta semana han salido expedientes que encajan con lo que hacéis…</p>
+<div class="firma"><img src="sbl/A1-diego.jpg" alt=""><div><b>Diego Rollán</b><span>Director de Ventas · TenderYou</span></div></div></div></div></div><div class="pane" data-p="4"><p class="pane-nota">E1 y A4 en alta resolución</p><div class="mock prensa"><p class="p-cab">Prensa · Economía</p><h4>La startup gijonesa que quiere automatizar las licitaciones públicas</h4>
+<img src="sbl/E1.jpg" alt=""><p class="p-pie">Miguel López, CEO de TenderYou, en la Laboral.</p></div></div><div class="pane" data-p="5"><p class="pane-nota">A2 en 16:9 con aire</p><div class="mock slide169"><img src="sbl/A2-miguel.jpg" alt=""><div class="s-t"><p>Quién está detrás</p><h4>Un equipo de Gijón que conoce la contratación pública</h4></div></div></div></div>
+</div></section>
 
-<section>
+<section id="estilo" style="background:#fff"><div class="wrap">
   <p class="eyebrow">Cómo se van a ver</p>
   <h2>Gente real trabajando, con luz de <em>ventana</em></h2>
-  <p>La contratación pública tiene fama de gris. Las fotos tienen que contar lo contrario sin dejar de transmitir confianza: un equipo cercano al que puedes poner cara y llamar.</p>
-  <ul>
-    <li><strong>No posáis: trabajáis.</strong> En las escenas cada uno hace lo que hace de verdad: una llamada, revisar un pliego, enseñar algo en pantalla.</li>
-    <li><strong>Luz natural y suave</strong>, la de las ventanas, y la misma para todos los retratos para que la serie sea coherente.</li>
-    <li><strong>Color sobrio y cálido</strong>, con un toque de lila cuando sea posible. Los retratos también saldrán en blanco y negro para la web.</li>
-    <li><strong>Cerca y claro:</strong> caras que se reconocen hasta en una miniatura. Nada de traje ni de fondo gris de directorio.</li>
-    <li><strong>Aire para el texto:</strong> en las fotos que van a llevar titular, un tercio de la imagen queda libre.</li>
-  </ul>
-  <div class="refs">
-    <figure class="ref "><img src="img/ref-trabajan.jpg" alt="" loading="lazy"><figcaption><b>Así queremos las escenas.</b> Nadie mira a cámara, se están riendo de algo de verdad y la luz entra por la ventana.</figcaption></figure>
-    <figure class="ref "><img src="img/ref-mesa.jpg" alt="" loading="lazy"><figcaption><b>Dos personas decidiendo en la mesa.</b> Colores lisos y tranquilos, con un primer término desenfocado que da profundidad.</figcaption></figure>
-    <figure class="ref alto"><img src="img/ref-retrato.jpg" alt="" loading="lazy"><figcaption><b>El retrato de busto.</b> Mirada a cámara, fondo claro y luz suave. Lo nuestro será algo menos pulido y más natural.</figcaption></figure>
-    <figure class="ref alto"><img src="img/ref-concentradas.jpg" alt="" loading="lazy"><figcaption><b>Concentración real.</b> El portátil y las manos cuentan qué están haciendo sin necesidad de señalar la pantalla.</figcaption></figure>
+  <p>La contratación pública tiene fama de gris. Las fotos tienen que contar lo contrario sin perder confianza: un equipo cercano al que puedes poner cara y llamar.</p>
+  <div class="principios reveal">
+    <div><b>No posáis: trabajáis</b>Una llamada, revisar un pliego, enseñar algo en pantalla.</div>
+    <div><b>Luz de ventana</b>Natural y suave, la misma en todos los retratos.</div>
+    <div><b>Color sobrio</b>Cálido, con un toque de lila. Retratos también en B/N.</div>
+    <div><b>Cerca y claro</b>Caras que se reconocen hasta en una miniatura.</div>
+    <div><b>Aire para el texto</b>Un tercio libre en las fotos que llevan titular.</div>
   </div>
-  <p class="sub">Referencias de empresas de software con IA para sectores técnicos (Harvey, Maisa y ElevenLabs). Las usamos para la luz, el encuadre y la actitud, no para copiarlas.</p>
-</section>
+  <div class="refs reveal">
+    <figure><img src="img/ref-trabajan.jpg" alt="" loading="lazy"><figcaption><b>Las escenas.</b> Nadie mira a cámara y la risa es de verdad.</figcaption></figure>
+    <figure><img src="img/ref-mesa.jpg" alt="" loading="lazy"><figcaption><b>Dos personas decidiendo.</b> Colores lisos y un primer término desenfocado.</figcaption></figure>
+    <figure><img src="img/ref-retrato.jpg" alt="" loading="lazy"><figcaption><b>El retrato de busto.</b> Pared clara, luz de ventana de lado y aire sobre la cabeza.</figcaption></figure>
+    <figure><img src="img/ref-concentradas.jpg" alt="" loading="lazy"><figcaption><b>Concentración real.</b> Las manos cuentan qué hacen sin señalar la pantalla.</figcaption></figure>
+  </div>
+  <p class="sub" style="margin-top:14px">Referencias de empresas de software con IA para sectores técnicos (Harvey, Maisa y ElevenLabs), para la luz, el encuadre y la actitud.</p>
+</div></section>
 
-<section>
+<section class="retratos" aria-label="Retratos"><div class="wrap ret-sticky">
+  <div class="ret-foto"><img src="img/ref-retrato.jpg" alt="Retrato de referencia"></div>
+  <div class="ret-txt">
+    <p class="on">Un retrato por persona<small>Misma luz, mismo fondo y misma distancia, para que la serie se vea como un equipo.</small></p>
+    <p>11 retratos <em>en color</em><small>Para LinkedIn, la firma de correo, los posts de bienvenida y la prensa.</small></p>
+    <p>y en blanco y <em>negro</em><small>La misma foto, para la web, que hoy ya va en blanco y negro.</small></p>
+  </div>
+</div></section>
+
+<section id="fotos"><div class="wrap">
   <p class="eyebrow">Lista de fotos</p>
   <h2>Lo que nos llevamos <em>seguro</em></h2>
-  <p>Son las fotos que cubren todos los usos de arriba. Están ordenadas por sitio y por persona para no perder tiempo moviendo a la gente.</p>
-  <div class="bloque"><span class="tag">Bloque A · Retratos</span><span class="donde">Edificio Impulsa · 8:55 – 10:05</span></div>
-  <div class="foto"><div class="id">A1</div><div><h3>Retrato de busto, mirando a cámara</h3><dl><dt>Quién</dt><dd>Cada persona del equipo, una a una</dd><dt>Dónde</dt><dd>Edificio Impulsa, junto a una ventana, con fondo claro y liso</dd><dt>Para qué</dt><dd>Web (Sobre nosotros y «Habla con un experto»), foto de perfil de LinkedIn, firma de correo, posts de bienvenida y prensa</dd><dt>Formato</dt><dd>Vertical 4:5. De la misma foto sale el cuadrado 1:1 y el círculo. Se entrega en color y en blanco y negro</dd></dl></div></div><div class="foto"><div class="id">A2</div><div><h3>Plano medio con aire a un lado</h3><dl><dt>Quién</dt><dd>Cada persona del equipo, en el mismo turno que A1</dd><dt>Dónde</dt><dd>El mismo set</dd><dt>Para qué</dt><dd>Presentaciones a clientes, artículos y premios en horizontal, anuncios con el texto al lado y cabeceras</dd><dt>Formato</dt><dd>Horizontal 3:2 (sale 16:9). La persona en un tercio y dos tercios libres para el texto</dd></dl></div></div><div class="foto"><div class="id">A3</div><div><h3>Cuerpo entero sobre fondo liso, para recortar</h3><dl><dt>Quién</dt><dd>Miguel, Diego y dos personas de desarrollo</dd><dt>Dónde</dt><dd>El mismo set, con más distancia</dd><dt>Para qué</dt><dd>Anuncios y carruseles en los que la persona va recortada sobre el fondo de marca, y correos</dd><dt>Formato</dt><dd>Vertical, con fondo liso que contraste con el pelo y la ropa para que el recorte salga limpio</dd></dl></div></div><div class="foto"><div class="id">A4</div><div><h3>Miguel, retrato para prensa</h3><dl><dt>Quién</dt><dd>Miguel (con americana, si la trae)</dd><dt>Dónde</dt><dd>El mismo set</dd><dt>Para qué</dt><dd>Notas de prensa, premios, Lanzadera y programas, ponencias y entrevistas</dd><dt>Formato</dt><dd>Una vertical y una horizontal, ambas con fondo limpio</dd></dl></div></div>
-  <div class="bloque"><span class="tag">Bloque B · Equipo</span><span class="donde">Exterior del Impulsa · 10:05 – 10:25</span></div>
-  <div class="foto"><div class="id">B1</div><div><h3>Equipo completo</h3><dl><dt>Quién</dt><dd>Todo el equipo</dd><dt>Dónde</dt><dd>Fuera del Edificio Impulsa, con la fachada de madera detrás</dd><dt>Para qué</dt><dd>Web, prensa, premios, LinkedIn de la empresa y presentaciones</dd><dt>Formato</dt><dd>Horizontal, con aire arriba para poder sacar también un 4:5</dd></dl></div></div><div class="foto"><div class="id">B2</div><div><h3>Por áreas: desarrollo, y ventas con Miguel</h3><dl><dt>Quién</dt><dd>Cada área por separado</dd><dt>Dónde</dt><dd>El mismo sitio, justo después de B1</dd><dt>Para qué</dt><dd>Presentaciones («quién te atiende»), posts y web</dd><dt>Formato</dt><dd>Horizontal</dd></dl></div></div>
-  <div class="bloque"><span class="tag">Bloque C · Desarrollo trabajando</span><span class="donde">Oficina del Impulsa · 10:25 – 11:05</span></div>
-  <div class="foto"><div class="id">C1</div><div><h3>El equipo trabajando en sus puestos</h3><dl><dt>Quién</dt><dd>Desarrollo, cada uno en su sitio</dd><dt>Dónde</dt><dd>Vuestra oficina del Impulsa</dd><dt>Para qué</dt><dd>Web, posts y presentaciones</dd><dt>Formato</dt><dd>Horizontal amplio, con aire arriba</dd></dl></div></div><div class="foto"><div class="id">C2</div><div><h3>Dos personas decidiendo en la mesa, con el portátil (dos tomas distintas)</h3><dl><dt>Quién</dt><dd>Dos personas de desarrollo; en la segunda toma, otras dos</dd><dt>Dónde</dt><dd>Mesa de vuestra oficina o sala de reuniones</dd><dt>Para qué</dt><dd>Correos del ciclo de vida y anuncios</dd><dt>Formato</dt><dd>Horizontal</dd></dl></div></div><div class="foto"><div class="id">C3</div><div><h3>Una persona sola con el portátil junto a la ventana</h3><dl><dt>Quién</dt><dd>Una persona de desarrollo</dd><dt>Dónde</dt><dd>Junto a la ventana más luminosa</dd><dt>Para qué</dt><dd>Correos y anuncios con texto encima</dd><dt>Formato</dt><dd>Vertical 4:5 y horizontal, con un tercio libre</dd></dl></div></div><div class="foto"><div class="id">C4</div><div><h3>Manos con un pliego impreso y el portátil, sin cara</h3><dl><dt>Quién</dt><dd>Cualquiera</dd><dt>Dónde</dt><dd>Mesa con luz de ventana</dd><dt>Para qué</dt><dd>Correos y piezas que explican el producto</dd><dt>Formato</dt><dd>Desde arriba o en tres cuartos</dd></dl></div></div><div class="foto"><div class="id">C5</div><div><h3>De pie, mirando el móvil</h3><dl><dt>Quién</dt><dd>Una persona de desarrollo</dd><dt>Dónde</dt><dd>Pasillo o junto a la ventana</dd><dt>Para qué</dt><dd>Correos de avisos y anuncios</dd><dt>Formato</dt><dd>Vertical; el móvil se ve por detrás</dd></dl></div></div>
-  <div class="bloque"><span class="tag">Bloque D · Ventas trabajando</span><span class="donde">Oficina de ventas, Laboral · 11:25 – 12:05</span></div>
-  <div class="foto"><div class="id">D1</div><div><h3>Comercial en una llamada</h3><dl><dt>Quién</dt><dd>Diego, Ramón y Nicolás (una toma cada uno)</dd><dt>Dónde</dt><dd>Oficina de ventas, Laboral</dd><dt>Para qué</dt><dd>«Detrás de los datos hay un equipo al que puedes llamar»: web, anuncios de demo y correos</dd><dt>Formato</dt><dd>Horizontal con aire y vertical</dd></dl></div></div><div class="foto"><div class="id">D2</div><div><h3>Demo: un comercial enseña una licitación en pantalla a un compañero</h3><dl><dt>Quién</dt><dd>Dos comerciales</dd><dt>Dónde</dt><dd>Oficina de ventas</dd><dt>Para qué</dt><dd>Anuncios de demo, presentaciones y outbound</dd><dt>Formato</dt><dd>Horizontal</dd></dl></div></div><div class="foto"><div class="id">D3</div><div><h3>Sonriendo al móvil, como cuando llega un aviso</h3><dl><dt>Quién</dt><dd>Un comercial</dd><dt>Dónde</dt><dd>Oficina de ventas o pasillo</dd><dt>Para qué</dt><dd>Correos de avisos y anuncios</dd><dt>Formato</dt><dd>Vertical</dd></dl></div></div><div class="foto"><div class="id">D4</div><div><h3>El equipo de ventas conversando</h3><dl><dt>Quién</dt><dd>Diego, Ramón y Nicolás</dd><dt>Dónde</dt><dd>Oficina de ventas</dd><dt>Para qué</dt><dd>Web, posts y presentaciones</dd><dt>Formato</dt><dd>Horizontal</dd></dl></div></div>
-  <div class="bloque"><span class="tag">Bloque E · Miguel</span><span class="donde">Laboral · 12:05 – 12:35</span></div>
-  <div class="foto"><div class="id">E1</div><div><h3>Miguel bajo la arquería</h3><dl><dt>Quién</dt><dd>Miguel</dd><dt>Dónde</dt><dd>Soportales y columnas de la Laboral, a la sombra</dd><dt>Para qué</dt><dd>Prensa, premios, entrevistas y miniaturas de vídeo</dd><dt>Formato</dt><dd>Horizontal con aire a un lado; la arquitectura desenfocada detrás</dd></dl></div></div><div class="foto"><div class="id">E2</div><div><h3>Miguel caminando bajo los arcos</h3><dl><dt>Quién</dt><dd>Miguel</dd><dt>Dónde</dt><dd>Soportales de la Laboral</dd><dt>Para qué</dt><dd>Portadas de carrusel, stories y artículos</dd><dt>Formato</dt><dd>Vertical 4:5 y 9:16</dd></dl></div></div>
-</section>
+  <p>Ordenadas por sitio y por persona para no perder tiempo. Pulsa cualquier storyboard para verlo en grande.</p>
+  <div class="bloque-cab" id="bloque-A"><span class="tag">Bloque A · Retratos</span><span class="donde">Edificio Impulsa · 8:55 – 10:05</span></div><div class="fichas"><article class="ficha reveal" id="foto-A1">
+  <button class="zoom portada" data-src="sb/A1-miguel.jpg" data-cap="A1 · Retrato de busto, mirando a cámara"><img src="sb/A1-miguel.jpg" alt="Storyboard A1" loading="lazy"><span class="lupa">Ampliar</span></button>
+  <div class="minis"><button class="zoom" data-src="sb/A1-miguel.jpg" data-cap="A1 · Retrato de busto, mirando a cámara"><img src="sb/A1-miguel.jpg" alt="" loading="lazy"></button><button class="zoom" data-src="sb/A1-diego.jpg" data-cap="A1 · Retrato de busto, mirando a cámara"><img src="sb/A1-diego.jpg" alt="" loading="lazy"></button><button class="zoom" data-src="sb/A1-ramon.jpg" data-cap="A1 · Retrato de busto, mirando a cámara"><img src="sb/A1-ramon.jpg" alt="" loading="lazy"></button><button class="zoom" data-src="sb/A1-nicolas.jpg" data-cap="A1 · Retrato de busto, mirando a cámara"><img src="sb/A1-nicolas.jpg" alt="" loading="lazy"></button><button class="zoom" data-src="sb/A1-ivan.jpg" data-cap="A1 · Retrato de busto, mirando a cámara"><img src="sb/A1-ivan.jpg" alt="" loading="lazy"></button><button class="zoom" data-src="sb/A1-alfonso.jpg" data-cap="A1 · Retrato de busto, mirando a cámara"><img src="sb/A1-alfonso.jpg" alt="" loading="lazy"></button><button class="zoom" data-src="sb/A1-javier.jpg" data-cap="A1 · Retrato de busto, mirando a cámara"><img src="sb/A1-javier.jpg" alt="" loading="lazy"></button><button class="zoom" data-src="sb/A1-pedro.jpg" data-cap="A1 · Retrato de busto, mirando a cámara"><img src="sb/A1-pedro.jpg" alt="" loading="lazy"></button><button class="zoom" data-src="sb/A1-mario.jpg" data-cap="A1 · Retrato de busto, mirando a cámara"><img src="sb/A1-mario.jpg" alt="" loading="lazy"></button><button class="zoom" data-src="sb/A1-alejandro.jpg" data-cap="A1 · Retrato de busto, mirando a cámara"><img src="sb/A1-alejandro.jpg" alt="" loading="lazy"></button><button class="zoom" data-src="sb/A1-jose.jpg" data-cap="A1 · Retrato de busto, mirando a cámara"><img src="sb/A1-jose.jpg" alt="" loading="lazy"></button></div>
+  <div class="txt"><p class="fid">A1</p><h3>Retrato de busto, mirando a cámara</h3>
+  <dl><dt>Quién</dt><dd>Cada persona del equipo, una a una</dd><dt>Dónde</dt><dd>Edificio Impulsa, junto a una ventana, con fondo claro y liso</dd><dt>Para qué</dt><dd>Web (Sobre nosotros y «Habla con un experto»), foto de perfil de LinkedIn, firma de correo, posts de bienvenida y prensa</dd><dt>Formato</dt><dd>Vertical 4:5, con aire sobre la cabeza: de la misma foto sale el 1:1 y el círculo. En color y en blanco y negro</dd></dl></div>
+</article><article class="ficha reveal" id="foto-A2">
+  <button class="zoom portada" data-src="sb/A2-miguel.jpg" data-cap="A2 · Plano medio con aire a un lado"><img src="sb/A2-miguel.jpg" alt="Storyboard A2" loading="lazy"><span class="lupa">Ampliar</span></button>
+  <div class="minis"><button class="zoom" data-src="sb/A2-miguel.jpg" data-cap="A2 · Plano medio con aire a un lado"><img src="sb/A2-miguel.jpg" alt="" loading="lazy"></button><button class="zoom" data-src="sb/A2-diego.jpg" data-cap="A2 · Plano medio con aire a un lado"><img src="sb/A2-diego.jpg" alt="" loading="lazy"></button><button class="zoom" data-src="sb/A2-ramon.jpg" data-cap="A2 · Plano medio con aire a un lado"><img src="sb/A2-ramon.jpg" alt="" loading="lazy"></button><button class="zoom" data-src="sb/A2-nicolas.jpg" data-cap="A2 · Plano medio con aire a un lado"><img src="sb/A2-nicolas.jpg" alt="" loading="lazy"></button><button class="zoom" data-src="sb/A2-ivan.jpg" data-cap="A2 · Plano medio con aire a un lado"><img src="sb/A2-ivan.jpg" alt="" loading="lazy"></button><button class="zoom" data-src="sb/A2-alfonso.jpg" data-cap="A2 · Plano medio con aire a un lado"><img src="sb/A2-alfonso.jpg" alt="" loading="lazy"></button><button class="zoom" data-src="sb/A2-javier.jpg" data-cap="A2 · Plano medio con aire a un lado"><img src="sb/A2-javier.jpg" alt="" loading="lazy"></button><button class="zoom" data-src="sb/A2-pedro.jpg" data-cap="A2 · Plano medio con aire a un lado"><img src="sb/A2-pedro.jpg" alt="" loading="lazy"></button><button class="zoom" data-src="sb/A2-mario.jpg" data-cap="A2 · Plano medio con aire a un lado"><img src="sb/A2-mario.jpg" alt="" loading="lazy"></button><button class="zoom" data-src="sb/A2-alejandro.jpg" data-cap="A2 · Plano medio con aire a un lado"><img src="sb/A2-alejandro.jpg" alt="" loading="lazy"></button><button class="zoom" data-src="sb/A2-jose.jpg" data-cap="A2 · Plano medio con aire a un lado"><img src="sb/A2-jose.jpg" alt="" loading="lazy"></button></div>
+  <div class="txt"><p class="fid">A2</p><h3>Plano medio con aire a un lado</h3>
+  <dl><dt>Quién</dt><dd>Cada persona, en el mismo turno que A1</dd><dt>Dónde</dt><dd>El mismo set</dd><dt>Para qué</dt><dd>Presentaciones a clientes, artículos y premios en horizontal, anuncios con el texto al lado y cabeceras</dd><dt>Formato</dt><dd>Horizontal 3:2 (sale 16:9). La persona en un tercio y dos tercios libres para el texto</dd></dl></div>
+</article><article class="ficha reveal" id="foto-A3">
+  <button class="zoom portada" data-src="sb/A3-miguel.jpg" data-cap="A3 · Cuerpo entero sobre fondo liso, para recortar"><img src="sb/A3-miguel.jpg" alt="Storyboard A3" loading="lazy"><span class="lupa">Ampliar</span></button>
+  <div class="minis"><button class="zoom" data-src="sb/A3-miguel.jpg" data-cap="A3 · Cuerpo entero sobre fondo liso, para recortar"><img src="sb/A3-miguel.jpg" alt="" loading="lazy"></button><button class="zoom" data-src="sb/A3-diego.jpg" data-cap="A3 · Cuerpo entero sobre fondo liso, para recortar"><img src="sb/A3-diego.jpg" alt="" loading="lazy"></button><button class="zoom" data-src="sb/A3-javier.jpg" data-cap="A3 · Cuerpo entero sobre fondo liso, para recortar"><img src="sb/A3-javier.jpg" alt="" loading="lazy"></button><button class="zoom" data-src="sb/A3-mario.jpg" data-cap="A3 · Cuerpo entero sobre fondo liso, para recortar"><img src="sb/A3-mario.jpg" alt="" loading="lazy"></button></div>
+  <div class="txt"><p class="fid">A3</p><h3>Cuerpo entero sobre fondo liso, para recortar</h3>
+  <dl><dt>Quién</dt><dd>Miguel, Diego y dos personas de desarrollo</dd><dt>Dónde</dt><dd>El mismo set, con más distancia</dd><dt>Para qué</dt><dd>Anuncios y carruseles con la persona recortada sobre el fondo de marca, y correos</dd><dt>Formato</dt><dd>Vertical, con fondo liso que contraste con el pelo y la ropa</dd></dl></div>
+</article><article class="ficha reveal" id="foto-A4">
+  <button class="zoom portada" data-src="sb/A4.jpg" data-cap="A4 · Miguel, retrato para prensa"><img src="sb/A4.jpg" alt="Storyboard A4" loading="lazy"><span class="lupa">Ampliar</span></button>
+  
+  <div class="txt"><p class="fid">A4</p><h3>Miguel, retrato para prensa</h3>
+  <dl><dt>Quién</dt><dd>Miguel (con americana, si la trae)</dd><dt>Dónde</dt><dd>El mismo set</dd><dt>Para qué</dt><dd>Notas de prensa, premios, Lanzadera y programas, ponencias y entrevistas</dd><dt>Formato</dt><dd>Una vertical y una horizontal, con fondo limpio</dd></dl></div>
+</article></div><div class="bloque-cab" id="bloque-B"><span class="tag">Bloque B · Equipo</span><span class="donde">Exterior del Impulsa · 10:05 – 10:25</span></div><div class="fichas"><article class="ficha reveal" id="foto-B1">
+  <button class="zoom portada" data-src="sb/B1.jpg" data-cap="B1 · Equipo completo"><img src="sb/B1.jpg" alt="Storyboard B1" loading="lazy"><span class="lupa">Ampliar</span></button>
+  
+  <div class="txt"><p class="fid">B1</p><h3>Equipo completo</h3>
+  <dl><dt>Quién</dt><dd>Todo el equipo</dd><dt>Dónde</dt><dd>Fuera del Edificio Impulsa, con la fachada de madera detrás</dd><dt>Para qué</dt><dd>Web, prensa, premios, LinkedIn de la empresa y presentaciones</dd><dt>Formato</dt><dd>Horizontal, con aire arriba para sacar también un 4:5</dd></dl></div>
+</article><article class="ficha reveal" id="foto-B2">
+  <button class="zoom portada" data-src="sb/B2-dev.jpg" data-cap="B2 · Por áreas: desarrollo, y ventas con Miguel"><img src="sb/B2-dev.jpg" alt="Storyboard B2" loading="lazy"><span class="lupa">Ampliar</span></button>
+  <div class="minis"><button class="zoom" data-src="sb/B2-dev.jpg" data-cap="B2 · Por áreas: desarrollo, y ventas con Miguel"><img src="sb/B2-dev.jpg" alt="" loading="lazy"></button><button class="zoom" data-src="sb/B2-ventas.jpg" data-cap="B2 · Por áreas: desarrollo, y ventas con Miguel"><img src="sb/B2-ventas.jpg" alt="" loading="lazy"></button></div>
+  <div class="txt"><p class="fid">B2</p><h3>Por áreas: desarrollo, y ventas con Miguel</h3>
+  <dl><dt>Quién</dt><dd>Cada área por separado</dd><dt>Dónde</dt><dd>El mismo sitio, justo después de B1</dd><dt>Para qué</dt><dd>Presentaciones («quién te atiende»), posts y web</dd><dt>Formato</dt><dd>Horizontal</dd></dl></div>
+</article></div><div class="bloque-cab" id="bloque-C"><span class="tag">Bloque C · Desarrollo trabajando</span><span class="donde">Oficina del Impulsa · 10:25 – 11:05</span></div><div class="fichas"><article class="ficha reveal" id="foto-C1">
+  <button class="zoom portada" data-src="sb/C1.jpg" data-cap="C1 · El equipo trabajando en sus puestos"><img src="sb/C1.jpg" alt="Storyboard C1" loading="lazy"><span class="lupa">Ampliar</span></button>
+  
+  <div class="txt"><p class="fid">C1</p><h3>El equipo trabajando en sus puestos</h3>
+  <dl><dt>Quién</dt><dd>Desarrollo, cada uno en su sitio</dd><dt>Dónde</dt><dd>Vuestra oficina del Impulsa</dd><dt>Para qué</dt><dd>Web, posts y presentaciones</dd><dt>Formato</dt><dd>Horizontal amplio, con aire arriba</dd></dl></div>
+</article><article class="ficha reveal" id="foto-C2">
+  <button class="zoom portada" data-src="sb/C2-t1.jpg" data-cap="C2 · Dos personas decidiendo en la mesa (dos tomas)"><img src="sb/C2-t1.jpg" alt="Storyboard C2" loading="lazy"><span class="lupa">Ampliar</span></button>
+  <div class="minis"><button class="zoom" data-src="sb/C2-t1.jpg" data-cap="C2 · Dos personas decidiendo en la mesa (dos tomas)"><img src="sb/C2-t1.jpg" alt="" loading="lazy"></button><button class="zoom" data-src="sb/C2-t2.jpg" data-cap="C2 · Dos personas decidiendo en la mesa (dos tomas)"><img src="sb/C2-t2.jpg" alt="" loading="lazy"></button></div>
+  <div class="txt"><p class="fid">C2</p><h3>Dos personas decidiendo en la mesa (dos tomas)</h3>
+  <dl><dt>Quién</dt><dd>Dos personas de desarrollo; en la segunda toma, otras dos</dd><dt>Dónde</dt><dd>Mesa de la oficina o sala de reuniones</dd><dt>Para qué</dt><dd>Correos del ciclo de vida y anuncios</dd><dt>Formato</dt><dd>Horizontal</dd></dl></div>
+</article><article class="ficha reveal" id="foto-C3">
+  <button class="zoom portada" data-src="sb/C3.jpg" data-cap="C3 · Una persona sola con el portátil junto a la ventana"><img src="sb/C3.jpg" alt="Storyboard C3" loading="lazy"><span class="lupa">Ampliar</span></button>
+  
+  <div class="txt"><p class="fid">C3</p><h3>Una persona sola con el portátil junto a la ventana</h3>
+  <dl><dt>Quién</dt><dd>Una persona de desarrollo</dd><dt>Dónde</dt><dd>Junto a la ventana más luminosa</dd><dt>Para qué</dt><dd>Correos y anuncios con texto encima</dd><dt>Formato</dt><dd>Vertical 4:5 y horizontal, con un tercio libre</dd></dl></div>
+</article><article class="ficha reveal" id="foto-C4">
+  <button class="zoom portada" data-src="sb/C4.jpg" data-cap="C4 · Manos con un pliego impreso y el portátil, sin cara"><img src="sb/C4.jpg" alt="Storyboard C4" loading="lazy"><span class="lupa">Ampliar</span></button>
+  
+  <div class="txt"><p class="fid">C4</p><h3>Manos con un pliego impreso y el portátil, sin cara</h3>
+  <dl><dt>Quién</dt><dd>Cualquiera</dd><dt>Dónde</dt><dd>Mesa con luz de ventana</dd><dt>Para qué</dt><dd>Correos y piezas que explican el producto</dd><dt>Formato</dt><dd>Desde arriba o en tres cuartos</dd></dl></div>
+</article><article class="ficha reveal" id="foto-C5">
+  <button class="zoom portada" data-src="sb/C5.jpg" data-cap="C5 · De pie, mirando el móvil"><img src="sb/C5.jpg" alt="Storyboard C5" loading="lazy"><span class="lupa">Ampliar</span></button>
+  
+  <div class="txt"><p class="fid">C5</p><h3>De pie, mirando el móvil</h3>
+  <dl><dt>Quién</dt><dd>Una persona de desarrollo</dd><dt>Dónde</dt><dd>Pasillo o junto a la ventana</dd><dt>Para qué</dt><dd>Correos de avisos y anuncios</dd><dt>Formato</dt><dd>Vertical; el móvil se ve por detrás</dd></dl></div>
+</article></div><div class="bloque-cab" id="bloque-D"><span class="tag">Bloque D · Ventas trabajando</span><span class="donde">Oficina de ventas, Laboral · 11:25 – 12:05</span></div><div class="fichas"><article class="ficha reveal" id="foto-D1">
+  <button class="zoom portada" data-src="sb/D1-diego.jpg" data-cap="D1 · Comercial en una llamada"><img src="sb/D1-diego.jpg" alt="Storyboard D1" loading="lazy"><span class="lupa">Ampliar</span></button>
+  <div class="minis"><button class="zoom" data-src="sb/D1-diego.jpg" data-cap="D1 · Comercial en una llamada"><img src="sb/D1-diego.jpg" alt="" loading="lazy"></button><button class="zoom" data-src="sb/D1-ramon.jpg" data-cap="D1 · Comercial en una llamada"><img src="sb/D1-ramon.jpg" alt="" loading="lazy"></button><button class="zoom" data-src="sb/D1-nicolas.jpg" data-cap="D1 · Comercial en una llamada"><img src="sb/D1-nicolas.jpg" alt="" loading="lazy"></button></div>
+  <div class="txt"><p class="fid">D1</p><h3>Comercial en una llamada</h3>
+  <dl><dt>Quién</dt><dd>Diego, Ramón y Nicolás (una toma cada uno)</dd><dt>Dónde</dt><dd>Oficina de ventas, Laboral</dd><dt>Para qué</dt><dd>«Detrás de los datos hay un equipo al que puedes llamar»: web, anuncios de demo y correos</dd><dt>Formato</dt><dd>Horizontal con aire y vertical</dd></dl></div>
+</article><article class="ficha reveal" id="foto-D2">
+  <button class="zoom portada" data-src="sb/D2.jpg" data-cap="D2 · Demo: un comercial enseña una licitación en pantalla"><img src="sb/D2.jpg" alt="Storyboard D2" loading="lazy"><span class="lupa">Ampliar</span></button>
+  
+  <div class="txt"><p class="fid">D2</p><h3>Demo: un comercial enseña una licitación en pantalla</h3>
+  <dl><dt>Quién</dt><dd>Dos comerciales</dd><dt>Dónde</dt><dd>Oficina de ventas</dd><dt>Para qué</dt><dd>Anuncios de demo, presentaciones y outbound</dd><dt>Formato</dt><dd>Horizontal</dd></dl></div>
+</article><article class="ficha reveal" id="foto-D3">
+  <button class="zoom portada" data-src="sb/D3.jpg" data-cap="D3 · Sonriendo al móvil, como cuando llega un aviso"><img src="sb/D3.jpg" alt="Storyboard D3" loading="lazy"><span class="lupa">Ampliar</span></button>
+  
+  <div class="txt"><p class="fid">D3</p><h3>Sonriendo al móvil, como cuando llega un aviso</h3>
+  <dl><dt>Quién</dt><dd>Un comercial</dd><dt>Dónde</dt><dd>Oficina de ventas o pasillo</dd><dt>Para qué</dt><dd>Correos de avisos y anuncios</dd><dt>Formato</dt><dd>Vertical</dd></dl></div>
+</article><article class="ficha reveal" id="foto-D4">
+  <button class="zoom portada" data-src="sb/D4.jpg" data-cap="D4 · El equipo de ventas conversando"><img src="sb/D4.jpg" alt="Storyboard D4" loading="lazy"><span class="lupa">Ampliar</span></button>
+  
+  <div class="txt"><p class="fid">D4</p><h3>El equipo de ventas conversando</h3>
+  <dl><dt>Quién</dt><dd>Diego, Ramón y Nicolás</dd><dt>Dónde</dt><dd>Oficina de ventas</dd><dt>Para qué</dt><dd>Web, posts y presentaciones</dd><dt>Formato</dt><dd>Horizontal</dd></dl></div>
+</article></div><div class="bloque-cab" id="bloque-E"><span class="tag">Bloque E · Miguel en la Laboral</span><span class="donde">Laboral · 12:05 – 12:35</span></div><div class="fichas"><article class="ficha reveal" id="foto-E1">
+  <button class="zoom portada" data-src="sb/E1.jpg" data-cap="E1 · Miguel bajo la arquería"><img src="sb/E1.jpg" alt="Storyboard E1" loading="lazy"><span class="lupa">Ampliar</span></button>
+  
+  <div class="txt"><p class="fid">E1</p><h3>Miguel bajo la arquería</h3>
+  <dl><dt>Quién</dt><dd>Miguel</dd><dt>Dónde</dt><dd>Soportales y columnas de la Laboral, a la sombra</dd><dt>Para qué</dt><dd>Prensa, premios, entrevistas y miniaturas de vídeo</dd><dt>Formato</dt><dd>Horizontal con aire a un lado; la arquitectura desenfocada detrás</dd></dl></div>
+</article><article class="ficha reveal" id="foto-E2">
+  <button class="zoom portada" data-src="sb/E2.jpg" data-cap="E2 · Miguel caminando bajo los arcos"><img src="sb/E2.jpg" alt="Storyboard E2" loading="lazy"><span class="lupa">Ampliar</span></button>
+  
+  <div class="txt"><p class="fid">E2</p><h3>Miguel caminando bajo los arcos</h3>
+  <dl><dt>Quién</dt><dd>Miguel</dd><dt>Dónde</dt><dd>Soportales de la Laboral</dd><dt>Para qué</dt><dd>Portadas de carrusel, stories y artículos</dd><dt>Formato</dt><dd>Vertical 4:5 y 9:16</dd></dl></div>
+</article></div>
+</div></section>
 
-<section>
-  <p class="eyebrow">Extras</p>
-  <h2>Si el día <em>acompaña</em></h2>
-  <p>Las hacemos en el margen del final o aprovechando huecos. Si no da tiempo, no falta nada: todo lo necesario ya está en la lista anterior.</p>
-  <div class="foto extra"><div class="id">X1</div><div><h3>Retratos naturales entre toma y toma (riendo, sin mirar a cámara)</h3><dl><dt>Para qué</dt><dd>Carrusel «Las personas detrás de TenderYou» y posts</dd></dl></div></div><div class="foto extra"><div class="id">X2</div><div><h3>El equipo caminando hacia cámara por la rampa del Impulsa</h3><dl><dt>Para qué</dt><dd>Web y LinkedIn de empresa</dd></dl></div></div><div class="foto extra"><div class="id">X3</div><div><h3>Una persona en el pasillo de madera o en el patio de los limoneros del Impulsa</h3><dl><dt>Para qué</dt><dd>Fondos de web y presentaciones</dd></dl></div></div><div class="foto extra"><div class="id">X4</div><div><h3>Detalles: manos en el teclado, TenderYou en pantalla (desenfocado), la camiseta</h3><dl><dt>Para qué</dt><dd>Recursos para posts y vídeos</dd></dl></div></div><div class="foto extra"><div class="id">X5</div><div><h3>Miguel y Diego conversando mientras caminan por la Laboral</h3><dl><dt>Para qué</dt><dd>Artículos y entrevistas</dd></dl></div></div><div class="foto extra"><div class="id">X6</div><div><h3>Miguel en primer plano con expresión marcada</h3><dl><dt>Para qué</dt><dd>Miniaturas de YouTube</dd></dl></div></div>
-</section>
+<section id="extras" style="background:#fff"><div class="wrap">
+  <div class="extras-cab"><svg class="reloj" viewBox="0 0 150 150" aria-hidden="true"><circle cx="75" cy="75" r="68" fill="#fff" stroke="#272485" stroke-width="6"/>
+<line x1="75" y1="14" x2="75" y2="24" stroke="#272485" stroke-width="4" transform="rotate(0 75 75)"/><line x1="75" y1="14" x2="75" y2="20" stroke="#272485" stroke-width="2" transform="rotate(30 75 75)"/><line x1="75" y1="14" x2="75" y2="20" stroke="#272485" stroke-width="2" transform="rotate(60 75 75)"/><line x1="75" y1="14" x2="75" y2="24" stroke="#272485" stroke-width="4" transform="rotate(90 75 75)"/><line x1="75" y1="14" x2="75" y2="20" stroke="#272485" stroke-width="2" transform="rotate(120 75 75)"/><line x1="75" y1="14" x2="75" y2="20" stroke="#272485" stroke-width="2" transform="rotate(150 75 75)"/><line x1="75" y1="14" x2="75" y2="24" stroke="#272485" stroke-width="4" transform="rotate(180 75 75)"/><line x1="75" y1="14" x2="75" y2="20" stroke="#272485" stroke-width="2" transform="rotate(210 75 75)"/><line x1="75" y1="14" x2="75" y2="20" stroke="#272485" stroke-width="2" transform="rotate(240 75 75)"/><line x1="75" y1="14" x2="75" y2="24" stroke="#272485" stroke-width="4" transform="rotate(270 75 75)"/><line x1="75" y1="14" x2="75" y2="20" stroke="#272485" stroke-width="2" transform="rotate(300 75 75)"/><line x1="75" y1="14" x2="75" y2="20" stroke="#272485" stroke-width="2" transform="rotate(330 75 75)"/>
+<line class="hora" x1="75" y1="75" x2="75" y2="42" stroke="#272485" stroke-width="7" stroke-linecap="round"/>
+<line class="min" x1="75" y1="75" x2="75" y2="24" stroke="#B764E5" stroke-width="5" stroke-linecap="round"/><circle cx="75" cy="75" r="6" fill="#F7FFA5" stroke="#272485" stroke-width="3"/></svg><div><p class="eyebrow">Extras</p><h2>Si el día <em>acompaña</em></h2>
+  <p>Las hacemos en el margen del final o aprovechando huecos. Si no da tiempo, no falta nada: todo lo necesario está en la lista de arriba.</p></div></div>
+  <div class="extras"><figure class="extra reveal"><button class="zoom" data-src="sb/X1.jpg" data-cap="X1 · Retratos naturales entre toma y toma"><img src="sb/X1.jpg" alt="" loading="lazy"></button><figcaption><b>X1</b> Retratos naturales entre toma y toma<span>Carrusel «Las personas detrás de TenderYou» y posts</span></figcaption></figure><figure class="extra reveal"><button class="zoom" data-src="sb/X2.jpg" data-cap="X2 · El equipo caminando por la rampa del Impulsa"><img src="sb/X2.jpg" alt="" loading="lazy"></button><figcaption><b>X2</b> El equipo caminando por la rampa del Impulsa<span>Web y LinkedIn de empresa</span></figcaption></figure><figure class="extra reveal"><button class="zoom" data-src="sb/X3.jpg" data-cap="X3 · Una persona en el pasillo de madera del Impulsa"><img src="sb/X3.jpg" alt="" loading="lazy"></button><figcaption><b>X3</b> Una persona en el pasillo de madera del Impulsa<span>Fondos de web y presentaciones</span></figcaption></figure><figure class="extra reveal"><button class="zoom" data-src="sb/X4.jpg" data-cap="X4 · Detalles: manos, teclado y TenderYou en pantalla"><img src="sb/X4.jpg" alt="" loading="lazy"></button><figcaption><b>X4</b> Detalles: manos, teclado y TenderYou en pantalla<span>Recursos para posts y vídeos</span></figcaption></figure><figure class="extra reveal"><button class="zoom" data-src="sb/X5.jpg" data-cap="X5 · Miguel y Diego caminando por la Laboral"><img src="sb/X5.jpg" alt="" loading="lazy"></button><figcaption><b>X5</b> Miguel y Diego caminando por la Laboral<span>Artículos y entrevistas</span></figcaption></figure><figure class="extra reveal"><button class="zoom" data-src="sb/X6.jpg" data-cap="X6 · Miguel en primer plano para miniaturas"><img src="sb/X6.jpg" alt="" loading="lazy"></button><figcaption><b>X6</b> Miguel en primer plano para miniaturas<span>YouTube</span></figcaption></figure></div>
+</div></section>
 
-<section>
+<section id="horario"><div class="wrap">
   <p class="eyebrow">Horario</p>
   <h2>Quién tiene que estar y <em>cuándo</em></h2>
-  <p>Cada persona solo tiene que dejar su trabajo durante su turno de retrato y la foto de equipo. El resto del tiempo seguís trabajando y os fotografiamos en vuestro sitio.</p>
-  <div class="tscroll"><table class="horario"><thead><tr><th>Hora</th><th>Qué hacemos</th><th>Quién tiene que estar</th></tr></thead><tbody><tr class=""><td>8:30</td><td>Llegada al Edificio Impulsa y montaje del set de retratos</td><td>Edgar (y Miguel para la prueba de luz)</td></tr><tr class=""><td>8:55 – 9:15</td><td>Retratos A1 · A2 · A3: ventas</td><td>Diego, Ramón y Nicolás (unos 6 min cada uno)</td></tr><tr class=""><td>9:15 – 9:25</td><td>Retratos A1 · A2 · A3 · A4: Miguel</td><td>Miguel</td></tr><tr class=""><td>9:25 – 10:05</td><td>Retratos A1 · A2 (y A3 de dos personas): desarrollo</td><td>Iván, Alfonso, Javier, Pedro, Mario, Alejandro y José (unos 5 min cada uno)</td></tr><tr class=""><td>10:05 – 10:25</td><td>Fotos de equipo B1 · B2 fuera del Impulsa</td><td>Todo el equipo</td></tr><tr class=""><td>10:25 – 11:05</td><td>Desarrollo trabajando: C1 a C5</td><td>Desarrollo. Ventas vuelve a la Laboral</td></tr><tr class="pausa"><td>11:05 – 11:25</td><td>Recoger y trasladarnos a la Laboral</td><td>—</td></tr><tr class=""><td>11:25 – 12:05</td><td>Ventas trabajando: D1 a D4 (los 10 primeros minutos, despejar el fondo)</td><td>Diego, Ramón y Nicolás</td></tr><tr class=""><td>12:05 – 12:35</td><td>Miguel en la Laboral: E1 · E2</td><td>Miguel</td></tr><tr class="margen"><td>12:35 – 13:00</td><td>Margen: repetir lo que haga falta y extras</td><td>Quien haga falta</td></tr><tr class="pausa"><td>Tarde</td><td>Grabación de vídeo para publicidad (tiene su propio briefing; hora a cerrar)</td><td>Diego y otro comercial</td></tr></tbody></table></div>
-  <div class="destacado">
-    <p class="minilabel">Si algo se tuerce</p>
-    <p class="guia">Lo primero que cae son los extras, nunca los retratos ni la foto de equipo.</p>
-    <p class="cierre">Si llueve, la foto de equipo se hace dentro del Impulsa y la de Miguel bajo los soportales de la Laboral, que están cubiertos. Si vamos con retraso, hacemos menos tomas por escena, pero todas las escenas.</p>
-  </div>
-</section>
+  <p>Cada persona solo deja su trabajo durante su retrato y la foto de equipo. El resto del tiempo seguís trabajando y os fotografiamos en vuestro sitio.</p>
+  <ol class="timeline"><li class="h-n"><time>8:30</time><div><b>Llegada al Edificio Impulsa y montaje del set de retratos</b><span>Edgar (y Miguel para la prueba de luz)</span></div></li><li class="h-A"><time>8:55</time><div><b>Retratos de ventas · A1 A2 A3</b><span>Diego, Ramón y Nicolás · unos 6 min cada uno</span></div></li><li class="h-A"><time>9:15</time><div><b>Retratos de Miguel · A1 A2 A3 A4</b><span>Miguel</span></div></li><li class="h-A"><time>9:25</time><div><b>Retratos de desarrollo · A1 A2 (y A3 de dos personas)</b><span>Iván, Alfonso, Javier, Pedro, Mario, Alejandro y José · unos 5 min cada uno</span></div></li><li class="h-B"><time>10:05</time><div><b>Fotos de equipo fuera del Impulsa · B1 B2</b><span>Todo el equipo</span></div></li><li class="h-C"><time>10:25</time><div><b>Desarrollo trabajando · C1 a C5</b><span>Desarrollo. Ventas vuelve a la Laboral</span></div></li><li class="h-pausa"><time>11:05</time><div><b>Recoger y trasladarnos a la Laboral</b><span>—</span></div></li><li class="h-D"><time>11:25</time><div><b>Ventas trabajando · D1 a D4 (10 min para despejar el fondo)</b><span>Diego, Ramón y Nicolás</span></div></li><li class="h-E"><time>12:05</time><div><b>Miguel en la Laboral · E1 E2</b><span>Miguel</span></div></li><li class="h-margen"><time>12:35</time><div><b>Margen: repetir lo que haga falta y extras</b><span>Quien haga falta</span></div></li><li class="h-pausa"><time>13:00</time><div><b>Fin de las fotos. Por la tarde, grabación de vídeo (briefing aparte)</b><span>Diego y otro comercial</span></div></li></ol>
+  <div class="destacado reveal"><b>Si algo se tuerce, lo primero que cae son los extras, nunca los retratos ni la foto de equipo.</b>
+  <p class="sub" style="margin:10px 0 0">Si llueve, la foto de equipo se hace dentro del Impulsa y la de Miguel bajo los soportales de la Laboral, que están cubiertos. Si vamos con retraso, hacemos menos tomas por escena, pero todas las escenas.</p></div>
+</div></section>
 
-<section>
+<section id="equipo" style="background:#fff"><div class="wrap">
   <p class="eyebrow">El equipo</p>
   <h2>Confirmadnos la <em>lista</em></h2>
-  <p>Esta es la lista con la que hemos planificado. Si falta alguien, sobra alguien o alguien no puede a esa hora, decídnoslo y lo recolocamos.</p>
-  <div class="tscroll"><table><thead><tr><th>Persona</th><th>Área</th><th>Cuándo le necesitamos</th><th>Fotos</th></tr></thead><tbody><tr><td>Miguel López Barrio</td><td>CEO</td><td>Todo el día</td><td>A1 · A2 · A3 · A4 · B · E</td></tr><tr><td>Diego Rollán</td><td>Ventas</td><td>8:55 – 10:25 y 11:25 – 12:05</td><td>A1 · A2 · A3 · B · D</td></tr><tr><td>Ramón Somolinos</td><td>Ventas</td><td>8:55 – 10:25 y 11:25 – 12:05</td><td>A1 · A2 · B · D</td></tr><tr><td>Nicolás Menéndez</td><td>Ventas</td><td>8:55 – 10:25 y 11:25 – 12:05</td><td>A1 · A2 · B · D</td></tr><tr><td>Iván García</td><td>Desarrollo</td><td>9:25 – 11:05</td><td>A1 · A2 · B · C</td></tr><tr><td>Alfonso Alonso</td><td>Desarrollo</td><td>9:25 – 11:05</td><td>A1 · A2 · B · C</td></tr><tr><td>Javier Novella</td><td>Desarrollo</td><td>9:25 – 11:05</td><td>A1 · A2 · B · C</td></tr><tr><td>Pedro Limeres</td><td>Desarrollo</td><td>9:25 – 11:05</td><td>A1 · A2 · B · C</td></tr><tr><td>Mario Orviz</td><td>Desarrollo</td><td>9:25 – 11:05</td><td>A1 · A2 · B · C</td></tr><tr><td>Alejandro Jardón</td><td>Desarrollo</td><td>9:25 – 11:05</td><td>A1 · A2 · B · C</td></tr><tr><td>José Rodríguez</td><td>Desarrollo</td><td>9:25 – 11:05</td><td>A1 · A2 · B · C</td></tr></tbody></table></div>
-</section>
+  <p>Es la lista con la que hemos planificado. Si falta alguien, sobra alguien o alguien no puede a esa hora, decídnoslo y lo recolocamos.</p>
+  <div class="tscroll"><table><thead><tr><th>Persona</th><th>Rol</th><th>Cuándo le necesitamos</th><th>Fotos</th></tr></thead><tbody><tr><td><img class="av" src="sbl/A1-miguel.jpg" alt="" loading="lazy">Miguel López</td><td>CEO</td><td>Todo el día</td><td>A1 · A2 · A3 · A4 · B · E</td></tr><tr><td><img class="av" src="sbl/A1-diego.jpg" alt="" loading="lazy">Diego Rollán</td><td>Director de Ventas</td><td>8:55 – 10:25 y 11:25 – 12:05</td><td>A1 · A2 · A3 · B · D</td></tr><tr><td><img class="av" src="sbl/A1-ramon.jpg" alt="" loading="lazy">Ramón Somolinos</td><td>Equipo comercial</td><td>8:55 – 10:25 y 11:25 – 12:05</td><td>A1 · A2 · B · D</td></tr><tr><td><img class="av" src="sbl/A1-nicolas.jpg" alt="" loading="lazy">Nicolás Menéndez</td><td>Equipo comercial</td><td>8:55 – 10:25 y 11:25 – 12:05</td><td>A1 · A2 · B · D</td></tr><tr><td><img class="av" src="sbl/A1-ivan.jpg" alt="" loading="lazy">Iván García</td><td>Director Tecnológico</td><td>9:25 – 11:05</td><td>A1 · A2 · B · C</td></tr><tr><td><img class="av" src="sbl/A1-alfonso.jpg" alt="" loading="lazy">Alfonso Alonso</td><td>Director de Desarrollo</td><td>9:25 – 11:05</td><td>A1 · A2 · B · C</td></tr><tr><td><img class="av" src="sbl/A1-javier.jpg" alt="" loading="lazy">Javier Novella</td><td>Programador jefe</td><td>9:25 – 11:05</td><td>A1 · A2 · B · C</td></tr><tr><td><img class="av" src="sbl/A1-pedro.jpg" alt="" loading="lazy">Pedro Limeres</td><td>Programador full stack</td><td>9:25 – 11:05</td><td>A1 · A2 · B · C</td></tr><tr><td><img class="av" src="sbl/A1-mario.jpg" alt="" loading="lazy">Mario Orviz</td><td>Programador full stack</td><td>9:25 – 11:05</td><td>A1 · A2 · B · C</td></tr><tr><td><img class="av" src="sbl/A1-alejandro.jpg" alt="" loading="lazy">Alejandro Jardón</td><td>Desarrollo</td><td>9:25 – 11:05</td><td>A1 · A2 · B · C</td></tr><tr><td><img class="av" src="sbl/A1-jose.jpg" alt="" loading="lazy">José Rodríguez</td><td>Desarrollo</td><td>9:25 – 11:05</td><td>A1 · A2 · B · C</td></tr></tbody></table></div>
+</div></section>
 
-<section>
+<section id="lugares"><div class="wrap">
   <p class="eyebrow">Localizaciones</p>
   <h2>Impulsa por la mañana, la Laboral a <em>mediodía</em></h2>
-  <div class="refs">
-    <figure class="ref "><img src="img/loc-impulsa-exterior.jpg" alt="" loading="lazy"><figcaption><b>Exterior del Impulsa.</b> Madera y hormigón: el fondo de la foto de equipo. Moderno sin parecer una tecnológica de catálogo.</figcaption></figure>
-    <figure class="ref "><img src="img/loc-impulsa-oficina.jpg" alt="" loading="lazy"><figcaption><b>Vuestra oficina del Impulsa.</b> Ventanal grande y paredes blancas: buena luz para el set de retratos y para las escenas de trabajo.</figcaption></figure>
-    <figure class="ref "><img src="img/loc-impulsa-pasillo.jpg" alt="" loading="lazy"><figcaption><b>Pasillos de madera y patio de limoneros.</b> Para los extras, si sobra tiempo.</figcaption></figure>
-    <figure class="ref "><img src="img/loc-laboral-corintio.jpg" alt="" loading="lazy"><figcaption><b>Columnas y soportales de la Laboral.</b> Fondo para Miguel. Esta foto es de noche; el viernes será de día y a la sombra.</figcaption></figure>
+  <div class="locs reveal">
+    <figure><img src="img/loc-impulsa-exterior.jpg" alt="" loading="lazy"><figcaption><b>Exterior del Impulsa.</b> Madera y hormigón: el fondo de la foto de equipo.</figcaption></figure>
+    <figure><img src="img/loc-impulsa-oficina.jpg" alt="" loading="lazy"><figcaption><b>Vuestra oficina del Impulsa.</b> Ventanal y paredes blancas para retratos y escenas.</figcaption></figure>
+    <figure><img src="img/loc-impulsa-pasillo.jpg" alt="" loading="lazy"><figcaption><b>Pasillos de madera y patio.</b> Para los extras, si sobra tiempo.</figcaption></figure>
+    <figure><img src="img/loc-laboral-corintio.jpg" alt="" loading="lazy"><figcaption><b>Soportales de la Laboral.</b> Fondo para Miguel; el viernes, de día y a la sombra.</figcaption></figure>
   </div>
-  <p class="sub">La foto de equipo que ya tenéis en la web está en el patio de la Laboral. Esta vez la hacemos en el Impulsa para que no se repita y para que se vea dónde trabajáis cada día.</p>
-</section>
+  <p class="sub" style="margin-top:14px">La foto de equipo de vuestra web está en el patio de la Laboral. Esta vez la hacemos en el Impulsa para que no se repita y para que se vea dónde trabajáis cada día.</p>
+</div></section>
 
-<section>
+<section id="ropa" style="background:#fff"><div class="wrap">
   <p class="eyebrow">Ropa</p>
-  <h2>Lisa, cómoda y vuestra</h2>
-  <div class="dos">
-    <div class="caja">
-      <h3>Qué traer</h3>
-      <ul>
-        <li>Lo que os pondríais un día normal de trabajo, pero en <strong>colores lisos</strong>: blanco roto, gris, azul marino, piedra o negro.</li>
-        <li>Si tenéis algo en <strong>lila o violeta suave</strong>, traedlo: es el color de la marca.</li>
-        <li>Una <strong>segunda prenda</strong> (camisa o jersey) por si la primera no funciona con el fondo.</li>
-        <li>Miguel: una <strong>americana</strong> para el retrato de prensa.</li>
-      </ul>
-      <div class="paleta"><i style="--c:#F6F5F9">blanco roto</i><i style="--c:#9A9AA2">gris</i><i style="--c:#1F2A44">azul marino</i><i style="--c:#CFC6B8">piedra</i><i style="--c:#C4AEEF">lila</i></div>
-    </div>
-    <div class="caja">
-      <h3>Qué evitar</h3>
-      <ul>
-        <li><strong>Rayas finas y cuadros pequeños</strong>: en foto hacen un efecto de ondas.</li>
-        <li><strong>Logos grandes</strong>, estampados y camisetas de otras marcas, también las de Cadabit.</li>
-        <li><strong>Verde lima</strong> o colores fluorescentes.</li>
-        <li>Prendas recién sacadas de la bolsa: mejor planchadas o colgadas la noche antes.</li>
-      </ul>
-    </div>
+  <h2>Lisa, cómoda y <em>vuestra</em></h2>
+  <div class="dos reveal">
+    <div class="caja"><h3>Qué traer</h3><ul>
+      <li>Lo de un día normal de trabajo, en <b>colores lisos</b>: blanco roto, gris, azul marino, piedra o negro.</li>
+      <li>Si tenéis algo en <b>lila o violeta suave</b>, traedlo: es el color de la marca.</li>
+      <li>Una <b>segunda prenda</b> (camisa o jersey) por si la primera no funciona con el fondo.</li>
+      <li>Miguel: una <b>americana</b> para el retrato de prensa.</li></ul>
+      <div class="paleta"><i style="--c:#F6F5F9">blanco roto</i><i style="--c:#9A9AA2">gris</i><i style="--c:#1F2A44">azul marino</i><i style="--c:#CFC6B8">piedra</i><i style="--c:#C4AEEF">lila</i></div></div>
+    <div class="caja"><h3>Qué evitar</h3><ul>
+      <li><b>Rayas finas y cuadros pequeños</b>: en foto hacen un efecto de ondas.</li>
+      <li><b>Logos grandes</b>, estampados y camisetas de otras marcas, también las de Cadabit.</li>
+      <li><b>Verde lima</b> o colores fluorescentes.</li>
+      <li>Prendas arrugadas: mejor planchadas o colgadas la noche antes.</li></ul></div>
   </div>
-</section>
+</div></section>
 
-<section>
+<section id="antes"><div class="wrap">
   <p class="eyebrow">Antes de mañana</p>
   <h2>Lo que necesitamos de <em>vosotros</em></h2>
-  <ul class="check">
-    <li><span><strong>Confirmar la lista del equipo</strong> y a qué edificio llega cada uno a las 8:30.</span></li>
-    <li><span><strong>Reservar la sala de reuniones del Impulsa</strong> (planta 0) de 8:30 a 10:30 o decirnos qué pared clara junto a una ventana de vuestra oficina podemos usar.</span></li>
-    <li><span><strong>Avisar en el Impulsa y en la Laboral</strong> de que haremos fotos con equipo ligero (cámara, trípode y dos focos).</span></li>
-    <li><span><strong>Despejar la oficina de ventas</strong> de la Laboral: cajas, paneles y la tela verde fuera del fondo, y mesas recogidas.</span></li>
-    <li><span><strong>Dejar TenderYou abierto en las pantallas</strong> con una cuenta de prueba, sin datos de clientes. En las fotos saldrá desenfocado.</span></li>
-    <li><span><strong>Tener a mano un pliego impreso</strong> de una licitación y los móviles cargados.</span></li>
-    <li><span><strong>Firmar la cesión de derechos de imagen</strong> cada persona, para poder usar las fotos en publicidad. Si no tenéis modelo, os pasamos uno.</span></li>
-    <li><span><strong>Decidir si queréis una versión de la foto de equipo con la camiseta de TenderYou.</strong> Suma unos cinco minutos.</span></li>
-  </ul>
-</section>
+  <p>Podéis ir marcando lo que esté hecho. <span class="progreso"></span></p>
+  <ul class="check"><li><label><input type="checkbox" data-k="c0"><span><b>Confirmar la lista del equipo</b> y a qué edificio llega cada uno a las 8:30.</span></label></li><li><label><input type="checkbox" data-k="c1"><span><b>Reservar la sala de reuniones del Impulsa</b> (planta 0) de 8:30 a 10:30, o decirnos qué pared clara junto a una ventana de vuestra oficina podemos usar.</span></label></li><li><label><input type="checkbox" data-k="c2"><span><b>Avisar en el Impulsa y en la Laboral</b> de que haremos fotos con equipo ligero (cámara, trípode y dos focos).</span></label></li><li><label><input type="checkbox" data-k="c3"><span><b>Despejar la oficina de ventas de la Laboral:</b> cajas, paneles y la tela verde fuera del fondo, y mesas recogidas.</span></label></li><li><label><input type="checkbox" data-k="c4"><span><b>Dejar TenderYou abierto en las pantallas</b> con una cuenta de prueba, sin datos de clientes. En las fotos saldrá desenfocado.</span></label></li><li><label><input type="checkbox" data-k="c5"><span><b>Tener a mano un pliego impreso</b> de una licitación y los móviles cargados.</span></label></li><li><label><input type="checkbox" data-k="c6"><span><b>Firmar la cesión de derechos de imagen</b> cada persona, para poder usar las fotos en publicidad. Si no tenéis modelo, os pasamos uno.</span></label></li><li><label><input type="checkbox" data-k="c7"><span><b>Decidir si queréis una versión de la foto de equipo con la camiseta de TenderYou.</b> Suma unos cinco minutos.</span></label></li></ul>
+</div></section>
 
-<section>
+<section id="entrega" style="background:#fff"><div class="wrap">
   <p class="eyebrow">Después del rodaje</p>
   <h2>Cómo os las <em>entregamos</em></h2>
-  <ul>
-    <li><strong>Un mismo color para todas</strong>, para que la web, los anuncios y LinkedIn se vean como una sola marca.</li>
-    <li><strong>Cada retrato en color y en blanco y negro</strong>, y cada foto en los formatos de su uso (4:5, 1:1, 9:16 y 16:9).</li>
-    <li><strong>Las de cuerpo entero, ya recortadas</strong>, listas para ponerlas sobre el fondo de marca.</li>
-    <li><strong>Retoque discreto:</strong> fuera brillos, cables y enchufes. Las caras no se tocan con inteligencia artificial; lo que se ve es real.</li>
-    <li><strong>Plazos:</strong> los retratos el miércoles 11 de noviembre y el resto de fotos el viernes 13.</li>
-  </ul>
-</section>
-
-<footer>Billber para TenderYou · Briefing de rodaje del 6 de noviembre de 2026 · Cualquier cambio, escribidnos hoy por el canal de Slack.</footer>
+  <div class="entrega reveal">
+    <div><b>Un mismo color</b>Para que web, anuncios y LinkedIn se vean como una sola marca.</div>
+    <div><b>Color y B/N</b>Cada retrato en las dos versiones y cada foto en sus formatos.</div>
+    <div><b>Ya recortadas</b>Las de cuerpo entero, listas para el fondo de marca.</div>
+    <div><b>Retoque discreto</b>Fuera brillos y cables. Las caras no se tocan con IA.</div>
+    <div><b>Plazos</b>Retratos el miércoles 11 y el resto el viernes 13.</div>
+  </div>
+</div></section>
 </main>
-
-</body></html>
+<footer><div class="wrap">Billber para TenderYou · Briefing de rodaje del 6 de noviembre de 2026</div></footer>
+<div class="lb" role="dialog" aria-modal="true"><button aria-label="Cerrar">×</button><img alt=""><p></p></div>
+<script>
+const _m=location.hash.match(/^#y=(\d+)/);if(_m)setTimeout(()=>{scrollTo({top:+_m[1],behavior:'instant'});sc()},300);
+// lightbox
+const lb=document.querySelector('.lb'),lbi=lb.querySelector('img'),lbp=lb.querySelector('p');
+document.addEventListener('click',ev=>{const z=ev.target.closest('.zoom');if(z){lbi.src=z.dataset.src;lbp.textContent=z.dataset.cap||'';lb.classList.add('on');}});
+lb.addEventListener('click',ev=>{if(ev.target===lb||ev.target.tagName==='BUTTON')lb.classList.remove('on')});
+document.addEventListener('keydown',ev=>{if(ev.key==='Escape')lb.classList.remove('on')});
+// carrusel
+const pista=document.querySelector('.pista'),cont=document.querySelector('.contador');
+const paso=()=>pista.querySelector('.slide').getBoundingClientRect().width+14;
+document.querySelector('.ant').onclick=()=>pista.scrollBy({left:-paso()*2,behavior:'smooth'});
+document.querySelector('.sig').onclick=()=>pista.scrollBy({left:paso()*2,behavior:'smooth'});
+const total=pista.children.length;
+pista.addEventListener('scroll',()=>{const i=Math.min(total,Math.round(pista.scrollLeft/paso())+1);cont.textContent=i+' / '+total},{passive:true});
+// pestañas de usos
+document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('.tabs button').forEach(x=>x.setAttribute('aria-selected','false'));b.setAttribute('aria-selected','true');
+  document.querySelectorAll('.pane').forEach(p=>p.classList.toggle('on',p.dataset.p===b.dataset.t));});
+// aparición
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vis');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+// retratos: color -> blanco y negro según el scroll
+const ret=document.querySelector('.retratos'),pasos=[...document.querySelectorAll('.ret-txt p')];
+function sc(){const r=ret.getBoundingClientRect(),h=ret.offsetHeight-innerHeight;const t=Math.min(1,Math.max(0,-r.top/h));
+  const k=t<.28?0:t<.6?1:2;pasos.forEach((p,i)=>p.classList.toggle('on',i===k));
+  const dentro=r.top<innerHeight*.2&&r.bottom>innerHeight*.5;document.documentElement.classList.toggle('bn',dentro&&k===2);}
+addEventListener('scroll',sc,{passive:true});sc();
+// checklist con memoria local
+document.querySelectorAll('.check input').forEach(i=>{try{i.checked=localStorage.getItem('ty-'+i.dataset.k)==='1'}catch(e){}
+  i.onchange=()=>{try{localStorage.setItem('ty-'+i.dataset.k,i.checked?'1':'0')}catch(e){};prog()}});
+function prog(){const a=[...document.querySelectorAll('.check input')];document.querySelector('.progreso').textContent=a.filter(x=>x.checked).length+' de '+a.length+' listos'}prog();
+// nav activa
+const secs=[...document.querySelectorAll('section[id]')],links=[...document.querySelectorAll('.nav a[href^="#"]')];
+addEventListener('scroll',()=>{let cur='';secs.forEach(s=>{if(s.getBoundingClientRect().top<120)cur=s.id});links.forEach(l=>l.classList.toggle('act',l.getAttribute('href')==='#'+cur))},{passive:true});
+</script></body></html>
