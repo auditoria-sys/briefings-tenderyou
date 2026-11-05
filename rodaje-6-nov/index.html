@@ -2,72 +2,175 @@
 <html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow"><title>Rodaje TenderYou · 6 de noviembre</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap">
-<style>
-:root{--accion:#0923F3;--texto:#2C2C31;--fondo:#FAFAFA;--prof:#272485;--ac1:#F7FFA5;--ac2:#B764E5;--tenue:#6B6B74;--linea:#DDDCE2;--lienzo:#F1F0F4;
---violeta:#6D28D9;--lila:#A98BF0;--glicina:#E4D9FB;--display:"Helvetica Neue",Helvetica,Arial,system-ui,sans-serif;--realce:"Instrument Serif",Georgia,serif;--r:16px;color-scheme:light}
+<style>:root{--accion:#0923F3;--texto:#2C2C31;--fondo:#FAFAFA;--prof:#272485;--ac1:#F7FFA5;--ac2:#B764E5;--tenue:#6B6B74;--linea:#DDDCE2;--lienzo:#F1F0F4;
+--violeta:#6D28D9;--lila:#A98BF0;--display:"Helvetica Neue",Helvetica,Arial,system-ui,sans-serif;--realce:"Instrument Serif",Georgia,serif;--r:16px;color-scheme:light}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
 body{margin:0;background:var(--fondo);color:var(--texto);font:16px/1.6 var(--display);-webkit-font-smoothing:antialiased}
-img{max-width:100%;display:block}
-a{color:var(--accion)}
+img{max-width:100%;display:block}a{color:var(--accion)}
 button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
 em{font-family:var(--realce);font-style:italic;font-weight:400}
-.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
-section{padding:88px 0;scroll-margin-top:64px}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+section{padding:88px 0;scroll-margin-top:56px}
+section.claro{background:#fff}
 .eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--tenue);margin:0 0 14px}
-h2{font:700 clamp(28px,4.4vw,44px)/1.08 var(--display);letter-spacing:-.02em;margin:0 0 18px;max-width:22ch}
+h2{font:700 clamp(28px,4.4vw,46px)/1.08 var(--display);letter-spacing:-.02em;margin:0 0 18px;max-width:22ch}
 h3{font:700 19px/1.3 var(--display);margin:0}
-p{margin:0 0 14px;max-width:66ch}
-.sub{color:var(--tenue)}
-main{transition:filter 1.1s ease}
-html.bn main{filter:grayscale(1)}
-
-/* nav */
-.nav{position:sticky;top:0;z-index:30;background:rgba(39,36,133,.96);backdrop-filter:blur(8px);color:#fff}
+p{margin:0 0 14px;max-width:68ch}.sub{color:var(--tenue)}
+main{transition:filter 1.1s ease}html.bn main{filter:grayscale(1)}
+.nav{position:sticky;top:0;z-index:30;background:rgba(39,36,133,.97);color:#fff}
 .nav .wrap{display:flex;align-items:center;gap:22px;height:56px;overflow-x:auto;scrollbar-width:none}
 .nav .wrap::-webkit-scrollbar{display:none}
 .nav b{white-space:nowrap;font-size:14px;color:var(--ac1)}
 .nav a{color:#fff;text-decoration:none;font-size:14px;white-space:nowrap;opacity:.82}
 .nav a:hover,.nav a.act{opacity:1;text-decoration:underline;text-underline-offset:5px}
 .nav a.cta{margin-left:auto;background:var(--ac1);color:var(--prof);opacity:1;padding:6px 14px;border-radius:999px;font-weight:700;text-decoration:none}
-
-/* hero */
-.hero{background:var(--prof);color:#FAFAFA;padding:72px 0 0;overflow:hidden}
+.hero{background:var(--prof);color:#FAFAFA;padding:72px 0 80px}
 .kicker{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ac1);margin:0 0 24px}
 .hero h1{font:700 clamp(36px,6.6vw,72px)/1.04 var(--display);letter-spacing:-.025em;margin:0 0 22px;max-width:16ch}
-.hero .lead{font-size:18px;opacity:.9;max-width:58ch}
-.edif{display:grid;grid-template-columns:1.2fr 1fr;gap:14px;margin-top:40px}
-.edif figure{margin:0;position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:16/10}
-.edif img{width:100%;height:100%;object-fit:cover;transform:scale(1.04);transition:transform 6s ease}
-.edif figure:hover img{transform:scale(1)}
-.edif figcaption{position:absolute;left:14px;bottom:14px;background:rgba(17,16,20,.72);padding:8px 12px;border-radius:10px;font-size:13px;line-height:1.35}
+.hero .lead{font-size:18px;opacity:.9;max-width:60ch}
+.edif{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:40px}
+.edif a{color:#fff;text-decoration:none}
+.edif figure{margin:0;position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:3/2}
+.edif img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s ease}
+.edif a:hover img{transform:scale(1.03)}
+.edif figcaption{position:absolute;left:14px;bottom:14px;background:rgba(17,16,20,.75);padding:9px 13px;border-radius:10px;font-size:14px;line-height:1.35}
 .edif figcaption b{display:block;color:var(--ac1)}
-.cifras{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:34px 0 0}
+.cifras{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:30px 0 0}
 .cifra{background:rgba(255,255,255,.08);border-radius:var(--r);padding:22px}
 .cifra b{display:block;font:700 46px/1 var(--display);letter-spacing:-.02em;color:var(--ac1)}
 .cifra span{font-size:14px;opacity:.85}
 .atajo{display:inline-flex;margin-top:26px;background:var(--ac1);color:var(--prof);font-weight:700;padding:12px 20px;border-radius:999px;text-decoration:none}
 
-/* carrusel */
-.carr{background:#17153f;padding:48px 0 56px;color:#fff}
-.carr-cab{display:flex;align-items:end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:22px}
-.carr-cab h2{color:#fff;margin:0}
-.carr-cab p{color:#cfcde8;margin:6px 0 0;max-width:60ch;font-size:14.5px}
-.flechas{display:flex;gap:8px}
-.flechas button{width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.1);color:#fff;font-size:20px}
-.flechas button:hover{background:var(--ac1);color:var(--prof)}
-.pista{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 20px 14px;scrollbar-width:thin;scroll-padding:0 20px}
-.slide{margin:0;flex:0 0 auto;scroll-snap-align:start;width:min(360px,78vw)}
-.slide img{width:100%;aspect-ratio:3/2;object-fit:contain;border-radius:12px;background:#2a2760}
-.slide figcaption{font-size:13px;color:#cfcde8;margin-top:8px}
-.slide figcaption b{color:var(--ac1);margin-right:4px}
-.contador{font-size:13px;color:#cfcde8;margin-top:10px}
+/* estilo: referencias con sus ideas */
+.est-grid{columns:3 300px;column-gap:16px;margin-top:26px}
+.est{margin:0 0 16px;break-inside:avoid;background:#fff;border-radius:var(--r);overflow:hidden;border:1px solid var(--linea)}
+.est img{width:100%;height:auto}
+.est figcaption{padding:14px 16px 16px;font-size:14px;line-height:1.45;color:var(--tenue)}
+.est-tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+.est-tags i{font-style:normal;font-size:12px;font-weight:700;background:var(--prof);color:var(--ac1);padding:4px 10px;border-radius:999px}
+
+/* retratos scroll */
+.retratos{position:relative;height:300vh;padding:0;background:#F1F0F4}
+.ret-sticky{position:sticky;top:56px;height:calc(100vh - 56px);display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:40px;overflow:hidden}
+.ret-foto{height:86%;display:flex;justify-content:center}
+.ret-foto img{height:100%;width:auto;max-width:100%;object-fit:cover;border-radius:22px;box-shadow:0 30px 70px -30px rgba(0,0,0,.45)}
+.ret-txt{position:relative;height:220px}
+.ret-txt p{position:absolute;inset:0;margin:0;font:700 clamp(34px,5.6vw,68px)/1.04 var(--display);letter-spacing:-.025em;opacity:0;transform:translateY(30px);transition:all .7s ease;max-width:12ch}
+.ret-txt p.on{opacity:1;transform:none}
+.ret-txt small{display:block;font:400 16px/1.5 var(--display);color:var(--tenue);margin-top:16px;letter-spacing:0;max-width:34ch}
+
+/* lista de fotos */
+.b-cab{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin:56px 0 18px;scroll-margin-top:70px}
+.b-cab .tag{background:var(--prof);color:var(--ac1);font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:7px 13px;border-radius:8px}
+.b-cab .donde{color:var(--tenue);font-size:15px}
+.foto{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:30px;background:#fff;border:1px solid var(--linea);border-radius:20px;padding:22px;margin-bottom:22px;scroll-margin-top:70px}
+.f-nota{font-size:12.5px;color:var(--tenue);margin:8px 0 0}
+.fid{display:flex;align-items:center;gap:10px;margin:0 0 6px;font:700 15px var(--display)}
+.fid{color:var(--prof)}.fid::before{content:"";display:none}
+.fid span{font-size:12px;font-weight:700;background:var(--lienzo);color:var(--tenue);padding:3px 9px;border-radius:999px}
+.f-txt h3{font-size:22px;margin-bottom:10px;letter-spacing:-.01em}
+.f-q{font-size:14.5px;margin:0 0 6px;color:var(--tenue)}.f-q b{color:var(--texto)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 16px}
+.chips span{background:var(--prof);color:#fff;border-radius:10px;padding:7px 11px;font-size:15px;font-weight:700;line-height:1.15}
+.chips small{display:block;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ac1);font-weight:700;margin-bottom:2px}
+.f-txt dl{display:grid;grid-template-columns:118px 1fr;gap:8px 14px;margin:0;font-size:14.5px;line-height:1.45}
+.f-txt dt{font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--violeta);padding-top:3px}
+.f-txt dd{margin:0;border-bottom:1px solid var(--lienzo);padding-bottom:8px}
+
+/* referencia con indicaciones */
+.ref-ov{position:relative;margin:0;border-radius:14px;overflow:hidden;background:#111;cursor:zoom-in;max-height:78vh;margin-inline:auto}
+.ref-ov img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ov{position:absolute;inset:0;pointer-events:none;transition:opacity .3s}
+.ref-ov.limpia .ov{opacity:0}
+.o-svg{position:absolute;inset:0;width:100%;height:100%}
+.o-aire{position:absolute;border:3px dashed #F7FFA5;background:rgba(109,40,217,.32);display:flex;align-items:center;justify-content:center;border-radius:6px}
+.o-aire span,.o-marco span,.o-tag{font:700 13px/1.2 var(--display);border-radius:8px;padding:6px 10px;white-space:nowrap;box-shadow:0 4px 14px rgba(0,0,0,.35)}
+.o-aire span{background:#F7FFA5;color:#1E1030}
+.o-marco{position:absolute;border:3px solid #fff;box-shadow:0 0 0 2000px rgba(0,0,0,.28)}
+.o-marco span{position:absolute;left:8px;top:8px;background:#fff;color:#1E1030}
+.o-tag{position:absolute;transform:translate(0,-50%)}
+.o-tag.luz{background:#FFB020;color:#1E1030}
+.o-tag.linea{background:#1E1030;color:#F7FFA5}
+.o-tag.nota{background:#1E1030;color:#fff}
+.o-tog{position:absolute;right:10px;top:10px;background:rgba(17,16,20,.82);color:#fff;font-size:12.5px;font-weight:700;padding:6px 12px;border-radius:999px;z-index:2}
+.o-tog[aria-pressed=false]{background:#F7FFA5;color:#1E1030}
+
+/* extras */
+.extras-cab{display:grid;grid-template-columns:auto 1fr;gap:34px;align-items:center}
+.reloj{width:150px;height:150px}
+.reloj .min{transform-origin:75px 75px;animation:gira 6s linear infinite}
+.reloj .hora{transform-origin:75px 75px;animation:gira 72s linear infinite}
+@keyframes gira{to{transform:rotate(360deg)}}
+.extras{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}
+.extra{margin:0}.extra img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:12px}
+.extra figcaption{font-size:15px;margin-top:9px;line-height:1.4}.extra figcaption b{color:var(--violeta);margin-right:4px}
+.extra figcaption span{display:block;color:var(--tenue);font-size:13.5px;margin-top:2px}
+
+/* horario */
+.horario{display:grid;gap:14px;margin-top:26px}
+.h-bloque{background:#fff;border:1px solid var(--linea);border-radius:18px;overflow:hidden}
+.h-cab{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;padding:16px 22px;background:var(--prof);color:#fff}
+.h-cab b{font-size:18px}.h-cab span{color:var(--ac1);font-weight:700;font-variant-numeric:tabular-nums}
+.h-comida .h-cab,.h-video .h-cab{background:var(--lienzo);color:var(--texto)}.h-comida .h-cab span,.h-video .h-cab span{color:var(--tenue)}
+.timeline{list-style:none;margin:0;padding:8px 22px 14px 22px}
+.timeline li{display:grid;grid-template-columns:70px 1fr;gap:14px;padding:11px 0;border-bottom:1px solid var(--lienzo)}
+.timeline li:last-child{border:0}
+.timeline time{font-weight:700;font-variant-numeric:tabular-nums;font-size:18px;color:var(--prof)}
+.timeline b{display:block}.timeline span{color:var(--tenue);font-size:14.5px}
+.timeline .h-margen{background:#FBFDE6;margin:0 -22px;padding:11px 22px}
+.timeline .h-pausa time{color:var(--tenue)}
+.destacado{background:var(--lienzo);border-left:8px solid var(--ac2);border-radius:var(--r);padding:26px 30px;margin-top:28px}
+.destacado b{font-size:17px}
+
+/* lugares */
+.lugares{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:22px}
+.lugar{background:var(--lienzo);border-radius:20px;overflow:hidden;scroll-margin-top:70px}
+.lugar img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.l-txt{padding:20px 22px 22px}
+.l-h{display:inline-block;background:var(--prof);color:var(--ac1);font-weight:700;border-radius:8px;padding:5px 11px;margin-bottom:10px}
+.l-txt h3{font-size:22px;margin-bottom:6px}.l-n{color:var(--tenue);font-size:15px}
+.l-chips{display:flex;flex-wrap:wrap;gap:6px}
+.l-chips a{background:#fff;border:1px solid var(--linea);border-radius:8px;padding:4px 10px;font-weight:700;font-size:13px;text-decoration:none;color:var(--prof)}
+
+/* equipo */
+.tscroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:15px}
+th{text-align:left;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--tenue);padding:0 14px 10px 0}
+td{padding:10px 14px 10px 0;border-top:2px solid var(--linea);vertical-align:middle}
+td:first-child{font-weight:700;display:flex;align-items:center;gap:12px}
+.av{width:38px;height:38px;border-radius:50%;background:var(--lienzo);border:1.5px solid var(--linea);display:inline-flex;align-items:center;justify-content:center;font-size:12px;color:var(--tenue);flex:none}
+
+/* ropa */
+.r-h{font-size:22px;margin:30px 0 14px;display:inline-block;padding:6px 14px;border-radius:10px}
+.r-h.ok{background:#E7F7D4;color:#255B12}.r-h.no{background:#FDE3E1;color:#9B1C1C}
+.prendas{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:14px}
+.pr{border-radius:18px;padding:16px;display:flex;flex-direction:column;gap:6px;border:2px solid transparent}
+.pr.si{background:#F4FBEC;border-color:#CFEBB4}.pr.no{background:#FFF4F3;border-color:#F6C9C4}
+.pr-ic{position:relative;background:#fff;border-radius:12px;aspect-ratio:1;display:flex;align-items:center;justify-content:center;margin-bottom:6px}
+.prenda{width:72%;height:72%}
+.pr.no .pr-ic::after{content:"";position:absolute;inset:14%;background:linear-gradient(to top right,transparent calc(50% - 3px),#D92D20 calc(50% - 3px),#D92D20 calc(50% + 3px),transparent calc(50% + 3px))}
+.logo-ty{position:absolute;top:38%;left:50%;transform:translateX(-50%);font:700 10px var(--display);color:#6D28D9}
+.logo-x{position:absolute;top:40%;left:50%;transform:translateX(-50%);font:900 16px var(--display);color:#E23;letter-spacing:.05em}
+.pr b{font-size:16px;line-height:1.25}.pr span{font-size:13.5px;color:var(--tenue);line-height:1.4}
+
+/* antes de mañana */
+.check{list-style:none;padding:0;margin:22px 0 0;display:flex;flex-direction:column;gap:10px}
+.check label{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid var(--linea);border-radius:12px;padding:14px 16px;cursor:pointer}
+.check input{width:22px;height:22px;accent-color:var(--prof);flex:none;margin-top:2px}
+.check input:checked+span{color:var(--tenue);text-decoration:line-through}
+.progreso{font-weight:700;color:var(--violeta)}
+.planes{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+.plan{border-radius:16px;padding:20px;background:#fff;border:1px solid var(--linea)}
+.plan b{display:inline-block;font-size:12px;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:999px;margin-bottom:10px}
+.plan.a b{background:var(--prof);color:var(--ac1)}.plan.b b{background:var(--lila);color:#1E1030}.plan.c b{background:var(--lienzo);color:var(--texto)}
+.plan h3{font-size:17px;margin-bottom:6px}.plan p{font-size:14.5px;color:var(--tenue);margin:0}
 
 /* usos */
 .tabs{display:flex;gap:8px;flex-wrap:wrap;margin:26px 0 18px}
 .tabs button{padding:9px 16px;border-radius:999px;background:var(--lienzo);font-size:14px;font-weight:600}
 .tabs button[aria-selected=true]{background:var(--prof);color:#fff}
 .pane{display:none}.pane.on{display:block;animation:sube .5s ease}
-.pane-nota{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--violeta)}
+.pane-nota{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--violeta)}
 @keyframes sube{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 .mock{border-radius:var(--r);overflow:hidden;background:#fff;box-shadow:0 18px 50px -24px rgba(39,36,133,.35);border:1px solid var(--linea)}
 .web .barra{display:flex;align-items:center;gap:6px;padding:10px 14px;background:var(--lienzo);font-size:12px;color:var(--tenue)}
@@ -78,21 +181,21 @@ html.bn main{filter:grayscale(1)}
 .web-in h4 em{color:var(--violeta)}
 .team{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
 .tc{background:#fff;border-radius:14px;overflow:hidden;font-size:12.5px;line-height:1.3}
-.tc img{aspect-ratio:4/5;object-fit:cover;object-position:top;filter:grayscale(1)}
+.tc img{aspect-ratio:4/5;object-fit:cover;object-position:50% 20%;filter:grayscale(1)}
 .tc b,.tc span{display:block;padding:0 10px}.tc b{padding-top:8px}.tc span{color:var(--tenue);padding-bottom:10px}
 .lis{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:22px;background:#F3F2EF;border:0}
 .li{background:#fff;border-radius:12px;overflow:hidden;text-align:center;padding-bottom:16px;font-size:13px;opacity:0;transform:translateY(24px)}
 .pane.on .li{animation:sube .6s ease forwards;animation-delay:var(--d)}
 .li-ban{height:64px;background:linear-gradient(90deg,#4C1D95,#A98BF0)}
-.li img{width:96px;height:96px;border-radius:50%;object-fit:cover;object-position:50% 18%;margin:-48px auto 10px;border:4px solid #fff}
+.li img{width:96px;height:96px;border-radius:50%;object-fit:cover;object-position:50% 22%;margin:-48px auto 10px;border:4px solid #fff}
 .li b{display:block;font-size:15px}.li span{display:block;color:#444;padding:2px 12px}.li small{display:block;color:#888;margin:4px 0 10px}
 .li em{font-family:var(--display);font-style:normal;display:inline-block;border:1.5px solid #0a66c2;color:#0a66c2;border-radius:999px;padding:4px 16px;font-weight:700}
 .ads{display:flex;gap:22px;justify-content:center;padding:26px;background:var(--lienzo);border:0;flex-wrap:wrap}
 .tel{width:300px;background:#fff;border-radius:22px;padding:12px;box-shadow:0 10px 30px -14px rgba(0,0,0,.3)}
 .tel-top{display:flex;justify-content:space-between;font-size:12px;padding:2px 4px 10px}.tel-top span{color:#888}
 .ad45{position:relative;aspect-ratio:4/5;border-radius:10px;overflow:hidden}
-.ad45 img,.ad916 img{width:100%;height:100%;object-fit:cover;object-position:30% 50%}
-.ad45 p{position:absolute;right:10px;top:16px;width:46%;font:700 19px/1.15 var(--display);color:#1E1030;margin:0}
+.ad45 img,.ad916 img{width:100%;height:100%;object-fit:cover}
+.ad45 p{position:absolute;left:12px;right:12px;top:14px;font:700 21px/1.15 var(--display);color:#1E1030;margin:0;background:rgba(255,255,255,.86);padding:10px 12px;border-radius:10px}
 .ad45 p em{color:var(--violeta)}
 .tel-cta{margin-top:10px;background:var(--lienzo);border-radius:8px;padding:9px;text-align:center;font-weight:700;font-size:13px}
 .tel.st{width:200px;padding:8px}
@@ -102,181 +205,65 @@ html.bn main{filter:grayscale(1)}
 .m-h{padding:16px 20px;border-bottom:1px solid var(--linea);font-size:13px}.m-h span{display:block;font-size:16px;font-weight:700;margin-top:4px}
 .m-b{padding:20px}.m-hero{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:16px;margin-bottom:14px}
 .firma{display:flex;gap:12px;align-items:center;border-top:1px solid var(--linea);padding-top:14px}
-.firma img{width:52px;height:52px;border-radius:50%;object-fit:cover;object-position:50% 18%}
+.firma img{width:52px;height:52px;border-radius:50%;object-fit:cover;object-position:50% 22%}
 .firma span{display:block;font-size:13px;color:var(--tenue)}
 .prensa{max-width:760px;margin:0 auto;padding:30px;font-family:Georgia,serif}
 .p-cab{font:700 12px var(--display);letter-spacing:.12em;color:#b00;text-transform:uppercase}
 .prensa h4{font-family:Georgia,serif}
 .prensa img{width:100%;aspect-ratio:3/2;object-fit:cover}.p-pie{font-size:13px;color:#666;margin-top:8px}
-.slide169{position:relative;aspect-ratio:16/9;max-width:860px;margin:0 auto;background:#F6F5F9}
+.slide169{position:relative;aspect-ratio:16/9;max-width:880px;margin:0 auto;background:#F6F5F9}
 .slide169 img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.s-t{position:absolute;left:5%;top:22%;width:42%;background:rgba(255,255,255,.86);padding:20px;border-radius:14px}
+.s-t{position:absolute;right:5%;top:24%;width:40%;background:rgba(255,255,255,.88);padding:20px;border-radius:14px}
 .s-t p{color:var(--violeta);font-weight:700;font-size:13px;margin:0 0 6px}.s-t h4{font-size:clamp(16px,2.3vw,26px);margin:0}
-
-/* estilo */
-.principios{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:24px 0 30px}
-.principios div{background:var(--lienzo);border-radius:14px;padding:18px;font-size:14px;line-height:1.45}
-.principios b{display:block;font-size:15px;margin-bottom:6px}
-.refs{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.refs figure{margin:0}.refs img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:12px}
-.refs figcaption{font-size:13px;color:var(--tenue);margin-top:8px;line-height:1.4}.refs b{color:var(--texto)}
-
-/* retratos (scroll) */
-.retratos{position:relative;height:300vh;padding:0;background:#F1F0F4}
-.ret-sticky{position:sticky;top:56px;height:calc(100vh - 56px);display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:40px;overflow:hidden}
-.ret-foto{height:86%;display:flex;justify-content:center}
-.ret-foto img{height:100%;width:auto;max-width:100%;object-fit:cover;border-radius:22px;box-shadow:0 30px 70px -30px rgba(0,0,0,.45)}
-.ret-txt{position:relative;height:220px}
-.ret-txt p{position:absolute;inset:0;margin:0;font:700 clamp(34px,5.6vw,68px)/1.04 var(--display);letter-spacing:-.025em;opacity:0;transform:translateY(30px);transition:all .7s ease;max-width:12ch}
-.ret-txt p.on{opacity:1;transform:none}
-.ret-txt small{display:block;font:400 16px/1.5 var(--display);color:var(--tenue);margin-top:16px;letter-spacing:0;max-width:34ch}
-
-/* fichas */
-.bloque-cab{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin:46px 0 16px;scroll-margin-top:70px}
-.bloque-cab .tag{background:var(--prof);color:var(--ac1);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:6px 12px;border-radius:8px}
-.bloque-cab .donde{color:var(--tenue);font-size:14px}
-.fichas{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.ficha{background:#fff;border:1px solid var(--linea);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;scroll-margin-top:70px}
-.portada{position:relative;display:block}
-.portada img{width:100%;aspect-ratio:3/2;object-fit:contain;background:var(--lienzo)}
-.lupa{position:absolute;right:10px;bottom:10px;background:rgba(17,16,20,.75);color:#fff;font-size:12px;padding:4px 10px;border-radius:999px;opacity:0;transition:.2s}
-.portada:hover .lupa{opacity:1}
-.minis{display:flex;gap:6px;padding:8px;overflow-x:auto;background:var(--lienzo)}
-.minis button{flex:0 0 auto}.minis img{height:58px;width:auto;border-radius:6px}
-.txt{padding:18px 20px 20px}
-.fid{display:inline-block;background:var(--ac1);font-weight:700;font-size:13px;padding:3px 10px;border-radius:7px;margin:0 0 8px}
-.txt h3{margin-bottom:10px}
-.txt dl{display:grid;grid-template-columns:84px 1fr;gap:5px 12px;margin:0;font-size:14px;line-height:1.45}
-.txt dt{font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--tenue);padding-top:3px}.txt dd{margin:0}
-
-/* extras */
-.extras-cab{display:grid;grid-template-columns:auto 1fr;gap:34px;align-items:center}
-.reloj{width:150px;height:150px}
-.reloj .min{transform-origin:75px 75px;animation:gira 6s linear infinite}
-.reloj .hora{transform-origin:75px 75px;animation:gira 72s linear infinite}
-@keyframes gira{to{transform:rotate(360deg)}}
-.extras{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}
-.extra{margin:0}.extra img{width:100%;aspect-ratio:3/2;object-fit:contain;background:var(--lienzo);border-radius:12px;border:1px dashed var(--lila)}
-.extra figcaption{font-size:14px;margin-top:8px}.extra figcaption b{color:var(--violeta)}.extra figcaption span{display:block;color:var(--tenue);font-size:13px}
-
-/* horario */
-.timeline{list-style:none;margin:26px 0 0;padding:0;border-left:3px solid var(--linea)}
-.timeline li{display:grid;grid-template-columns:76px 1fr;gap:14px;padding:12px 0 12px 22px;position:relative}
-.timeline li::before{content:"";position:absolute;left:-9px;top:20px;width:15px;height:15px;border-radius:50%;background:var(--prof)}
-.timeline time{font-weight:700;font-variant-numeric:tabular-nums;font-size:18px}
-.timeline b{display:block}.timeline span{color:var(--tenue);font-size:14.5px}
-.timeline .h-pausa::before{background:var(--linea)}.timeline .h-margen{background:#FBFDE6;border-radius:12px}
-.timeline .h-margen::before{background:var(--ac2)}
-.destacado{background:var(--lienzo);border-left:8px solid var(--ac2);border-radius:var(--r);padding:26px 30px;margin-top:28px}
-.destacado b{font-size:17px}
-
-/* tablas */
-.tscroll{overflow-x:auto}
-table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px}
-th{text-align:left;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--tenue);padding:0 14px 10px 0}
-td{padding:10px 14px 10px 0;border-top:2px solid var(--linea);vertical-align:middle}
-td:first-child{font-weight:700;display:flex;align-items:center;gap:10px}
-.av{width:38px;height:38px;border-radius:50%;object-fit:cover;object-position:50% 18%}
-
-/* localizaciones, ropa, checklist */
-.locs{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:22px}
-.locs figure{margin:0}.locs img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px}
-.locs figcaption{font-size:13px;color:var(--tenue);margin-top:8px;line-height:1.4}.locs b{color:var(--texto)}
-.dos{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:20px}
-.caja{background:var(--lienzo);border-radius:var(--r);padding:24px 26px}
-.caja h3{margin-bottom:10px}.caja ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:8px;font-size:15px}
-.paleta{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
-.paleta i{display:flex;align-items:center;gap:7px;font-style:normal;font-size:13px;color:var(--tenue)}
-.paleta i::before{content:"";width:26px;height:26px;border-radius:50%;background:var(--c);border:1px solid var(--linea)}
-.check{list-style:none;padding:0;margin:22px 0 0;display:flex;flex-direction:column;gap:10px}
-.check label{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid var(--linea);border-radius:12px;padding:14px 16px;cursor:pointer}
-.check input{width:22px;height:22px;accent-color:var(--prof);flex:none;margin-top:2px}
-.check input:checked+span{color:var(--tenue);text-decoration:line-through}
-.progreso{font-weight:700;color:var(--violeta)}
-.entrega{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:22px}
-.entrega div{background:var(--prof);color:#fff;border-radius:14px;padding:18px;font-size:14px;line-height:1.45}
-.entrega b{display:block;color:var(--ac1);margin-bottom:6px}
+.grande{font:700 clamp(22px,3vw,30px)/1.3 var(--display);max-width:30ch}
 footer{padding:40px 0 60px;color:var(--tenue);font-size:13px}
 
 /* lightbox */
-.lb{position:fixed;inset:0;background:rgba(17,16,20,.92);z-index:50;display:none;align-items:center;justify-content:center;flex-direction:column;padding:20px}
-.lb.on{display:flex}.lb img{max-height:84vh;max-width:94vw;border-radius:10px}
-.lb p{color:#fff;margin-top:12px}.lb button{position:absolute;top:16px;right:20px;color:#fff;font-size:30px}
+.lb{position:fixed;inset:0;background:rgba(17,16,20,.94);z-index:50;display:none;align-items:center;justify-content:center;padding:20px}
+.lb.on{display:flex}.lb-in{width:min(1300px,96vw)}.lb-in .ref-ov{max-height:90vh;cursor:default}
+.lb>button{position:absolute;top:14px;right:22px;color:#fff;font-size:34px;z-index:3}
 
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
 .reveal.vis{opacity:1;transform:none}
-.aviso-sb{display:inline-block;background:rgba(247,255,165,.14);border:1px solid rgba(247,255,165,.4);color:var(--ac1);border-radius:10px;padding:8px 12px;font-size:13px;margin-top:6px}
 
-@media (max-width:860px){
-  .principios{grid-template-columns:1fr 1fr}.refs,.locs{grid-template-columns:1fr 1fr}
-  .team{grid-template-columns:repeat(3,1fr)}.lis{grid-template-columns:1fr}.entrega{grid-template-columns:1fr 1fr}
+@media (max-width:900px){
+  .foto{grid-template-columns:1fr}.lugares{grid-template-columns:1fr}.planes{grid-template-columns:1fr}
+  .team{grid-template-columns:repeat(3,1fr)}.lis{grid-template-columns:1fr}.extras{grid-template-columns:1fr 1fr}
   .ret-sticky{grid-template-columns:1fr;gap:10px;align-content:center}.ret-foto{height:52vh}.ret-txt{height:170px}
-  .extras{grid-template-columns:1fr 1fr}
 }
 @media (max-width:620px){
-  section{padding:64px 0}.edif,.cifras,.fichas,.dos{grid-template-columns:1fr}
-  .cifra b{font-size:38px}.extras-cab{grid-template-columns:1fr}.reloj{width:110px;height:110px}
-  .txt dl{grid-template-columns:1fr}.principios,.refs,.locs,.entrega{grid-template-columns:1fr}
-  table{min-width:0;font-size:14px}.nav a.cta{display:none}
+  section{padding:64px 0}.edif,.cifras{grid-template-columns:1fr}.cifra b{font-size:38px}
+  .extras-cab{grid-template-columns:1fr}.reloj{width:100px;height:100px}.extras{grid-template-columns:1fr}
+  .f-txt dl{grid-template-columns:1fr;gap:2px}.f-txt dd{margin-bottom:6px}
+  table{min-width:0;font-size:14px}.nav a.cta{display:none}.foto{padding:14px}
+  .o-aire span,.o-marco span,.o-tag{font-size:10.5px;padding:4px 7px}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}.li{opacity:1;transform:none}html{scroll-behavior:auto}}
 </style></head><body>
 <nav class="nav"><div class="wrap"><b>Rodaje TenderYou · 6-nov</b>
-<a href="#fotos">Lista de fotos</a><a href="#horario">Horario</a><a href="#equipo">Equipo</a><a href="#usos">Usos</a><a href="#ropa">Ropa</a><a href="#antes">Antes de mañana</a><a class="cta" href="#fotos">Ir a la lista</a></div></nav>
+<a href="#fotos">Lista de fotos</a><a href="#horario">Horario</a><a href="#lugares">Dónde</a><a href="#equipo">Equipo</a><a href="#ropa">Ropa</a><a href="#antes">Antes de mañana</a><a href="#usos">Usos</a><a class="cta" href="#fotos">Ir a la lista</a></div></nav>
 <main>
 <header class="hero"><div class="wrap">
   <p class="kicker">Briefing de rodaje · TenderYou · viernes 6 de noviembre</p>
   <h1>Fotos del equipo para usarlas en <em>todas</em> partes</h1>
-  <p class="lead">Una mañana, de 8:30 a 13:00, en dos edificios. Aquí tenéis qué fotos vamos a hacer, a quién y a qué hora le toca, qué ropa traer y lo poco que necesitamos de vosotros. <b>Si queréis cambiar algo, decídnoslo hoy.</b></p>
+  <p class="lead">Un día, dos edificios. Aquí tenéis qué fotos vamos a hacer, a quién y a qué hora le toca, qué ropa traer y lo poco que necesitamos de vosotros. <b>Si queréis cambiar algo, decídnoslo hoy.</b></p>
   <div class="edif">
-    <figure><img src="img/loc-impulsa-exterior.jpg" alt="Edificio Impulsa"><figcaption><b>8:30 – 11:05</b>Edificio Impulsa · Parque Científico Tecnológico</figcaption></figure>
-    <figure><img src="img/loc-laboral-equipo.jpg" alt="Universidad Laboral"><figcaption><b>11:25 – 12:35</b>Laboral Ciudad de la Cultura</figcaption></figure>
+    <a href="#lugar-impulsa"><figure><img src="ref/LUG-IMPULSA.jpg" alt="Parque Científico Tecnológico de Gijón"><figcaption><b>Mañana · 8:30 – 13:00</b>Edificio Impulsa · 34 fotos</figcaption></figure></a>
+    <a href="#lugar-laboral"><figure><img src="ref/LUG-LABORAL.jpg" alt="Laboral Ciudad de la Cultura"><figcaption><b>Tarde · 14:30 – 16:30</b>Laboral · 8 fotos</figcaption></figure></a>
   </div>
   <div class="cifras">
-    <div class="cifra"><b>44</b><span>fotos editadas que nos llevamos seguro</span></div>
+    <div class="cifra"><b>42</b><span>fotos editadas que nos llevamos seguro</span></div>
     <div class="cifra"><b>+6</b><span>extras si el día acompaña</span></div>
     <div class="cifra"><b>11</b><span>retratos, en color y en blanco y negro</span></div>
   </div>
   <a class="atajo" href="#fotos">Ver la lista de fotos ↓</a>
-</div>
-<div class="carr" style="margin-top:56px"><div class="wrap carr-cab"><div><p class="eyebrow" style="color:#cfcde8">Storyboard</p><h2>Las 44 fotos, de un vistazo</h2>
-<p>Dibujadas a partir de vuestras fotos y de los espacios reales. Sirven para ver el encuadre, la luz y el aire para el texto. Las poses y la ropa son orientativas.</p></div>
-<div><div class="flechas"><button class="ant" aria-label="Anteriores">←</button><button class="sig" aria-label="Siguientes">→</button></div><p class="contador">1 / 44</p></div></div>
-<div class="pista"><figure class="slide"><button class="zoom" data-src="sb/A1-miguel.jpg" data-cap="A1 · Retrato de busto, mirando a cámara · Miguel"><img src="sb/A1-miguel.jpg" alt="A1 · Retrato de busto, mirando a cámara · Miguel" loading="lazy"></button><figcaption><b>A1</b> Retrato de busto, mirando a cámara · Miguel</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/A1-diego.jpg" data-cap="A1 · Retrato de busto, mirando a cámara · Diego"><img src="sb/A1-diego.jpg" alt="A1 · Retrato de busto, mirando a cámara · Diego" loading="lazy"></button><figcaption><b>A1</b> Retrato de busto, mirando a cámara · Diego</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/A1-ramon.jpg" data-cap="A1 · Retrato de busto, mirando a cámara · Ramón"><img src="sb/A1-ramon.jpg" alt="A1 · Retrato de busto, mirando a cámara · Ramón" loading="lazy"></button><figcaption><b>A1</b> Retrato de busto, mirando a cámara · Ramón</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/A1-nicolas.jpg" data-cap="A1 · Retrato de busto, mirando a cámara · Nicolás"><img src="sb/A1-nicolas.jpg" alt="A1 · Retrato de busto, mirando a cámara · Nicolás" loading="lazy"></button><figcaption><b>A1</b> Retrato de busto, mirando a cámara · Nicolás</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/A1-ivan.jpg" data-cap="A1 · Retrato de busto, mirando a cámara · Iván"><img src="sb/A1-ivan.jpg" alt="A1 · Retrato de busto, mirando a cámara · Iván" loading="lazy"></button><figcaption><b>A1</b> Retrato de busto, mirando a cámara · Iván</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/A1-alfonso.jpg" data-cap="A1 · Retrato de busto, mirando a cámara · Alfonso"><img src="sb/A1-alfonso.jpg" alt="A1 · Retrato de busto, mirando a cámara · Alfonso" loading="lazy"></button><figcaption><b>A1</b> Retrato de busto, mirando a cámara · Alfonso</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/A1-javier.jpg" data-cap="A1 · Retrato de busto, mirando a cámara · Javier"><img src="sb/A1-javier.jpg" alt="A1 · Retrato de busto, mirando a cámara · Javier" loading="lazy"></button><figcaption><b>A1</b> Retrato de busto, mirando a cámara · Javier</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/A1-pedro.jpg" data-cap="A1 · Retrato de busto, mirando a cámara · Pedro"><img src="sb/A1-pedro.jpg" alt="A1 · Retrato de busto, mirando a cámara · Pedro" loading="lazy"></button><figcaption><b>A1</b> Retrato de busto, mirando a cámara · Pedro</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/A1-mario.jpg" data-cap="A1 · Retrato de busto, mirando a cámara · Mario"><img src="sb/A1-mario.jpg" alt="A1 · Retrato de busto, mirando a cámara · Mario" loading="lazy"></button><figcaption><b>A1</b> Retrato de busto, mirando a cámara · Mario</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/A1-alejandro.jpg" data-cap="A1 · Retrato de busto, mirando a cámara · Alejandro"><img src="sb/A1-alejandro.jpg" alt="A1 · Retrato de busto, mirando a cámara · Alejandro" loading="lazy"></button><figcaption><b>A1</b> Retrato de busto, mirando a cámara · Alejandro</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/A1-jose.jpg" data-cap="A1 · Retrato de busto, mirando a cámara · José"><img src="sb/A1-jose.jpg" alt="A1 · Retrato de busto, mirando a cámara · José" loading="lazy"></button><figcaption><b>A1</b> Retrato de busto, mirando a cámara · José</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/A2-miguel.jpg" data-cap="A2 · Plano medio con aire a un lado · Miguel"><img src="sb/A2-miguel.jpg" alt="A2 · Plano medio con aire a un lado · Miguel" loading="lazy"></button><figcaption><b>A2</b> Plano medio con aire a un lado · Miguel</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/A2-diego.jpg" data-cap="A2 · Plano medio con aire a un lado · Diego"><img src="sb/A2-diego.jpg" alt="A2 · Plano medio con aire a un lado · Diego" loading="lazy"></button><figcaption><b>A2</b> Plano medio con aire a un lado · Diego</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/A2-ramon.jpg" data-cap="A2 · Plano medio con aire a un lado · Ramón"><img src="sb/A2-ramon.jpg" alt="A2 · Plano medio con aire a un lado · Ramón" loading="lazy"></button><figcaption><b>A2</b> Plano medio con aire a un lado · Ramón</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/A2-nicolas.jpg" data-cap="A2 · Plano medio con aire a un lado · Nicolás"><img src="sb/A2-nicolas.jpg" alt="A2 · Plano medio con aire a un lado · Nicolás" loading="lazy"></button><figcaption><b>A2</b> Plano medio con aire a un lado · Nicolás</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/A2-ivan.jpg" data-cap="A2 · Plano medio con aire a un lado · Iván"><img src="sb/A2-ivan.jpg" alt="A2 · Plano medio con aire a un lado · Iván" loading="lazy"></button><figcaption><b>A2</b> Plano medio con aire a un lado · Iván</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/A2-alfonso.jpg" data-cap="A2 · Plano medio con aire a un lado · Alfonso"><img src="sb/A2-alfonso.jpg" alt="A2 · Plano medio con aire a un lado · Alfonso" loading="lazy"></button><figcaption><b>A2</b> Plano medio con aire a un lado · Alfonso</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/A2-javier.jpg" data-cap="A2 · Plano medio con aire a un lado · Javier"><img src="sb/A2-javier.jpg" alt="A2 · Plano medio con aire a un lado · Javier" loading="lazy"></button><figcaption><b>A2</b> Plano medio con aire a un lado · Javier</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/A2-pedro.jpg" data-cap="A2 · Plano medio con aire a un lado · Pedro"><img src="sb/A2-pedro.jpg" alt="A2 · Plano medio con aire a un lado · Pedro" loading="lazy"></button><figcaption><b>A2</b> Plano medio con aire a un lado · Pedro</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/A2-mario.jpg" data-cap="A2 · Plano medio con aire a un lado · Mario"><img src="sb/A2-mario.jpg" alt="A2 · Plano medio con aire a un lado · Mario" loading="lazy"></button><figcaption><b>A2</b> Plano medio con aire a un lado · Mario</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/A2-alejandro.jpg" data-cap="A2 · Plano medio con aire a un lado · Alejandro"><img src="sb/A2-alejandro.jpg" alt="A2 · Plano medio con aire a un lado · Alejandro" loading="lazy"></button><figcaption><b>A2</b> Plano medio con aire a un lado · Alejandro</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/A2-jose.jpg" data-cap="A2 · Plano medio con aire a un lado · José"><img src="sb/A2-jose.jpg" alt="A2 · Plano medio con aire a un lado · José" loading="lazy"></button><figcaption><b>A2</b> Plano medio con aire a un lado · José</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/A3-miguel.jpg" data-cap="A3 · Cuerpo entero sobre fondo liso, para recortar · Miguel"><img src="sb/A3-miguel.jpg" alt="A3 · Cuerpo entero sobre fondo liso, para recortar · Miguel" loading="lazy"></button><figcaption><b>A3</b> Cuerpo entero sobre fondo liso, para recortar · Miguel</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/A3-diego.jpg" data-cap="A3 · Cuerpo entero sobre fondo liso, para recortar · Diego"><img src="sb/A3-diego.jpg" alt="A3 · Cuerpo entero sobre fondo liso, para recortar · Diego" loading="lazy"></button><figcaption><b>A3</b> Cuerpo entero sobre fondo liso, para recortar · Diego</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/A3-javier.jpg" data-cap="A3 · Cuerpo entero sobre fondo liso, para recortar · Javier"><img src="sb/A3-javier.jpg" alt="A3 · Cuerpo entero sobre fondo liso, para recortar · Javier" loading="lazy"></button><figcaption><b>A3</b> Cuerpo entero sobre fondo liso, para recortar · Javier</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/A3-mario.jpg" data-cap="A3 · Cuerpo entero sobre fondo liso, para recortar · Mario"><img src="sb/A3-mario.jpg" alt="A3 · Cuerpo entero sobre fondo liso, para recortar · Mario" loading="lazy"></button><figcaption><b>A3</b> Cuerpo entero sobre fondo liso, para recortar · Mario</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/A4.jpg" data-cap="A4 · Miguel, retrato para prensa"><img src="sb/A4.jpg" alt="A4 · Miguel, retrato para prensa" loading="lazy"></button><figcaption><b>A4</b> Miguel, retrato para prensa</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/B1.jpg" data-cap="B1 · Equipo completo"><img src="sb/B1.jpg" alt="B1 · Equipo completo" loading="lazy"></button><figcaption><b>B1</b> Equipo completo</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/B2-dev.jpg" data-cap="B2 · Por áreas: desarrollo, y ventas con Miguel"><img src="sb/B2-dev.jpg" alt="B2 · Por áreas: desarrollo, y ventas con Miguel" loading="lazy"></button><figcaption><b>B2</b> Por áreas: desarrollo, y ventas con Miguel</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/B2-ventas.jpg" data-cap="B2 · Por áreas: desarrollo, y ventas con Miguel"><img src="sb/B2-ventas.jpg" alt="B2 · Por áreas: desarrollo, y ventas con Miguel" loading="lazy"></button><figcaption><b>B2</b> Por áreas: desarrollo, y ventas con Miguel</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/C1.jpg" data-cap="C1 · El equipo trabajando en sus puestos"><img src="sb/C1.jpg" alt="C1 · El equipo trabajando en sus puestos" loading="lazy"></button><figcaption><b>C1</b> El equipo trabajando en sus puestos</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/C2-t1.jpg" data-cap="C2 · Dos personas decidiendo en la mesa (dos tomas)"><img src="sb/C2-t1.jpg" alt="C2 · Dos personas decidiendo en la mesa (dos tomas)" loading="lazy"></button><figcaption><b>C2</b> Dos personas decidiendo en la mesa (dos tomas)</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/C2-t2.jpg" data-cap="C2 · Dos personas decidiendo en la mesa (dos tomas)"><img src="sb/C2-t2.jpg" alt="C2 · Dos personas decidiendo en la mesa (dos tomas)" loading="lazy"></button><figcaption><b>C2</b> Dos personas decidiendo en la mesa (dos tomas)</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/C3.jpg" data-cap="C3 · Una persona sola con el portátil junto a la ventana"><img src="sb/C3.jpg" alt="C3 · Una persona sola con el portátil junto a la ventana" loading="lazy"></button><figcaption><b>C3</b> Una persona sola con el portátil junto a la ventana</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/C4.jpg" data-cap="C4 · Manos con un pliego impreso y el portátil, sin cara"><img src="sb/C4.jpg" alt="C4 · Manos con un pliego impreso y el portátil, sin cara" loading="lazy"></button><figcaption><b>C4</b> Manos con un pliego impreso y el portátil, sin cara</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/C5.jpg" data-cap="C5 · De pie, mirando el móvil"><img src="sb/C5.jpg" alt="C5 · De pie, mirando el móvil" loading="lazy"></button><figcaption><b>C5</b> De pie, mirando el móvil</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/D1-diego.jpg" data-cap="D1 · Comercial en una llamada · Diego"><img src="sb/D1-diego.jpg" alt="D1 · Comercial en una llamada · Diego" loading="lazy"></button><figcaption><b>D1</b> Comercial en una llamada · Diego</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/D1-ramon.jpg" data-cap="D1 · Comercial en una llamada · Ramón"><img src="sb/D1-ramon.jpg" alt="D1 · Comercial en una llamada · Ramón" loading="lazy"></button><figcaption><b>D1</b> Comercial en una llamada · Ramón</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/D1-nicolas.jpg" data-cap="D1 · Comercial en una llamada · Nicolás"><img src="sb/D1-nicolas.jpg" alt="D1 · Comercial en una llamada · Nicolás" loading="lazy"></button><figcaption><b>D1</b> Comercial en una llamada · Nicolás</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/D2.jpg" data-cap="D2 · Demo: un comercial enseña una licitación en pantalla"><img src="sb/D2.jpg" alt="D2 · Demo: un comercial enseña una licitación en pantalla" loading="lazy"></button><figcaption><b>D2</b> Demo: un comercial enseña una licitación en pantalla</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/D3.jpg" data-cap="D3 · Sonriendo al móvil, como cuando llega un aviso"><img src="sb/D3.jpg" alt="D3 · Sonriendo al móvil, como cuando llega un aviso" loading="lazy"></button><figcaption><b>D3</b> Sonriendo al móvil, como cuando llega un aviso</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/D4.jpg" data-cap="D4 · El equipo de ventas conversando"><img src="sb/D4.jpg" alt="D4 · El equipo de ventas conversando" loading="lazy"></button><figcaption><b>D4</b> El equipo de ventas conversando</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/E1.jpg" data-cap="E1 · Miguel bajo la arquería"><img src="sb/E1.jpg" alt="E1 · Miguel bajo la arquería" loading="lazy"></button><figcaption><b>E1</b> Miguel bajo la arquería</figcaption></figure><figure class="slide"><button class="zoom" data-src="sb/E2.jpg" data-cap="E2 · Miguel caminando bajo los arcos"><img src="sb/E2.jpg" alt="E2 · Miguel caminando bajo los arcos" loading="lazy"></button><figcaption><b>E2</b> Miguel caminando bajo los arcos</figcaption></figure></div></div>
-</header>
+</div></header>
 
-<section id="usos"><div class="wrap">
-  <p class="eyebrow">Dónde se van a usar</p>
-  <h2>Cada foto sale pensando en su <em>sitio</em></h2>
-  <p>No hacemos «fotos de equipo» en general: cada toma responde a un sitio donde vuestras caras ya aparecen o van a aparecer. Así se verían con el storyboard puesto en su sitio.</p>
-  <div class="tabs" role="tablist"><button role="tab" aria-selected="true" data-t="0">Web «Sobre nosotros»</button><button role="tab" aria-selected="false" data-t="1">LinkedIn</button><button role="tab" aria-selected="false" data-t="2">Anuncios</button><button role="tab" aria-selected="false" data-t="3">Correos</button><button role="tab" aria-selected="false" data-t="4">Prensa y premios</button><button role="tab" aria-selected="false" data-t="5">Presentaciones</button></div><div class="panes"><div class="pane on" data-p="0"><p class="pane-nota">A1 · 4:5 · también en blanco y negro</p><div class="mock web"><div class="barra"><i></i><i></i><i></i><span>tenderyou.com/sobre-nosotros</span></div>
-<div class="web-in"><p class="w-k">Sobre nosotros</p><h4>Detrás de los datos hay un equipo al que <em>puedes llamar</em></h4>
-<div class="team"><div class="tc"><img src="sbl/A1-miguel.jpg" alt="" loading="lazy"><b>Miguel López</b><span>CEO</span></div><div class="tc"><img src="sbl/A1-diego.jpg" alt="" loading="lazy"><b>Diego Rollán</b><span>Director de Ventas</span></div><div class="tc"><img src="sbl/A1-ivan.jpg" alt="" loading="lazy"><b>Iván García</b><span>Director Tecnológico</span></div><div class="tc"><img src="sbl/A1-alfonso.jpg" alt="" loading="lazy"><b>Alfonso Alonso</b><span>Director de Desarrollo</span></div><div class="tc"><img src="sbl/A1-javier.jpg" alt="" loading="lazy"><b>Javier Novella</b><span>Programador jefe</span></div><div class="tc"><img src="sbl/A1-ramon.jpg" alt="" loading="lazy"><b>Ramón Somolinos</b><span>Equipo comercial</span></div></div></div></div></div><div class="pane" data-p="1"><p class="pane-nota">A1 en círculo · B1 para la página de empresa</p><div class="mock lis"><div class="li" style="--d:0.0s"><div class="li-ban"></div><img src="sbl/A1-miguel.jpg" alt=""><b>Miguel López</b><span>CEO en TenderYou · Licitaciones públicas con IA</span><small>Gijón, Asturias · 500+ contactos</small><em>Conectar</em></div><div class="li" style="--d:0.18s"><div class="li-ban"></div><img src="sbl/A1-diego.jpg" alt=""><b>Diego Rollán</b><span>Director de Ventas en TenderYou</span><small>Gijón, Asturias · 500+ contactos</small><em>Conectar</em></div><div class="li" style="--d:0.36s"><div class="li-ban"></div><img src="sbl/A1-ivan.jpg" alt=""><b>Iván García</b><span>Director Tecnológico en TenderYou</span><small>Gijón, Asturias · 500+ contactos</small><em>Conectar</em></div></div></div><div class="pane" data-p="2"><p class="pane-nota">D1 en 4:5 · E2 en 9:16</p><div class="mock ads">
-<div class="tel"><div class="tel-top"><b>tenderyou</b><span>Publicidad</span></div><div class="ad45"><img src="sbl/D1-diego.jpg" alt=""><p>¿Te llamamos y te enseñamos <em>tus</em> licitaciones?</p></div><div class="tel-cta">Más información</div></div>
-<div class="tel st"><div class="ad916"><img src="sbl/E2.jpg" alt=""><p>Miguel López, CEO de TenderYou</p></div></div></div></div><div class="pane" data-p="3"><p class="pane-nota">C3 de cabecera · A1 en la firma</p><div class="mock mail"><div class="m-h"><b>TenderYou</b> &lt;hola@tenderyou.com&gt;<span>Tienes licitaciones nuevas que encajan contigo</span></div>
-<div class="m-b"><img class="m-hero" src="sbl/C3.jpg" alt=""><p>Hola, esta semana han salido expedientes que encajan con lo que hacéis…</p>
-<div class="firma"><img src="sbl/A1-diego.jpg" alt=""><div><b>Diego Rollán</b><span>Director de Ventas · TenderYou</span></div></div></div></div></div><div class="pane" data-p="4"><p class="pane-nota">E1 y A4 en alta resolución</p><div class="mock prensa"><p class="p-cab">Prensa · Economía</p><h4>La startup gijonesa que quiere automatizar las licitaciones públicas</h4>
-<img src="sbl/E1.jpg" alt=""><p class="p-pie">Miguel López, CEO de TenderYou, en la Laboral.</p></div></div><div class="pane" data-p="5"><p class="pane-nota">A2 en 16:9 con aire</p><div class="mock slide169"><img src="sbl/A2-miguel.jpg" alt=""><div class="s-t"><p>Quién está detrás</p><h4>Un equipo de Gijón que conoce la contratación pública</h4></div></div></div></div>
-</div></section>
-
-<section id="estilo" style="background:#fff"><div class="wrap">
+<section id="estilo"><div class="wrap">
   <p class="eyebrow">Cómo se van a ver</p>
   <h2>Gente real trabajando, con luz de <em>ventana</em></h2>
-  <p>La contratación pública tiene fama de gris. Las fotos tienen que contar lo contrario sin perder confianza: un equipo cercano al que puedes poner cara y llamar.</p>
-  <div class="principios reveal">
-    <div><b>No posáis: trabajáis</b>Una llamada, revisar un pliego, enseñar algo en pantalla.</div>
-    <div><b>Luz de ventana</b>Natural y suave, la misma en todos los retratos.</div>
-    <div><b>Color sobrio</b>Cálido, con un toque de lila. Retratos también en B/N.</div>
-    <div><b>Cerca y claro</b>Caras que se reconocen hasta en una miniatura.</div>
-    <div><b>Aire para el texto</b>Un tercio libre en las fotos que llevan titular.</div>
-  </div>
-  <div class="refs reveal">
-    <figure><img src="img/ref-trabajan.jpg" alt="" loading="lazy"><figcaption><b>Las escenas.</b> Nadie mira a cámara y la risa es de verdad.</figcaption></figure>
-    <figure><img src="img/ref-mesa.jpg" alt="" loading="lazy"><figcaption><b>Dos personas decidiendo.</b> Colores lisos y un primer término desenfocado.</figcaption></figure>
-    <figure><img src="img/ref-retrato.jpg" alt="" loading="lazy"><figcaption><b>El retrato de busto.</b> Pared clara, luz de ventana de lado y aire sobre la cabeza.</figcaption></figure>
-    <figure><img src="img/ref-concentradas.jpg" alt="" loading="lazy"><figcaption><b>Concentración real.</b> Las manos cuentan qué hacen sin señalar la pantalla.</figcaption></figure>
-  </div>
-  <p class="sub" style="margin-top:14px">Referencias de empresas de software con IA para sectores técnicos (Harvey, Maisa y ElevenLabs), para la luz, el encuadre y la actitud.</p>
+  <p>La contratación pública tiene fama de gris. Las fotos tienen que contar lo contrario sin perder confianza: un equipo cercano al que puedes poner cara y llamar. Cada referencia muestra una de estas ideas.</p>
+  <div class="est-grid"><figure class="est reveal"><img src="ref/C2.jpg" alt="" loading="lazy"><figcaption><div class="est-tags"><i>No posáis: trabajáis</i><i>Profundidad</i></div>Nadie posa: ella explica algo de verdad y se ríe. El hombro desenfocado mete al que mira dentro de la escena.</figcaption></figure><figure class="est reveal"><img src="ref/A1.jpg" alt="" loading="lazy"><figcaption><div class="est-tags"><i>Cerca y claro</i><i>Luz de ventana</i></div>Pared lisa, luz suave y una sonrisa que sale sola. Así serán los retratos.</figcaption></figure><figure class="est reveal"><img src="ref/C1.jpg" alt="" loading="lazy"><figcaption><div class="est-tags"><i>Luz de ventana</i><i>No posáis: trabajáis</i></div>La luz entra por el ventanal y las pantallas quedan desenfocadas: se entiende qué hacen sin leer nada.</figcaption></figure><figure class="est reveal"><img src="ref/A2.jpg" alt="" loading="lazy"><figcaption><div class="est-tags"><i>Aire para el texto</i><i>Color sobrio</i></div>Colores apagados y un solo tono oscuro. Dos tercios de pared limpia para poner el texto encima.</figcaption></figure><figure class="est reveal"><img src="ref/D4.jpg" alt="" loading="lazy"><figcaption><div class="est-tags"><i>Profundidad</i><i>Color sobrio</i></div>Tres capas: alguien de espaldas delante, la conversación en medio y la ventana detrás.</figcaption></figure><figure class="est reveal"><img src="ref/C4.jpg" alt="" loading="lazy"><figcaption><div class="est-tags"><i>Detalles reales</i><i>Luz de ventana</i></div>El detalle también cuenta el trabajo: el pliego, el bolígrafo y el portátil, sin caras.</figcaption></figure></div>
 </div></section>
 
 <section class="retratos" aria-label="Retratos"><div class="wrap ret-sticky">
@@ -290,204 +277,176 @@ footer{padding:40px 0 60px;color:var(--tenue);font-size:13px}
 
 <section id="fotos"><div class="wrap">
   <p class="eyebrow">Lista de fotos</p>
-  <h2>Lo que nos llevamos <em>seguro</em></h2>
-  <p>Ordenadas por sitio y por persona para no perder tiempo. Pulsa cualquier storyboard para verlo en grande.</p>
-  <div class="bloque-cab" id="bloque-A"><span class="tag">Bloque A · Retratos</span><span class="donde">Edificio Impulsa · 8:55 – 10:05</span></div><div class="fichas"><article class="ficha reveal" id="foto-A1">
-  <button class="zoom portada" data-src="sb/A1-miguel.jpg" data-cap="A1 · Retrato de busto, mirando a cámara"><img src="sb/A1-miguel.jpg" alt="Storyboard A1" loading="lazy"><span class="lupa">Ampliar</span></button>
-  <div class="minis"><button class="zoom" data-src="sb/A1-miguel.jpg" data-cap="A1 · Retrato de busto, mirando a cámara"><img src="sb/A1-miguel.jpg" alt="" loading="lazy"></button><button class="zoom" data-src="sb/A1-diego.jpg" data-cap="A1 · Retrato de busto, mirando a cámara"><img src="sb/A1-diego.jpg" alt="" loading="lazy"></button><button class="zoom" data-src="sb/A1-ramon.jpg" data-cap="A1 · Retrato de busto, mirando a cámara"><img src="sb/A1-ramon.jpg" alt="" loading="lazy"></button><button class="zoom" data-src="sb/A1-nicolas.jpg" data-cap="A1 · Retrato de busto, mirando a cámara"><img src="sb/A1-nicolas.jpg" alt="" loading="lazy"></button><button class="zoom" data-src="sb/A1-ivan.jpg" data-cap="A1 · Retrato de busto, mirando a cámara"><img src="sb/A1-ivan.jpg" alt="" loading="lazy"></button><button class="zoom" data-src="sb/A1-alfonso.jpg" data-cap="A1 · Retrato de busto, mirando a cámara"><img src="sb/A1-alfonso.jpg" alt="" loading="lazy"></button><button class="zoom" data-src="sb/A1-javier.jpg" data-cap="A1 · Retrato de busto, mirando a cámara"><img src="sb/A1-javier.jpg" alt="" loading="lazy"></button><button class="zoom" data-src="sb/A1-pedro.jpg" data-cap="A1 · Retrato de busto, mirando a cámara"><img src="sb/A1-pedro.jpg" alt="" loading="lazy"></button><button class="zoom" data-src="sb/A1-mario.jpg" data-cap="A1 · Retrato de busto, mirando a cámara"><img src="sb/A1-mario.jpg" alt="" loading="lazy"></button><button class="zoom" data-src="sb/A1-alejandro.jpg" data-cap="A1 · Retrato de busto, mirando a cámara"><img src="sb/A1-alejandro.jpg" alt="" loading="lazy"></button><button class="zoom" data-src="sb/A1-jose.jpg" data-cap="A1 · Retrato de busto, mirando a cámara"><img src="sb/A1-jose.jpg" alt="" loading="lazy"></button></div>
-  <div class="txt"><p class="fid">A1</p><h3>Retrato de busto, mirando a cámara</h3>
-  <dl><dt>Quién</dt><dd>Cada persona del equipo, una a una</dd><dt>Dónde</dt><dd>Edificio Impulsa, junto a una ventana, con fondo claro y liso</dd><dt>Para qué</dt><dd>Web (Sobre nosotros y «Habla con un experto»), foto de perfil de LinkedIn, firma de correo, posts de bienvenida y prensa</dd><dt>Formato</dt><dd>Vertical 4:5, con aire sobre la cabeza: de la misma foto sale el 1:1 y el círculo. En color y en blanco y negro</dd></dl></div>
-</article><article class="ficha reveal" id="foto-A2">
-  <button class="zoom portada" data-src="sb/A2-miguel.jpg" data-cap="A2 · Plano medio con aire a un lado"><img src="sb/A2-miguel.jpg" alt="Storyboard A2" loading="lazy"><span class="lupa">Ampliar</span></button>
-  <div class="minis"><button class="zoom" data-src="sb/A2-miguel.jpg" data-cap="A2 · Plano medio con aire a un lado"><img src="sb/A2-miguel.jpg" alt="" loading="lazy"></button><button class="zoom" data-src="sb/A2-diego.jpg" data-cap="A2 · Plano medio con aire a un lado"><img src="sb/A2-diego.jpg" alt="" loading="lazy"></button><button class="zoom" data-src="sb/A2-ramon.jpg" data-cap="A2 · Plano medio con aire a un lado"><img src="sb/A2-ramon.jpg" alt="" loading="lazy"></button><button class="zoom" data-src="sb/A2-nicolas.jpg" data-cap="A2 · Plano medio con aire a un lado"><img src="sb/A2-nicolas.jpg" alt="" loading="lazy"></button><button class="zoom" data-src="sb/A2-ivan.jpg" data-cap="A2 · Plano medio con aire a un lado"><img src="sb/A2-ivan.jpg" alt="" loading="lazy"></button><button class="zoom" data-src="sb/A2-alfonso.jpg" data-cap="A2 · Plano medio con aire a un lado"><img src="sb/A2-alfonso.jpg" alt="" loading="lazy"></button><button class="zoom" data-src="sb/A2-javier.jpg" data-cap="A2 · Plano medio con aire a un lado"><img src="sb/A2-javier.jpg" alt="" loading="lazy"></button><button class="zoom" data-src="sb/A2-pedro.jpg" data-cap="A2 · Plano medio con aire a un lado"><img src="sb/A2-pedro.jpg" alt="" loading="lazy"></button><button class="zoom" data-src="sb/A2-mario.jpg" data-cap="A2 · Plano medio con aire a un lado"><img src="sb/A2-mario.jpg" alt="" loading="lazy"></button><button class="zoom" data-src="sb/A2-alejandro.jpg" data-cap="A2 · Plano medio con aire a un lado"><img src="sb/A2-alejandro.jpg" alt="" loading="lazy"></button><button class="zoom" data-src="sb/A2-jose.jpg" data-cap="A2 · Plano medio con aire a un lado"><img src="sb/A2-jose.jpg" alt="" loading="lazy"></button></div>
-  <div class="txt"><p class="fid">A2</p><h3>Plano medio con aire a un lado</h3>
-  <dl><dt>Quién</dt><dd>Cada persona, en el mismo turno que A1</dd><dt>Dónde</dt><dd>El mismo set</dd><dt>Para qué</dt><dd>Presentaciones a clientes, artículos y premios en horizontal, anuncios con el texto al lado y cabeceras</dd><dt>Formato</dt><dd>Horizontal 3:2 (sale 16:9). La persona en un tercio y dos tercios libres para el texto</dd></dl></div>
-</article><article class="ficha reveal" id="foto-A3">
-  <button class="zoom portada" data-src="sb/A3-miguel.jpg" data-cap="A3 · Cuerpo entero sobre fondo liso, para recortar"><img src="sb/A3-miguel.jpg" alt="Storyboard A3" loading="lazy"><span class="lupa">Ampliar</span></button>
-  <div class="minis"><button class="zoom" data-src="sb/A3-miguel.jpg" data-cap="A3 · Cuerpo entero sobre fondo liso, para recortar"><img src="sb/A3-miguel.jpg" alt="" loading="lazy"></button><button class="zoom" data-src="sb/A3-diego.jpg" data-cap="A3 · Cuerpo entero sobre fondo liso, para recortar"><img src="sb/A3-diego.jpg" alt="" loading="lazy"></button><button class="zoom" data-src="sb/A3-javier.jpg" data-cap="A3 · Cuerpo entero sobre fondo liso, para recortar"><img src="sb/A3-javier.jpg" alt="" loading="lazy"></button><button class="zoom" data-src="sb/A3-mario.jpg" data-cap="A3 · Cuerpo entero sobre fondo liso, para recortar"><img src="sb/A3-mario.jpg" alt="" loading="lazy"></button></div>
-  <div class="txt"><p class="fid">A3</p><h3>Cuerpo entero sobre fondo liso, para recortar</h3>
-  <dl><dt>Quién</dt><dd>Miguel, Diego y dos personas de desarrollo</dd><dt>Dónde</dt><dd>El mismo set, con más distancia</dd><dt>Para qué</dt><dd>Anuncios y carruseles con la persona recortada sobre el fondo de marca, y correos</dd><dt>Formato</dt><dd>Vertical, con fondo liso que contraste con el pelo y la ropa</dd></dl></div>
-</article><article class="ficha reveal" id="foto-A4">
-  <button class="zoom portada" data-src="sb/A4.jpg" data-cap="A4 · Miguel, retrato para prensa"><img src="sb/A4.jpg" alt="Storyboard A4" loading="lazy"><span class="lupa">Ampliar</span></button>
-  
-  <div class="txt"><p class="fid">A4</p><h3>Miguel, retrato para prensa</h3>
-  <dl><dt>Quién</dt><dd>Miguel (con americana, si la trae)</dd><dt>Dónde</dt><dd>El mismo set</dd><dt>Para qué</dt><dd>Notas de prensa, premios, Lanzadera y programas, ponencias y entrevistas</dd><dt>Formato</dt><dd>Una vertical y una horizontal, con fondo limpio</dd></dl></div>
-</article></div><div class="bloque-cab" id="bloque-B"><span class="tag">Bloque B · Equipo</span><span class="donde">Exterior del Impulsa · 10:05 – 10:25</span></div><div class="fichas"><article class="ficha reveal" id="foto-B1">
-  <button class="zoom portada" data-src="sb/B1.jpg" data-cap="B1 · Equipo completo"><img src="sb/B1.jpg" alt="Storyboard B1" loading="lazy"><span class="lupa">Ampliar</span></button>
-  
-  <div class="txt"><p class="fid">B1</p><h3>Equipo completo</h3>
-  <dl><dt>Quién</dt><dd>Todo el equipo</dd><dt>Dónde</dt><dd>Fuera del Edificio Impulsa, con la fachada de madera detrás</dd><dt>Para qué</dt><dd>Web, prensa, premios, LinkedIn de la empresa y presentaciones</dd><dt>Formato</dt><dd>Horizontal, con aire arriba para sacar también un 4:5</dd></dl></div>
-</article><article class="ficha reveal" id="foto-B2">
-  <button class="zoom portada" data-src="sb/B2-dev.jpg" data-cap="B2 · Por áreas: desarrollo, y ventas con Miguel"><img src="sb/B2-dev.jpg" alt="Storyboard B2" loading="lazy"><span class="lupa">Ampliar</span></button>
-  <div class="minis"><button class="zoom" data-src="sb/B2-dev.jpg" data-cap="B2 · Por áreas: desarrollo, y ventas con Miguel"><img src="sb/B2-dev.jpg" alt="" loading="lazy"></button><button class="zoom" data-src="sb/B2-ventas.jpg" data-cap="B2 · Por áreas: desarrollo, y ventas con Miguel"><img src="sb/B2-ventas.jpg" alt="" loading="lazy"></button></div>
-  <div class="txt"><p class="fid">B2</p><h3>Por áreas: desarrollo, y ventas con Miguel</h3>
-  <dl><dt>Quién</dt><dd>Cada área por separado</dd><dt>Dónde</dt><dd>El mismo sitio, justo después de B1</dd><dt>Para qué</dt><dd>Presentaciones («quién te atiende»), posts y web</dd><dt>Formato</dt><dd>Horizontal</dd></dl></div>
-</article></div><div class="bloque-cab" id="bloque-C"><span class="tag">Bloque C · Desarrollo trabajando</span><span class="donde">Oficina del Impulsa · 10:25 – 11:05</span></div><div class="fichas"><article class="ficha reveal" id="foto-C1">
-  <button class="zoom portada" data-src="sb/C1.jpg" data-cap="C1 · El equipo trabajando en sus puestos"><img src="sb/C1.jpg" alt="Storyboard C1" loading="lazy"><span class="lupa">Ampliar</span></button>
-  
-  <div class="txt"><p class="fid">C1</p><h3>El equipo trabajando en sus puestos</h3>
-  <dl><dt>Quién</dt><dd>Desarrollo, cada uno en su sitio</dd><dt>Dónde</dt><dd>Vuestra oficina del Impulsa</dd><dt>Para qué</dt><dd>Web, posts y presentaciones</dd><dt>Formato</dt><dd>Horizontal amplio, con aire arriba</dd></dl></div>
-</article><article class="ficha reveal" id="foto-C2">
-  <button class="zoom portada" data-src="sb/C2-t1.jpg" data-cap="C2 · Dos personas decidiendo en la mesa (dos tomas)"><img src="sb/C2-t1.jpg" alt="Storyboard C2" loading="lazy"><span class="lupa">Ampliar</span></button>
-  <div class="minis"><button class="zoom" data-src="sb/C2-t1.jpg" data-cap="C2 · Dos personas decidiendo en la mesa (dos tomas)"><img src="sb/C2-t1.jpg" alt="" loading="lazy"></button><button class="zoom" data-src="sb/C2-t2.jpg" data-cap="C2 · Dos personas decidiendo en la mesa (dos tomas)"><img src="sb/C2-t2.jpg" alt="" loading="lazy"></button></div>
-  <div class="txt"><p class="fid">C2</p><h3>Dos personas decidiendo en la mesa (dos tomas)</h3>
-  <dl><dt>Quién</dt><dd>Dos personas de desarrollo; en la segunda toma, otras dos</dd><dt>Dónde</dt><dd>Mesa de la oficina o sala de reuniones</dd><dt>Para qué</dt><dd>Correos del ciclo de vida y anuncios</dd><dt>Formato</dt><dd>Horizontal</dd></dl></div>
-</article><article class="ficha reveal" id="foto-C3">
-  <button class="zoom portada" data-src="sb/C3.jpg" data-cap="C3 · Una persona sola con el portátil junto a la ventana"><img src="sb/C3.jpg" alt="Storyboard C3" loading="lazy"><span class="lupa">Ampliar</span></button>
-  
-  <div class="txt"><p class="fid">C3</p><h3>Una persona sola con el portátil junto a la ventana</h3>
-  <dl><dt>Quién</dt><dd>Una persona de desarrollo</dd><dt>Dónde</dt><dd>Junto a la ventana más luminosa</dd><dt>Para qué</dt><dd>Correos y anuncios con texto encima</dd><dt>Formato</dt><dd>Vertical 4:5 y horizontal, con un tercio libre</dd></dl></div>
-</article><article class="ficha reveal" id="foto-C4">
-  <button class="zoom portada" data-src="sb/C4.jpg" data-cap="C4 · Manos con un pliego impreso y el portátil, sin cara"><img src="sb/C4.jpg" alt="Storyboard C4" loading="lazy"><span class="lupa">Ampliar</span></button>
-  
-  <div class="txt"><p class="fid">C4</p><h3>Manos con un pliego impreso y el portátil, sin cara</h3>
-  <dl><dt>Quién</dt><dd>Cualquiera</dd><dt>Dónde</dt><dd>Mesa con luz de ventana</dd><dt>Para qué</dt><dd>Correos y piezas que explican el producto</dd><dt>Formato</dt><dd>Desde arriba o en tres cuartos</dd></dl></div>
-</article><article class="ficha reveal" id="foto-C5">
-  <button class="zoom portada" data-src="sb/C5.jpg" data-cap="C5 · De pie, mirando el móvil"><img src="sb/C5.jpg" alt="Storyboard C5" loading="lazy"><span class="lupa">Ampliar</span></button>
-  
-  <div class="txt"><p class="fid">C5</p><h3>De pie, mirando el móvil</h3>
-  <dl><dt>Quién</dt><dd>Una persona de desarrollo</dd><dt>Dónde</dt><dd>Pasillo o junto a la ventana</dd><dt>Para qué</dt><dd>Correos de avisos y anuncios</dd><dt>Formato</dt><dd>Vertical; el móvil se ve por detrás</dd></dl></div>
-</article></div><div class="bloque-cab" id="bloque-D"><span class="tag">Bloque D · Ventas trabajando</span><span class="donde">Oficina de ventas, Laboral · 11:25 – 12:05</span></div><div class="fichas"><article class="ficha reveal" id="foto-D1">
-  <button class="zoom portada" data-src="sb/D1-diego.jpg" data-cap="D1 · Comercial en una llamada"><img src="sb/D1-diego.jpg" alt="Storyboard D1" loading="lazy"><span class="lupa">Ampliar</span></button>
-  <div class="minis"><button class="zoom" data-src="sb/D1-diego.jpg" data-cap="D1 · Comercial en una llamada"><img src="sb/D1-diego.jpg" alt="" loading="lazy"></button><button class="zoom" data-src="sb/D1-ramon.jpg" data-cap="D1 · Comercial en una llamada"><img src="sb/D1-ramon.jpg" alt="" loading="lazy"></button><button class="zoom" data-src="sb/D1-nicolas.jpg" data-cap="D1 · Comercial en una llamada"><img src="sb/D1-nicolas.jpg" alt="" loading="lazy"></button></div>
-  <div class="txt"><p class="fid">D1</p><h3>Comercial en una llamada</h3>
-  <dl><dt>Quién</dt><dd>Diego, Ramón y Nicolás (una toma cada uno)</dd><dt>Dónde</dt><dd>Oficina de ventas, Laboral</dd><dt>Para qué</dt><dd>«Detrás de los datos hay un equipo al que puedes llamar»: web, anuncios de demo y correos</dd><dt>Formato</dt><dd>Horizontal con aire y vertical</dd></dl></div>
-</article><article class="ficha reveal" id="foto-D2">
-  <button class="zoom portada" data-src="sb/D2.jpg" data-cap="D2 · Demo: un comercial enseña una licitación en pantalla"><img src="sb/D2.jpg" alt="Storyboard D2" loading="lazy"><span class="lupa">Ampliar</span></button>
-  
-  <div class="txt"><p class="fid">D2</p><h3>Demo: un comercial enseña una licitación en pantalla</h3>
-  <dl><dt>Quién</dt><dd>Dos comerciales</dd><dt>Dónde</dt><dd>Oficina de ventas</dd><dt>Para qué</dt><dd>Anuncios de demo, presentaciones y outbound</dd><dt>Formato</dt><dd>Horizontal</dd></dl></div>
-</article><article class="ficha reveal" id="foto-D3">
-  <button class="zoom portada" data-src="sb/D3.jpg" data-cap="D3 · Sonriendo al móvil, como cuando llega un aviso"><img src="sb/D3.jpg" alt="Storyboard D3" loading="lazy"><span class="lupa">Ampliar</span></button>
-  
-  <div class="txt"><p class="fid">D3</p><h3>Sonriendo al móvil, como cuando llega un aviso</h3>
-  <dl><dt>Quién</dt><dd>Un comercial</dd><dt>Dónde</dt><dd>Oficina de ventas o pasillo</dd><dt>Para qué</dt><dd>Correos de avisos y anuncios</dd><dt>Formato</dt><dd>Vertical</dd></dl></div>
-</article><article class="ficha reveal" id="foto-D4">
-  <button class="zoom portada" data-src="sb/D4.jpg" data-cap="D4 · El equipo de ventas conversando"><img src="sb/D4.jpg" alt="Storyboard D4" loading="lazy"><span class="lupa">Ampliar</span></button>
-  
-  <div class="txt"><p class="fid">D4</p><h3>El equipo de ventas conversando</h3>
-  <dl><dt>Quién</dt><dd>Diego, Ramón y Nicolás</dd><dt>Dónde</dt><dd>Oficina de ventas</dd><dt>Para qué</dt><dd>Web, posts y presentaciones</dd><dt>Formato</dt><dd>Horizontal</dd></dl></div>
-</article></div><div class="bloque-cab" id="bloque-E"><span class="tag">Bloque E · Miguel en la Laboral</span><span class="donde">Laboral · 12:05 – 12:35</span></div><div class="fichas"><article class="ficha reveal" id="foto-E1">
-  <button class="zoom portada" data-src="sb/E1.jpg" data-cap="E1 · Miguel bajo la arquería"><img src="sb/E1.jpg" alt="Storyboard E1" loading="lazy"><span class="lupa">Ampliar</span></button>
-  
-  <div class="txt"><p class="fid">E1</p><h3>Miguel bajo la arquería</h3>
-  <dl><dt>Quién</dt><dd>Miguel</dd><dt>Dónde</dt><dd>Soportales y columnas de la Laboral, a la sombra</dd><dt>Para qué</dt><dd>Prensa, premios, entrevistas y miniaturas de vídeo</dd><dt>Formato</dt><dd>Horizontal con aire a un lado; la arquitectura desenfocada detrás</dd></dl></div>
-</article><article class="ficha reveal" id="foto-E2">
-  <button class="zoom portada" data-src="sb/E2.jpg" data-cap="E2 · Miguel caminando bajo los arcos"><img src="sb/E2.jpg" alt="Storyboard E2" loading="lazy"><span class="lupa">Ampliar</span></button>
-  
-  <div class="txt"><p class="fid">E2</p><h3>Miguel caminando bajo los arcos</h3>
-  <dl><dt>Quién</dt><dd>Miguel</dd><dt>Dónde</dt><dd>Soportales de la Laboral</dd><dt>Para qué</dt><dd>Portadas de carrusel, stories y artículos</dd><dt>Formato</dt><dd>Vertical 4:5 y 9:16</dd></dl></div>
-</article></div>
+  <h2>Las 42 fotos que nos llevamos <em>seguro</em></h2>
+  <p>Cada foto lleva una referencia con las indicaciones encima (aire para el texto, de dónde entra la luz, el encuadre) y su ficha técnica. Pulsa «Indicaciones» para ver la referencia limpia.</p>
+  <div class="b-cab" id="bloque-A"><span class="tag">Bloque A · Retratos</span><span class="donde">Edificio Impulsa · 9:00 – 10:50 · 26 fotos</span></div><article class="foto reveal" id="foto-A1">
+<div class="f-img"><figure class="ref-ov " style="aspect-ratio:1430/1800"><img src="ref/A1.jpg" alt="Referencia A1" loading="lazy"><div class="ov"><svg class="o-svg" viewBox="0 0 1430 1800" preserveAspectRatio="none"><defs><marker id="pfA1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#FFB020"/></marker></defs><style>.o-flecha{stroke:#FFB020;stroke-width:10}.o-linea{stroke:#F7FFA5;stroke-width:6;stroke-dasharray:24 18}</style><line x1="43" y1="540" x2="315" y2="720" class="o-flecha" marker-end="url(#pfA1)"/></svg><div class="o-marco" style="left:0%;top:8%;width:100%;height:79.5%"><span>Recorte 1:1 para LinkedIn y la firma</span></div><span class="o-tag luz" style="left:3%;top:30%;transform:translate(-0%,-50%)">☀ Ventana de lado</span><span class="o-tag nota" style="left:56%;top:5%;transform:translate(-24%,-50%)">● Aire sobre la cabeza</span><span class="o-tag nota" style="left:56%;top:93%;transform:translate(-24%,-50%)">● Pared lisa a 1,5 – 2 m</span></div><button class="o-tog" aria-pressed="true">Indicaciones</button></figure><p class="f-nota">Referencia: sirve para el encuadre, la luz y la actitud, no es el sitio ni la persona.</p></div>
+<div class="f-txt"><p class="fid">A1<span>11 fotos</span></p><h3>Retrato de busto, mirando a cámara</h3>
+<p class="f-q"><b>Quién:</b> Cada persona del equipo, una a una (11)</p><p class="f-q"><b>Para qué:</b> Web (Sobre nosotros y «Habla con un experto»), foto de perfil de LinkedIn, firma de correo, posts de bienvenida y prensa</p>
+<div class="chips"><span><small>Formato</small>4:5 vertical</span><span><small>Plano</small>Busto</span><span><small>Óptica</small>50–56 mm</span><span><small>Apertura</small>f/2.8</span><span><small>Luz</small>Ventana lateral</span><span><small>Cámara</small>Altura de ojos</span></div><dl><dt>Plano</dt><dd>Busto: del pecho a la cabeza. Cerrado, pero sin cortar nada de la cabeza</dd><dt>Formato</dt><dd>Vertical 4:5. De la misma foto sale el 1:1 y el círculo de LinkedIn. En color y en blanco y negro</dd><dt>Márgenes</dt><dd>Ojos en la línea del tercio superior. Aire sobre la cabeza de un 10-12 % del alto y hombros completos a los lados</dd><dt>Tiro de cámara</dt><dd>A la altura de los ojos, recto y nivelado. Ni picado ni contrapicado</dd><dt>Pose y acción</dt><dd>Cuerpo girado unos 30° hacia la ventana, cara a cámara, sonrisa natural (sale de una pregunta, no de «sonríe»). Sin brazos cruzados</dd><dt>Luz</dt><dd>Natural de ventana, de lado (45°), suave. Un reflector blanco en el lado de sombra. Luces del techo apagadas</dd><dt>Fondo y profundidad</dt><dd>Pared clara y lisa a 1,5-2 m, ligeramente desenfocada. Nada detrás de la cabeza</dd><dt>Óptica y ajustes</dt><dd>50-56 mm · f/2.8 · 1/200 · ISO 200-800 · balance fijo</dd></dl></div></article><article class="foto reveal" id="foto-A2">
+<div class="f-img"><figure class="ref-ov " style="aspect-ratio:1600/1063"><img src="ref/A2.jpg" alt="Referencia A2" loading="lazy"><div class="ov"><svg class="o-svg" viewBox="0 0 1600 1063" preserveAspectRatio="none"><defs><marker id="pfA2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#FFB020"/></marker></defs><style>.o-flecha{stroke:#FFB020;stroke-width:11}.o-linea{stroke:#F7FFA5;stroke-width:7;stroke-dasharray:28 21}</style><line x1="640" y1="64" x2="832" y2="213" class="o-flecha" marker-end="url(#pfA2)"/></svg><div class="o-aire" style="left:3%;top:10%;width:34%;height:80%"><span>AIRE PARA TEXTO · dos tercios</span></div><span class="o-tag luz" style="left:40%;top:6%;transform:translate(-0%,-50%)">☀ Luz suave lateral</span><span class="o-tag nota" style="left:56%;top:94%;transform:translate(-24%,-50%)">● Cuerpo hacia el hueco libre</span></div><button class="o-tog" aria-pressed="true">Indicaciones</button></figure><p class="f-nota">Referencia: sirve para el encuadre, la luz y la actitud, no es el sitio ni la persona.</p></div>
+<div class="f-txt"><p class="fid">A2<span>11 fotos</span></p><h3>Plano medio con aire a un lado</h3>
+<p class="f-q"><b>Quién:</b> Cada persona, en el mismo turno que A1 (11)</p><p class="f-q"><b>Para qué:</b> Presentaciones a clientes, artículos y premios en horizontal, anuncios con el texto al lado y cabeceras</p>
+<div class="chips"><span><small>Formato</small>3:2 horizontal</span><span><small>Plano</small>Medio</span><span><small>Óptica</small>35 mm</span><span><small>Apertura</small>f/4</span><span><small>Luz</small>Ventana lateral</span><span><small>Aire</small>2/3 libres</span></div><dl><dt>Plano</dt><dd>Medio: de la cintura a la cabeza</dd><dt>Formato</dt><dd>Horizontal 3:2 (de él sale el 16:9)</dd><dt>Márgenes</dt><dd>Persona en un tercio y dos tercios libres al otro lado para el texto (alternamos el lado entre personas). Aire sobre la cabeza</dd><dt>Tiro de cámara</dt><dd>A la altura del pecho, recto y nivelado</dd><dt>Pose y acción</dt><dd>Cuerpo hacia el hueco libre, mirada a cámara o hacia el hueco; manos relajadas o en los bolsillos</dd><dt>Luz</dt><dd>La misma ventana lateral que en A1, entrando desde el lado de la persona</dd><dt>Fondo y profundidad</dt><dd>La misma pared lisa, que en el hueco del texto quede limpia y uniforme</dd><dt>Óptica y ajustes</dt><dd>35 mm · f/4 · 1/200 · ISO 200-800</dd></dl></div></article><article class="foto reveal" id="foto-A3">
+<div class="f-img"><figure class="ref-ov " style="aspect-ratio:1200/1800"><img src="ref/A3.jpg" alt="Referencia A3" loading="lazy"><div class="ov"><svg class="o-svg" viewBox="0 0 1200 1800" preserveAspectRatio="none"><defs><marker id="pfA3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#FFB020"/></marker></defs><style>.o-flecha{stroke:#FFB020;stroke-width:8}.o-linea{stroke:#F7FFA5;stroke-width:5;stroke-dasharray:20 15}</style></svg><div class="o-marco" style="left:18%;top:2%;width:56%;height:96%"><span>Cuerpo entero, con fondo liso alrededor</span></div><span class="o-tag nota" style="left:62%;top:40%;transform:translate(-37%,-50%)">● Pared lisa = recorte limpio</span><span class="o-tag nota" style="left:62%;top:92%;transform:translate(-37%,-50%)">● Pies dentro del encuadre</span></div><button class="o-tog" aria-pressed="true">Indicaciones</button></figure><p class="f-nota">Referencia: sirve para el encuadre, la luz y la actitud, no es el sitio ni la persona.</p></div>
+<div class="f-txt"><p class="fid">A3<span>2 fotos</span></p><h3>Cuerpo entero sobre fondo liso, para recortar</h3>
+<p class="f-q"><b>Quién:</b> Miguel y Diego</p><p class="f-q"><b>Para qué:</b> Anuncios y carruseles con la persona recortada sobre el fondo de marca, y correos</p>
+<div class="chips"><span><small>Formato</small>4:5 vertical</span><span><small>Plano</small>Entero</span><span><small>Óptica</small>24–35 mm</span><span><small>Apertura</small>f/5.6</span><span><small>Cámara</small>Altura de cintura</span></div><dl><dt>Plano</dt><dd>Entero: de los pies a la cabeza, con suelo visible</dd><dt>Formato</dt><dd>Vertical 4:5</dd><dt>Márgenes</dt><dd>Unos 20 cm de fondo liso por encima de la cabeza, a los lados y bajo los pies</dd><dt>Tiro de cámara</dt><dd>A la altura de la cintura, recto, para no achatar las piernas</dd><dt>Pose y acción</dt><dd>De pie, peso en una pierna, manos naturales. Una toma mirando a cámara y otra a un lado</dd><dt>Luz</dt><dd>Ventana lateral y un foco hacia la pared, para separar a la persona del fondo</dd><dt>Fondo y profundidad</dt><dd>Pared lisa que contraste con el pelo y la ropa: si alguien viene de blanco, no sobre pared blanca</dd><dt>Óptica y ajustes</dt><dd>24-35 mm · f/5.6 · 1/200</dd></dl></div></article><article class="foto reveal" id="foto-A4">
+<div class="f-img"><figure class="ref-ov " style="aspect-ratio:1600/1067"><img src="ref/A4.jpg" alt="Referencia A4" loading="lazy"><div class="ov"><svg class="o-svg" viewBox="0 0 1600 1067" preserveAspectRatio="none"><defs><marker id="pfA4" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#FFB020"/></marker></defs><style>.o-flecha{stroke:#FFB020;stroke-width:11}.o-linea{stroke:#F7FFA5;stroke-width:7;stroke-dasharray:28 21}</style><line x1="1552" y1="160" x2="1312" y2="299" class="o-flecha" marker-end="url(#pfA4)"/></svg><div class="o-aire" style="left:3%;top:10%;width:22%;height:80%"><span>Hueco para titular</span></div><span class="o-tag luz" style="left:97%;top:15%;transform:translate(-100%,-50%)">☀ Luz de ventana</span><span class="o-tag nota" style="left:30%;top:82%;transform:translate(-0%,-50%)">● Americana, sin corbata</span></div><button class="o-tog" aria-pressed="true">Indicaciones</button></figure><p class="f-nota">Referencia: sirve para el encuadre, la luz y la actitud, no es el sitio ni la persona.</p></div>
+<div class="f-txt"><p class="fid">A4<span>2 fotos</span></p><h3>Miguel, retrato para prensa</h3>
+<p class="f-q"><b>Quién:</b> Miguel (con americana)</p><p class="f-q"><b>Para qué:</b> Notas de prensa, premios, Lanzadera y programas, ponencias y entrevistas</p>
+<div class="chips"><span><small>Formato</small>4:5 y 3:2</span><span><small>Plano</small>Busto y medio</span><span><small>Óptica</small>50–56 mm</span><span><small>Apertura</small>f/2.8–4</span><span><small>Luz</small>Ventana lateral</span></div><dl><dt>Plano</dt><dd>Busto y plano medio</dd><dt>Formato</dt><dd>Una vertical 4:5 y una horizontal 3:2</dd><dt>Márgenes</dt><dd>En la horizontal, Miguel en un tercio y espacio limpio al otro lado para titulares</dd><dt>Tiro de cámara</dt><dd>A la altura de los ojos, recto</dd><dt>Pose y acción</dt><dd>Americana abierta, sin corbata. Gesto serio-cercano: media sonrisa</dd><dt>Luz</dt><dd>Ventana lateral, algo más de contraste que en A1 (menos reflector)</dd><dt>Fondo y profundidad</dt><dd>Pared lisa, limpia</dd><dt>Óptica y ajustes</dt><dd>50-56 mm · f/2.8-4 · 1/200</dd></dl></div></article><div class="b-cab" id="bloque-B"><span class="tag">Bloque B · Equipo</span><span class="donde">Exterior del Impulsa · 11:05 – 11:35 · 3 fotos</span></div><article class="foto reveal" id="foto-B1">
+<div class="f-img"><figure class="ref-ov " style="aspect-ratio:1800/1200"><img src="ref/B1.jpg" alt="Referencia B1" loading="lazy"><div class="ov"><svg class="o-svg" viewBox="0 0 1800 1200" preserveAspectRatio="none"><defs><marker id="pfB1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#FFB020"/></marker></defs><style>.o-flecha{stroke:#FFB020;stroke-width:13}.o-linea{stroke:#F7FFA5;stroke-width:8;stroke-dasharray:32 24}</style></svg><div class="o-aire" style="left:4%;top:2%;width:92%;height:26%"><span>AIRE ARRIBA · para sacar también un 4:5</span></div><div class="o-marco" style="left:23.5%;top:0%;width:53%;height:100%"><span>Recorte 4:5</span></div><span class="o-tag nota" style="left:2%;top:92%;transform:translate(-0%,-50%)">● Pies dentro: nadie cortado en los bordes</span><span class="o-tag nota" style="left:56%;top:34%;transform:translate(-24%,-50%)">● Nosotros: dos filas escalonadas y camiseta TenderYou</span></div><button class="o-tog" aria-pressed="true">Indicaciones</button></figure><p class="f-nota">Referencia: sirve para el encuadre, la luz y la actitud, no es el sitio ni la persona.</p></div>
+<div class="f-txt"><p class="fid">B1<span>1 foto</span></p><h3>Equipo completo, con la camiseta de TenderYou</h3>
+<p class="f-q"><b>Quién:</b> Todo el equipo</p><p class="f-q"><b>Para qué:</b> Web, prensa, premios, LinkedIn de la empresa y presentaciones</p>
+<div class="chips"><span><small>Formato</small>3:2 horizontal</span><span><small>Plano</small>General</span><span><small>Óptica</small>16–24 mm</span><span><small>Apertura</small>f/8</span><span><small>Cámara</small>Trípode, pecho</span><span><small>Luz</small>Sombra abierta</span></div><dl><dt>Plano</dt><dd>General: todo el equipo de cuerpo entero o de rodillas arriba</dd><dt>Formato</dt><dd>Horizontal 3:2, con aire arriba para poder sacar un 4:5</dd><dt>Márgenes</dt><dd>Grupo en los dos tercios inferiores; el edificio arriba. Nadie cortado en los bordes</dd><dt>Tiro de cámara</dt><dd>En trípode, a la altura del pecho, recto. Horizonte y verticales del edificio rectos</dd><dt>Pose y acción</dt><dd>Dos filas escalonadas (la rampa o un escalón ayuda), cuerpos girados hacia el centro, relajados. Ráfaga para evitar ojos cerrados</dd><dt>Luz</dt><dd>Natural. Sombra abierta del edificio o sol de lado o detrás; nunca sol de frente</dd><dt>Fondo y profundidad</dt><dd>La fachada de madera, nítida pero secundaria</dd><dt>Óptica y ajustes</dt><dd>16-24 mm · f/8 · 1/250 · ISO 100-400 · trípode</dd></dl></div></article><article class="foto reveal" id="foto-B2">
+<div class="f-img"><figure class="ref-ov " style="aspect-ratio:1800/1200"><img src="ref/B2.jpg" alt="Referencia B2" loading="lazy"><div class="ov"><svg class="o-svg" viewBox="0 0 1800 1200" preserveAspectRatio="none"><defs><marker id="pfB2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#FFB020"/></marker></defs><style>.o-flecha{stroke:#FFB020;stroke-width:13}.o-linea{stroke:#F7FFA5;stroke-width:8;stroke-dasharray:32 24}</style><line x1="1296" y1="96" x2="1152" y2="312" class="o-flecha" marker-end="url(#pfB2)"/></svg><span class="o-tag nota" style="left:3%;top:8%;transform:translate(-0%,-50%)">● Más cerca y más suelto que B1</span><span class="o-tag luz" style="left:72%;top:8%;transform:translate(-59%,-50%)">☀ Luz natural, de lado</span><span class="o-tag nota" style="left:46%;top:93%;transform:translate(-2%,-50%)">● Hablando entre ellos</span></div><button class="o-tog" aria-pressed="true">Indicaciones</button></figure><p class="f-nota">Referencia: sirve para el encuadre, la luz y la actitud, no es el sitio ni la persona.</p></div>
+<div class="f-txt"><p class="fid">B2<span>2 fotos</span></p><h3>Por áreas: desarrollo, y ventas con Miguel</h3>
+<p class="f-q"><b>Quién:</b> Cada área por separado</p><p class="f-q"><b>Para qué:</b> Presentaciones («quién te atiende»), posts y web</p>
+<div class="chips"><span><small>Formato</small>3:2 horizontal</span><span><small>Plano</small>Medio-largo</span><span><small>Óptica</small>35 mm</span><span><small>Apertura</small>f/4–5.6</span><span><small>Luz</small>Sombra abierta</span></div><dl><dt>Plano</dt><dd>Medio-largo del grupo (de rodillas arriba)</dd><dt>Formato</dt><dd>Horizontal 3:2</dd><dt>Márgenes</dt><dd>Grupo centrado, aire arriba</dd><dt>Tiro de cámara</dt><dd>A la altura del pecho, recto</dd><dt>Pose y acción</dt><dd>Más cerca y más suelto que B1: hablando entre ellos y una toma mirando a cámara</dd><dt>Luz</dt><dd>La misma que B1</dd><dt>Fondo y profundidad</dt><dd>Fachada desenfocada</dd><dt>Óptica y ajustes</dt><dd>35 mm · f/4-5.6 · 1/250</dd></dl></div></article><div class="b-cab" id="bloque-C"><span class="tag">Bloque C · Desarrollo trabajando</span><span class="donde">Oficina del Impulsa · 11:35 – 12:20 · 5 fotos</span></div><article class="foto reveal" id="foto-C1">
+<div class="f-img"><figure class="ref-ov " style="aspect-ratio:1200/674"><img src="ref/C1.jpg" alt="Referencia C1" loading="lazy"><div class="ov"><svg class="o-svg" viewBox="0 0 1200 674" preserveAspectRatio="none"><defs><marker id="pfC1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#FFB020"/></marker></defs><style>.o-flecha{stroke:#FFB020;stroke-width:8}.o-linea{stroke:#F7FFA5;stroke-width:5;stroke-dasharray:20 15}</style><line x1="864" y1="148" x2="792" y2="270" class="o-flecha" marker-end="url(#pfC1)"/></svg><div class="o-aire" style="left:30%;top:2%;width:66%;height:16%"><span>AIRE ARRIBA</span></div><span class="o-tag luz" style="left:72%;top:22%;transform:translate(-59%,-50%)">☀ Luz del ventanal, desde el fondo</span><span class="o-tag nota" style="left:2%;top:88%;transform:translate(-0%,-50%)">● Primer término desenfocado</span><span class="o-tag nota" style="left:26%;top:30%;transform:translate(-0%,-50%)">● Pantallas ilegibles</span></div><button class="o-tog" aria-pressed="true">Indicaciones</button></figure><p class="f-nota">Referencia: sirve para el encuadre, la luz y la actitud, no es el sitio ni la persona.</p></div>
+<div class="f-txt"><p class="fid">C1<span>1 foto</span></p><h3>El equipo trabajando en sus puestos</h3>
+<p class="f-q"><b>Quién:</b> Desarrollo, cada uno en su sitio</p><p class="f-q"><b>Para qué:</b> Web, posts y presentaciones</p>
+<div class="chips"><span><small>Formato</small>3:2 horizontal</span><span><small>Plano</small>General</span><span><small>Óptica</small>18–24 mm</span><span><small>Apertura</small>f/2.8–4</span><span><small>Profundidad</small>3 capas</span></div><dl><dt>Plano</dt><dd>General de la oficina, abierto</dd><dt>Formato</dt><dd>Horizontal 3:2</dd><dt>Márgenes</dt><dd>Aire arriba (ventanal) para texto. Personas en los dos tercios inferiores</dd><dt>Tiro de cámara</dt><dd>Desde una esquina, a la altura de los ojos de alguien sentado; ligeramente en diagonal a las mesas</dd><dt>Pose y acción</dt><dd>Trabajo real: programando, comentando algo con el de al lado. Nadie mira a cámara</dd><dt>Luz</dt><dd>Natural del ventanal, de lado o desde el fondo; luz del techo encendida si hace falta</dd><dt>Fondo y profundidad</dt><dd>Tres capas: una persona cerca, el grupo en medio y la ventana al fondo</dd><dt>Elementos</dt><dd>Pantallas con TenderYou o código, desenfocadas e ilegibles. Mesas sin cables ni botellas</dd><dt>Óptica y ajustes</dt><dd>18-24 mm · f/2.8-4 · 1/250 · ISO auto ≤ 3200</dd></dl></div></article><article class="foto reveal" id="foto-C2">
+<div class="f-img"><figure class="ref-ov " style="aspect-ratio:1800/1201"><img src="ref/C2.jpg" alt="Referencia C2" loading="lazy"><div class="ov"><svg class="o-svg" viewBox="0 0 1800 1201" preserveAspectRatio="none"><defs><marker id="pfC2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#FFB020"/></marker></defs><style>.o-flecha{stroke:#FFB020;stroke-width:13}.o-linea{stroke:#F7FFA5;stroke-width:8;stroke-dasharray:32 24}</style><line x1="1746" y1="264" x2="1548" y2="432" class="o-flecha" marker-end="url(#pfC2)"/></svg><span class="o-tag luz" style="left:97%;top:22%;transform:translate(-100%,-50%)">☀ Ventana lateral</span><span class="o-tag nota" style="left:66%;top:94%;transform:translate(-46%,-50%)">● Primer término: hombro de espaldas</span><span class="o-tag nota" style="left:3%;top:70%;transform:translate(-0%,-50%)">● Portátil y papeles en la mesa</span><span class="o-tag nota" style="left:30%;top:12%;transform:translate(-0%,-50%)">● Ella explica, él escucha</span></div><button class="o-tog" aria-pressed="true">Indicaciones</button></figure><p class="f-nota">Referencia: sirve para el encuadre, la luz y la actitud, no es el sitio ni la persona.</p></div>
+<div class="f-txt"><p class="fid">C2<span>2 fotos</span></p><h3>Dos personas decidiendo en la mesa (dos tomas)</h3>
+<p class="f-q"><b>Quién:</b> Dos personas de desarrollo; en la segunda toma, otras dos</p><p class="f-q"><b>Para qué:</b> Correos del ciclo de vida y anuncios</p>
+<div class="chips"><span><small>Formato</small>3:2 horizontal</span><span><small>Plano</small>Medio</span><span><small>Óptica</small>50–56 mm</span><span><small>Apertura</small>f/2–2.8</span><span><small>Luz</small>Ventana lateral</span></div><dl><dt>Plano</dt><dd>Medio de las dos personas, de la mesa hacia arriba</dd><dt>Formato</dt><dd>Horizontal 3:2</dd><dt>Márgenes</dt><dd>Personas en el centro-derecha; un primer término desenfocado a un lado</dd><dt>Tiro de cámara</dt><dd>A la altura de los ojos sentados, recto</dd><dt>Pose y acción</dt><dd>Una explica algo en el portátil y la otra escucha o pregunta. Conversación real</dd><dt>Luz</dt><dd>Ventana lateral</dd><dt>Fondo y profundidad</dt><dd>Primer término desenfocado (un monitor, una planta, un hombro), personas nítidas y fondo suave</dd><dt>Elementos</dt><dd>Portátil, un pliego impreso, una libreta. Nada de tazas con logos</dd><dt>Óptica y ajustes</dt><dd>50-56 mm · f/2-2.8 · 1/250</dd></dl></div></article><article class="foto reveal" id="foto-C3">
+<div class="f-img"><figure class="ref-ov " style="aspect-ratio:1000/750"><img src="ref/C3.jpg" alt="Referencia C3" loading="lazy"><div class="ov"><svg class="o-svg" viewBox="0 0 1000 750" preserveAspectRatio="none"><defs><marker id="pfC3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#FFB020"/></marker></defs><style>.o-flecha{stroke:#FFB020;stroke-width:6}.o-linea{stroke:#F7FFA5;stroke-width:4;stroke-dasharray:16 12}</style><line x1="500" y1="60" x2="640" y2="210" class="o-flecha" marker-end="url(#pfC3)"/></svg><div class="o-aire" style="left:3%;top:6%;width:40%;height:56%"><span>AIRE PARA TEXTO</span></div><span class="o-tag luz" style="left:50%;top:8%;transform:translate(-11%,-50%)">☀ Ventana de lado, nunca detrás</span><span class="o-tag nota" style="left:56%;top:94%;transform:translate(-24%,-50%)">● Concentrado o riendo: real</span></div><button class="o-tog" aria-pressed="true">Indicaciones</button></figure><p class="f-nota">Referencia: sirve para el encuadre, la luz y la actitud, no es el sitio ni la persona.</p></div>
+<div class="f-txt"><p class="fid">C3<span>1 foto</span></p><h3>Una persona sola con el portátil junto a la ventana</h3>
+<p class="f-q"><b>Quién:</b> Una persona de desarrollo</p><p class="f-q"><b>Para qué:</b> Correos y anuncios con texto encima</p>
+<div class="chips"><span><small>Formato</small>4:5 y 3:2</span><span><small>Plano</small>Medio</span><span><small>Óptica</small>35–50 mm</span><span><small>Apertura</small>f/2.8</span><span><small>Aire</small>1/3 libre</span></div><dl><dt>Plano</dt><dd>Medio, de la mesa hacia arriba</dd><dt>Formato</dt><dd>Vertical 4:5 y horizontal 3:2, sin mover a la persona</dd><dt>Márgenes</dt><dd>Un tercio limpio a un lado (la ventana o la pared) para el texto</dd><dt>Tiro de cámara</dt><dd>A la altura de los ojos, recto</dd><dt>Pose y acción</dt><dd>Concentrada en la pantalla o con media sonrisa al leer algo</dd><dt>Luz</dt><dd>Ventana de lado, nunca detrás de la persona</dd><dt>Fondo y profundidad</dt><dd>Fondo limpio y desenfocado</dd><dt>Óptica y ajustes</dt><dd>35-50 mm · f/2.8 · 1/250</dd></dl></div></article><article class="foto reveal" id="foto-C4">
+<div class="f-img"><figure class="ref-ov " style="aspect-ratio:1600/1067"><img src="ref/C4.jpg" alt="Referencia C4" loading="lazy"><div class="ov"><svg class="o-svg" viewBox="0 0 1600 1067" preserveAspectRatio="none"><defs><marker id="pfC4" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#FFB020"/></marker></defs><style>.o-flecha{stroke:#FFB020;stroke-width:11}.o-linea{stroke:#F7FFA5;stroke-width:7;stroke-dasharray:28 21}</style><line x1="1552" y1="491" x2="1312" y2="555" class="o-flecha" marker-end="url(#pfC4)"/></svg><span class="o-tag nota" style="left:3%;top:6%;transform:translate(-0%,-50%)">● Vista cenital, desde arriba</span><span class="o-tag nota" style="left:30%;top:30%;transform:translate(-0%,-50%)">● El pliego impreso, protagonista</span><span class="o-tag luz" style="left:97%;top:46%;transform:translate(-100%,-50%)">☀ Luz rasante lateral</span><div class="o-aire" style="left:68%;top:62%;width:30%;height:34%"><span>Hueco</span></div></div><button class="o-tog" aria-pressed="true">Indicaciones</button></figure><p class="f-nota">Referencia: sirve para el encuadre, la luz y la actitud, no es el sitio ni la persona.</p></div>
+<div class="f-txt"><p class="fid">C4<span>1 foto</span></p><h3>Manos con un pliego impreso y el portátil, sin cara</h3>
+<p class="f-q"><b>Quién:</b> Cualquiera</p><p class="f-q"><b>Para qué:</b> Correos y piezas que explican el producto</p>
+<div class="chips"><span><small>Formato</small>3:2 y 4:5</span><span><small>Plano</small>Detalle</span><span><small>Cámara</small>Cenital</span><span><small>Óptica</small>24–35 mm</span><span><small>Apertura</small>f/4</span></div><dl><dt>Plano</dt><dd>Detalle de manos, papeles y portátil</dd><dt>Formato</dt><dd>Horizontal 3:2 y vertical 4:5</dd><dt>Márgenes</dt><dd>El pliego ocupa un tercio; espacio libre en la mesa para texto</dd><dt>Tiro de cámara</dt><dd>Cenital (desde arriba, en vertical) o en tres cuartos desde el hombro</dd><dt>Pose y acción</dt><dd>Subrayando el pliego o pasando una página, con el portátil abierto al lado</dd><dt>Luz</dt><dd>Ventana lateral rasante: da textura al papel</dd><dt>Elementos</dt><dd>Pliego impreso real, bolígrafo, portátil. Manos limpias, sin anillos llamativos</dd><dt>Óptica y ajustes</dt><dd>24-35 mm · f/4 · 1/250</dd></dl></div></article><div class="b-cab" id="bloque-D"><span class="tag">Bloque D · Ventas trabajando</span><span class="donde">Oficina de ventas, Laboral · 15:00 – 15:45 · 6 fotos</span></div><article class="foto reveal" id="foto-D1">
+<div class="f-img"><figure class="ref-ov " style="aspect-ratio:1600/900"><img src="ref/D1.jpg" alt="Referencia D1" loading="lazy"><div class="ov"><svg class="o-svg" viewBox="0 0 1600 900" preserveAspectRatio="none"><defs><marker id="pfD1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#FFB020"/></marker></defs><style>.o-flecha{stroke:#FFB020;stroke-width:11}.o-linea{stroke:#F7FFA5;stroke-width:7;stroke-dasharray:28 21}</style><line x1="48" y1="180" x2="320" y2="288" class="o-flecha" marker-end="url(#pfD1)"/></svg><span class="o-tag luz" style="left:3%;top:20%;transform:translate(-0%,-50%)">☀ Panel LED desde el lado</span><span class="o-tag nota" style="left:62%;top:8%;transform:translate(-37%,-50%)">● Mirada fuera de cámara</span><span class="o-tag nota" style="left:26%;top:54%;transform:translate(-0%,-50%)">● Teléfono o auriculares</span><span class="o-tag nota" style="left:72%;top:94%;transform:translate(-59%,-50%)">● Nuestro fondo: pared limpia</span></div><button class="o-tog" aria-pressed="true">Indicaciones</button></figure><p class="f-nota">Referencia: sirve para el encuadre, la luz y la actitud, no es el sitio ni la persona.</p></div>
+<div class="f-txt"><p class="fid">D1<span>3 fotos</span></p><h3>Comercial en una llamada</h3>
+<p class="f-q"><b>Quién:</b> Diego, Ramón y Nicolás (una toma cada uno)</p><p class="f-q"><b>Para qué:</b> «Detrás de los datos hay un equipo al que puedes llamar»: web, anuncios de demo y correos</p>
+<div class="chips"><span><small>Formato</small>3:2 y 4:5</span><span><small>Plano</small>Medio</span><span><small>Óptica</small>35–50 mm</span><span><small>Apertura</small>f/2.8</span><span><small>Luz</small>Panel LED lateral</span></div><dl><dt>Plano</dt><dd>Medio, de la mesa hacia arriba</dd><dt>Formato</dt><dd>Horizontal 3:2 y vertical 4:5</dd><dt>Márgenes</dt><dd>Persona en un tercio y dos tercios libres para el texto</dd><dt>Tiro de cámara</dt><dd>A la altura de los ojos, recto, ligeramente de tres cuartos</dd><dt>Pose y acción</dt><dd>Hablando por teléfono o con auriculares, sonrisa leve, mirada fuera de cámara</dd><dt>Luz</dt><dd>Las ventanas de la oficina son altas: luz suave de un panel LED desde el lado de la ventana, a la altura de la cara</dd><dt>Fondo y profundidad</dt><dd>Pared blanca limpia (sin cajas ni tela verde), desenfocada</dd><dt>Óptica y ajustes</dt><dd>35-50 mm · f/2.8 · 1/250</dd></dl></div></article><article class="foto reveal" id="foto-D2">
+<div class="f-img"><figure class="ref-ov " style="aspect-ratio:1244/1696"><img src="ref/D2.jpg" alt="Referencia D2" loading="lazy"><div class="ov"><svg class="o-svg" viewBox="0 0 1244 1696" preserveAspectRatio="none"><defs><marker id="pfD2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#FFB020"/></marker></defs><style>.o-flecha{stroke:#FFB020;stroke-width:8}.o-linea{stroke:#F7FFA5;stroke-width:5;stroke-dasharray:20 15}</style></svg><span class="o-tag nota" style="left:4%;top:60%;transform:translate(-0%,-50%)">● Uno explica, la otra mira</span><span class="o-tag nota" style="left:30%;top:92%;transform:translate(-0%,-50%)">● Sin señalar con el dedo</span><span class="o-tag nota" style="left:4%;top:10%;transform:translate(-0%,-50%)">● Tres cuartos, por detrás</span></div><button class="o-tog" aria-pressed="true">Indicaciones</button></figure><p class="f-nota">Referencia: sirve para el encuadre, la luz y la actitud, no es el sitio ni la persona.</p></div>
+<div class="f-txt"><p class="fid">D2<span>1 foto</span></p><h3>Demo: un comercial enseña una licitación en pantalla</h3>
+<p class="f-q"><b>Quién:</b> Dos comerciales</p><p class="f-q"><b>Para qué:</b> Anuncios de demo, presentaciones y outbound</p>
+<div class="chips"><span><small>Formato</small>3:2 horizontal</span><span><small>Plano</small>Medio, sobre el hombro</span><span><small>Óptica</small>35 mm</span><span><small>Apertura</small>f/2.8</span></div><dl><dt>Plano</dt><dd>Medio, sobre el hombro de quien mira</dd><dt>Formato</dt><dd>Horizontal 3:2</dd><dt>Márgenes</dt><dd>Hombro desenfocado en un lado del encuadre; la cara de quien explica, en el tercio opuesto</dd><dt>Tiro de cámara</dt><dd>Desde detrás del hombro, a la altura de los ojos</dd><dt>Pose y acción</dt><dd>Uno explica una licitación en pantalla y el otro asiente o pregunta</dd><dt>Luz</dt><dd>Panel LED lateral y la luz de la pantalla</dd><dt>Fondo y profundidad</dt><dd>Tres capas: hombro desenfocado, persona nítida y pared suave</dd><dt>Elementos</dt><dd>TenderYou en pantalla con cuenta de prueba</dd><dt>Óptica y ajustes</dt><dd>35 mm · f/2.8 · 1/250</dd></dl></div></article><article class="foto reveal" id="foto-D3">
+<div class="f-img"><figure class="ref-ov " style="aspect-ratio:1600/900"><img src="ref/D3.jpg" alt="Referencia D3" loading="lazy"><div class="ov"><svg class="o-svg" viewBox="0 0 1600 900" preserveAspectRatio="none"><defs><marker id="pfD3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#FFB020"/></marker></defs><style>.o-flecha{stroke:#FFB020;stroke-width:11}.o-linea{stroke:#F7FFA5;stroke-width:7;stroke-dasharray:28 21}</style><line x1="48" y1="126" x2="320" y2="270" class="o-flecha" marker-end="url(#pfD3)"/></svg><span class="o-tag nota" style="left:40%;top:64%;transform:translate(-0%,-50%)">● Móvil por detrás, sonrisa real</span><span class="o-tag luz" style="left:3%;top:14%;transform:translate(-0%,-50%)">☀ Luz lateral suave</span><div class="o-aire" style="left:62%;top:4%;width:34%;height:32%"><span>AIRE</span></div></div><button class="o-tog" aria-pressed="true">Indicaciones</button></figure><p class="f-nota">Referencia: sirve para el encuadre, la luz y la actitud, no es el sitio ni la persona.</p></div>
+<div class="f-txt"><p class="fid">D3<span>1 foto</span></p><h3>Sonriendo al móvil, como cuando llega un aviso</h3>
+<p class="f-q"><b>Quién:</b> Un comercial</p><p class="f-q"><b>Para qué:</b> Correos de avisos y anuncios</p>
+<div class="chips"><span><small>Formato</small>4:5 vertical</span><span><small>Plano</small>Medio corto</span><span><small>Óptica</small>50 mm</span><span><small>Apertura</small>f/2.8</span></div><dl><dt>Plano</dt><dd>Medio corto</dd><dt>Formato</dt><dd>Vertical 4:5</dd><dt>Márgenes</dt><dd>Aire arriba y a un lado</dd><dt>Tiro de cámara</dt><dd>A la altura del pecho, recto</dd><dt>Pose y acción</dt><dd>Mira el móvil y sonríe por algo real; se ve la parte trasera del móvil</dd><dt>Luz</dt><dd>Panel LED o ventana lateral</dd><dt>Fondo y profundidad</dt><dd>Fondo desenfocado</dd><dt>Óptica y ajustes</dt><dd>50 mm · f/2.8 · 1/250</dd></dl></div></article><article class="foto reveal" id="foto-D4">
+<div class="f-img"><figure class="ref-ov " style="aspect-ratio:1800/1201"><img src="ref/D4.jpg" alt="Referencia D4" loading="lazy"><div class="ov"><svg class="o-svg" viewBox="0 0 1800 1201" preserveAspectRatio="none"><defs><marker id="pfD4" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#FFB020"/></marker></defs><style>.o-flecha{stroke:#FFB020;stroke-width:13}.o-linea{stroke:#F7FFA5;stroke-width:8;stroke-dasharray:32 24}</style><line x1="1080" y1="48" x2="1080" y2="264" class="o-flecha" marker-end="url(#pfD4)"/></svg><span class="o-tag nota" style="left:2%;top:62%;transform:translate(-0%,-50%)">● Primer término de espaldas</span><span class="o-tag luz" style="left:60%;top:4%;transform:translate(-33%,-50%)">☀ Ventanales detrás</span><span class="o-tag nota" style="left:40%;top:92%;transform:translate(-0%,-50%)">● Conversación real, nadie mira a cámara</span></div><button class="o-tog" aria-pressed="true">Indicaciones</button></figure><p class="f-nota">Referencia: sirve para el encuadre, la luz y la actitud, no es el sitio ni la persona.</p></div>
+<div class="f-txt"><p class="fid">D4<span>1 foto</span></p><h3>El equipo de ventas conversando</h3>
+<p class="f-q"><b>Quién:</b> Diego, Ramón y Nicolás</p><p class="f-q"><b>Para qué:</b> Web, posts y presentaciones</p>
+<div class="chips"><span><small>Formato</small>3:2 horizontal</span><span><small>Plano</small>Medio-largo</span><span><small>Óptica</small>24–35 mm</span><span><small>Apertura</small>f/2.8–4</span><span><small>Profundidad</small>Primer término</span></div><dl><dt>Plano</dt><dd>Medio-largo de los tres</dd><dt>Formato</dt><dd>Horizontal 3:2</dd><dt>Márgenes</dt><dd>Aire arriba</dd><dt>Tiro de cámara</dt><dd>A la altura de los ojos, recto</dd><dt>Pose y acción</dt><dd>Conversación real; uno de espaldas o de perfil en primer término</dd><dt>Luz</dt><dd>Panel LED y luz de la oficina</dd><dt>Fondo y profundidad</dt><dd>Primer término desenfocado, dos personas nítidas</dd><dt>Óptica y ajustes</dt><dd>24-35 mm · f/2.8-4 · 1/250</dd></dl></div></article><div class="b-cab" id="bloque-E"><span class="tag">Bloque E · Miguel en la Laboral</span><span class="donde">Soportales de la Laboral · 15:45 – 16:15 · 2 fotos</span></div><article class="foto reveal" id="foto-E1">
+<div class="f-img"><figure class="ref-ov " style="aspect-ratio:1800/1188"><img src="ref/E1.jpg" alt="Referencia E1" loading="lazy"><div class="ov"><svg class="o-svg" viewBox="0 0 1800 1188" preserveAspectRatio="none"><defs><marker id="pfE1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#FFB020"/></marker></defs><style>.o-flecha{stroke:#FFB020;stroke-width:13}.o-linea{stroke:#F7FFA5;stroke-width:8;stroke-dasharray:32 24}</style><line x1="1116" y1="1117" x2="900" y2="998" class="o-flecha" marker-end="url(#pfE1)"/></svg><div class="o-marco" style="left:30%;top:18%;width:26%;height:80%"><span>Miguel aquí</span></div><div class="o-aire" style="left:60%;top:8%;width:34%;height:56%"><span>Hueco para texto</span></div><span class="o-tag luz" style="left:62%;top:94%;transform:translate(-37%,-50%)">☀ Luz rebotada del patio</span><span class="o-tag nota" style="left:4%;top:92%;transform:translate(-0%,-50%)">● A la sombra del soportal</span></div><button class="o-tog" aria-pressed="true">Indicaciones</button></figure><p class="f-nota">Referencia: sirve para el encuadre, la luz y la actitud, no es el sitio ni la persona.</p></div>
+<div class="f-txt"><p class="fid">E1<span>1 foto</span></p><h3>Miguel bajo la arquería</h3>
+<p class="f-q"><b>Quién:</b> Miguel</p><p class="f-q"><b>Para qué:</b> Prensa, premios, entrevistas y miniaturas de vídeo</p>
+<div class="chips"><span><small>Formato</small>3:2 horizontal</span><span><small>Plano</small>Medio</span><span><small>Óptica</small>50–56 mm</span><span><small>Apertura</small>f/2</span><span><small>Luz</small>Sombra abierta</span></div><dl><dt>Plano</dt><dd>Medio, de la cintura hacia arriba</dd><dt>Formato</dt><dd>Horizontal 3:2</dd><dt>Márgenes</dt><dd>Miguel en el tercio izquierdo; la arquería desenfocada ocupa el resto y sirve de hueco para texto</dd><dt>Tiro de cámara</dt><dd>A la altura de los ojos, recto, verticales de las columnas rectas</dd><dt>Pose y acción</dt><dd>De pie, apoyado o con las manos en los bolsillos, mirada a cámara</dd><dt>Luz</dt><dd>Sombra abierta del soportal: la luz llega rebotada desde el patio, suave, de frente-lado</dd><dt>Fondo y profundidad</dt><dd>Columnas y arcos muy desenfocados detrás</dd><dt>Óptica y ajustes</dt><dd>50-56 mm · f/2 · 1/500 · ISO 100-400</dd></dl></div></article><article class="foto reveal" id="foto-E2">
+<div class="f-img"><figure class="ref-ov " style="aspect-ratio:1350/1800"><img src="ref/E2.jpg" alt="Referencia E2" loading="lazy"><div class="ov"><svg class="o-svg" viewBox="0 0 1350 1800" preserveAspectRatio="none"><defs><marker id="pfE2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#FFB020"/></marker></defs><style>.o-flecha{stroke:#FFB020;stroke-width:10}.o-linea{stroke:#F7FFA5;stroke-width:6;stroke-dasharray:24 18}</style></svg><span class="o-tag nota" style="left:3%;top:8%;transform:translate(-0%,-50%)">● Cámara en el eje de la galería</span><span class="o-tag nota" style="left:48%;top:62%;transform:translate(-7%,-50%)">● Miguel camina hacia cámara</span><span class="o-tag nota" style="left:30%;top:93%;transform:translate(-0%,-50%)">● Las columnas llevan la mirada hacia él</span></div><button class="o-tog" aria-pressed="true">Indicaciones</button></figure><p class="f-nota">Referencia: sirve para el encuadre, la luz y la actitud, no es el sitio ni la persona.</p></div>
+<div class="f-txt"><p class="fid">E2<span>1 foto</span></p><h3>Miguel caminando bajo los arcos</h3>
+<p class="f-q"><b>Quién:</b> Miguel</p><p class="f-q"><b>Para qué:</b> Portadas de carrusel, stories y artículos</p>
+<div class="chips"><span><small>Formato</small>4:5 y 9:16</span><span><small>Plano</small>Entero, caminando</span><span><small>Óptica</small>35–50 mm</span><span><small>Apertura</small>f/2.8</span><span><small>Velocidad</small>1/500</span></div><dl><dt>Plano</dt><dd>Entero o de rodillas arriba, caminando hacia cámara</dd><dt>Formato</dt><dd>Vertical 4:5 y 9:16</dd><dt>Márgenes</dt><dd>Miguel centrado; los arcos marcan líneas de fuga hacia él</dd><dt>Tiro de cámara</dt><dd>A la altura del pecho, recto, en el eje de la galería</dd><dt>Pose y acción</dt><dd>Caminando natural, mirando al frente o de lado</dd><dt>Luz</dt><dd>Sombra abierta de la galería</dd><dt>Fondo y profundidad</dt><dd>Perspectiva de la galería, fondo desenfocado</dd><dt>Óptica y ajustes</dt><dd>35-50 mm · f/2.8 · 1/500 · AF continuo con seguimiento</dd></dl></div></article>
 </div></section>
 
-<section id="extras" style="background:#fff"><div class="wrap">
-  <div class="extras-cab"><svg class="reloj" viewBox="0 0 150 150" aria-hidden="true"><circle cx="75" cy="75" r="68" fill="#fff" stroke="#272485" stroke-width="6"/>
-<line x1="75" y1="14" x2="75" y2="24" stroke="#272485" stroke-width="4" transform="rotate(0 75 75)"/><line x1="75" y1="14" x2="75" y2="20" stroke="#272485" stroke-width="2" transform="rotate(30 75 75)"/><line x1="75" y1="14" x2="75" y2="20" stroke="#272485" stroke-width="2" transform="rotate(60 75 75)"/><line x1="75" y1="14" x2="75" y2="24" stroke="#272485" stroke-width="4" transform="rotate(90 75 75)"/><line x1="75" y1="14" x2="75" y2="20" stroke="#272485" stroke-width="2" transform="rotate(120 75 75)"/><line x1="75" y1="14" x2="75" y2="20" stroke="#272485" stroke-width="2" transform="rotate(150 75 75)"/><line x1="75" y1="14" x2="75" y2="24" stroke="#272485" stroke-width="4" transform="rotate(180 75 75)"/><line x1="75" y1="14" x2="75" y2="20" stroke="#272485" stroke-width="2" transform="rotate(210 75 75)"/><line x1="75" y1="14" x2="75" y2="20" stroke="#272485" stroke-width="2" transform="rotate(240 75 75)"/><line x1="75" y1="14" x2="75" y2="24" stroke="#272485" stroke-width="4" transform="rotate(270 75 75)"/><line x1="75" y1="14" x2="75" y2="20" stroke="#272485" stroke-width="2" transform="rotate(300 75 75)"/><line x1="75" y1="14" x2="75" y2="20" stroke="#272485" stroke-width="2" transform="rotate(330 75 75)"/>
-<line class="hora" x1="75" y1="75" x2="75" y2="42" stroke="#272485" stroke-width="7" stroke-linecap="round"/>
-<line class="min" x1="75" y1="75" x2="75" y2="24" stroke="#B764E5" stroke-width="5" stroke-linecap="round"/><circle cx="75" cy="75" r="6" fill="#F7FFA5" stroke="#272485" stroke-width="3"/></svg><div><p class="eyebrow">Extras</p><h2>Si el día <em>acompaña</em></h2>
-  <p>Las hacemos en el margen del final o aprovechando huecos. Si no da tiempo, no falta nada: todo lo necesario está en la lista de arriba.</p></div></div>
-  <div class="extras"><figure class="extra reveal"><button class="zoom" data-src="sb/X1.jpg" data-cap="X1 · Retratos naturales entre toma y toma"><img src="sb/X1.jpg" alt="" loading="lazy"></button><figcaption><b>X1</b> Retratos naturales entre toma y toma<span>Carrusel «Las personas detrás de TenderYou» y posts</span></figcaption></figure><figure class="extra reveal"><button class="zoom" data-src="sb/X2.jpg" data-cap="X2 · El equipo caminando por la rampa del Impulsa"><img src="sb/X2.jpg" alt="" loading="lazy"></button><figcaption><b>X2</b> El equipo caminando por la rampa del Impulsa<span>Web y LinkedIn de empresa</span></figcaption></figure><figure class="extra reveal"><button class="zoom" data-src="sb/X3.jpg" data-cap="X3 · Una persona en el pasillo de madera del Impulsa"><img src="sb/X3.jpg" alt="" loading="lazy"></button><figcaption><b>X3</b> Una persona en el pasillo de madera del Impulsa<span>Fondos de web y presentaciones</span></figcaption></figure><figure class="extra reveal"><button class="zoom" data-src="sb/X4.jpg" data-cap="X4 · Detalles: manos, teclado y TenderYou en pantalla"><img src="sb/X4.jpg" alt="" loading="lazy"></button><figcaption><b>X4</b> Detalles: manos, teclado y TenderYou en pantalla<span>Recursos para posts y vídeos</span></figcaption></figure><figure class="extra reveal"><button class="zoom" data-src="sb/X5.jpg" data-cap="X5 · Miguel y Diego caminando por la Laboral"><img src="sb/X5.jpg" alt="" loading="lazy"></button><figcaption><b>X5</b> Miguel y Diego caminando por la Laboral<span>Artículos y entrevistas</span></figcaption></figure><figure class="extra reveal"><button class="zoom" data-src="sb/X6.jpg" data-cap="X6 · Miguel en primer plano para miniaturas"><img src="sb/X6.jpg" alt="" loading="lazy"></button><figcaption><b>X6</b> Miguel en primer plano para miniaturas<span>YouTube</span></figcaption></figure></div>
+<section id="extras" class="claro"><div class="wrap">
+  <div class="extras-cab"><svg class="reloj" viewBox="0 0 150 150" aria-hidden="true"><circle cx="75" cy="75" r="68" fill="#fff" stroke="#272485" stroke-width="6"/><g stroke="#272485"><line x1="75" y1="14" x2="75" y2="26" stroke-width="4"/><line x1="136" y1="75" x2="124" y2="75" stroke-width="4"/><line x1="75" y1="136" x2="75" y2="124" stroke-width="4"/><line x1="14" y1="75" x2="26" y2="75" stroke-width="4"/></g><line class="hora" x1="75" y1="75" x2="75" y2="42" stroke="#272485" stroke-width="7" stroke-linecap="round"/><line class="min" x1="75" y1="75" x2="75" y2="24" stroke="#B764E5" stroke-width="5" stroke-linecap="round"/><circle cx="75" cy="75" r="6" fill="#F7FFA5" stroke="#272485" stroke-width="3"/></svg>
+  <div><p class="eyebrow">Extras</p><h2>Si el día <em>acompaña</em></h2><p>Las hacemos en los márgenes. Si no da tiempo, no falta nada: todo lo necesario está en la lista de arriba.</p></div></div>
+  <div class="extras"><figure class="extra reveal"><img src="ref/X1.jpg" alt="" loading="lazy"><figcaption><b>X1</b> Retratos naturales entre toma y toma<span>Carrusel «Las personas detrás de TenderYou» y posts · Riendo, mirando fuera de cámara, mismo set que A1.</span></figcaption></figure><figure class="extra reveal"><img src="ref/X2.jpg" alt="" loading="lazy"><figcaption><b>X2</b> El equipo caminando hacia cámara<span>Web y LinkedIn de empresa · Justo después de B1, en la rampa del Impulsa.</span></figcaption></figure><figure class="extra reveal"><img src="ref/X3.jpg" alt="" loading="lazy"><figcaption><b>X3</b> De pie con el móvil en el pasillo de madera<span>Correos de avisos y fondos de web · Vertical, luz cálida del pasillo.</span></figcaption></figure><figure class="extra reveal"><img src="ref/X4.jpg" alt="" loading="lazy"><figcaption><b>X4</b> Detalles: manos, teclado y TenderYou en pantalla<span>Recursos para posts y vídeos · Muy cerca, f/2, pantalla desenfocada.</span></figcaption></figure><figure class="extra reveal"><img src="ref/X5.jpg" alt="" loading="lazy"><figcaption><b>X5</b> Miguel y Diego conversando mientras caminan<span>Artículos y entrevistas · Bajo los soportales de la Laboral.</span></figcaption></figure><figure class="extra reveal"><img src="ref/X6.jpg" alt="" loading="lazy"><figcaption><b>X6</b> Miguel en primer plano para miniaturas<span>YouTube · Fondo liso, cara a un lado, expresión clara.</span></figcaption></figure></div>
 </div></section>
 
 <section id="horario"><div class="wrap">
   <p class="eyebrow">Horario</p>
   <h2>Quién tiene que estar y <em>cuándo</em></h2>
-  <p>Cada persona solo deja su trabajo durante su retrato y la foto de equipo. El resto del tiempo seguís trabajando y os fotografiamos en vuestro sitio.</p>
-  <ol class="timeline"><li class="h-n"><time>8:30</time><div><b>Llegada al Edificio Impulsa y montaje del set de retratos</b><span>Edgar (y Miguel para la prueba de luz)</span></div></li><li class="h-A"><time>8:55</time><div><b>Retratos de ventas · A1 A2 A3</b><span>Diego, Ramón y Nicolás · unos 6 min cada uno</span></div></li><li class="h-A"><time>9:15</time><div><b>Retratos de Miguel · A1 A2 A3 A4</b><span>Miguel</span></div></li><li class="h-A"><time>9:25</time><div><b>Retratos de desarrollo · A1 A2 (y A3 de dos personas)</b><span>Iván, Alfonso, Javier, Pedro, Mario, Alejandro y José · unos 5 min cada uno</span></div></li><li class="h-B"><time>10:05</time><div><b>Fotos de equipo fuera del Impulsa · B1 B2</b><span>Todo el equipo</span></div></li><li class="h-C"><time>10:25</time><div><b>Desarrollo trabajando · C1 a C5</b><span>Desarrollo. Ventas vuelve a la Laboral</span></div></li><li class="h-pausa"><time>11:05</time><div><b>Recoger y trasladarnos a la Laboral</b><span>—</span></div></li><li class="h-D"><time>11:25</time><div><b>Ventas trabajando · D1 a D4 (10 min para despejar el fondo)</b><span>Diego, Ramón y Nicolás</span></div></li><li class="h-E"><time>12:05</time><div><b>Miguel en la Laboral · E1 E2</b><span>Miguel</span></div></li><li class="h-margen"><time>12:35</time><div><b>Margen: repetir lo que haga falta y extras</b><span>Quien haga falta</span></div></li><li class="h-pausa"><time>13:00</time><div><b>Fin de las fotos. Por la tarde, grabación de vídeo (briefing aparte)</b><span>Diego y otro comercial</span></div></li></ol>
+  <p>Hemos dejado tiempo de sobra en cada bloque: cambiar de sitio, repetir una toma o revisar cuesta más de lo que parece. Cada persona solo deja su trabajo durante su retrato y la foto de equipo.</p>
+  <div class="horario"><div class="h-bloque h-impulsa"><div class="h-cab"><b>Edificio Impulsa</b><span>8:30 – 13:00</span></div><ol class=timeline><li class="h-n"><time>8:30</time><div><b>Llegada, montaje del set de retratos y prueba de luz</b><span>Edgar y Miguel</span></div></li><li class="h-A"><time>9:00</time><div><b>Retratos de Miguel · A1 A2 A3 A4</b><span>Miguel · 20 min</span></div></li><li class="h-A"><time>9:20</time><div><b>Retratos de ventas · A1 A2 (y A3 de Diego)</b><span>Diego, Ramón y Nicolás · unos 10 min cada uno</span></div></li><li class="h-A"><time>9:50</time><div><b>Retratos de desarrollo · A1 A2</b><span>Iván, Alfonso, Javier, Pedro, Mario, Alejandro y José · unos 8 min cada uno</span></div></li><li class="h-pausa"><time>10:50</time><div><b>Pausa: revisamos los retratos y os ponéis la camiseta de TenderYou</b><span>Todo el equipo</span></div></li><li class="h-B"><time>11:05</time><div><b>Foto de equipo y por áreas, fuera del Impulsa · B1 B2</b><span>Todo el equipo · 30 min</span></div></li><li class="h-C"><time>11:35</time><div><b>Desarrollo trabajando · C1 a C4</b><span>Desarrollo · 45 min</span></div></li><li class="h-margen"><time>12:20</time><div><b>Margen: repetir lo que haga falta y extras</b><span>Quien haga falta · 40 min</span></div></li></ol></div><div class="h-bloque h-comida"><div class="h-cab"><b>Comida y traslado a la Laboral</b><span>13:00 – 14:30</span></div></div><div class="h-bloque h-laboral"><div class="h-cab"><b>Laboral Ciudad de la Cultura</b><span>14:30 – 16:30</span></div><ol class=timeline><li class="h-n"><time>14:30</time><div><b>Despejar la oficina de ventas y montar la luz</b><span>Edgar</span></div></li><li class="h-D"><time>15:00</time><div><b>Ventas trabajando · D1 a D4</b><span>Diego, Ramón y Nicolás · 45 min</span></div></li><li class="h-E"><time>15:45</time><div><b>Miguel bajo los soportales · E1 E2</b><span>Miguel · 30 min</span></div></li><li class="h-margen"><time>16:15</time><div><b>Margen</b><span>15 min</span></div></li></ol></div><div class="h-bloque h-video"><div class="h-cab"><b>Grabación de vídeo (con su propio briefing)</b><span>16:30 – 18:30</span></div></div></div>
   <div class="destacado reveal"><b>Si algo se tuerce, lo primero que cae son los extras, nunca los retratos ni la foto de equipo.</b>
-  <p class="sub" style="margin:10px 0 0">Si llueve, la foto de equipo se hace dentro del Impulsa y la de Miguel bajo los soportales de la Laboral, que están cubiertos. Si vamos con retraso, hacemos menos tomas por escena, pero todas las escenas.</p></div>
+  <p class="sub" style="margin:10px 0 0">Si llueve, la foto de equipo se hace dentro del Impulsa y la de Miguel bajo los soportales de la Laboral, que están cubiertos.</p></div>
 </div></section>
 
-<section id="equipo" style="background:#fff"><div class="wrap">
+<section id="lugares" class="claro"><div class="wrap">
+  <p class="eyebrow">Dónde</p>
+  <h2>Impulsa por la mañana, la Laboral por la <em>tarde</em></h2>
+  <div class="lugares"><article class="lugar reveal"><img src="ref/LUG-IMPULSA.jpg" alt="Edificio Impulsa · Parque Científico Tecnológico" loading="lazy"><div class="l-txt">
+<p class="l-h">Mañana · 8:30 – 13:00</p><h3>Edificio Impulsa · Parque Científico Tecnológico</h3><p class="l-n"><b>34 fotos</b> · Retratos de todo el equipo, foto de grupo y desarrollo trabajando</p><div class="l-chips"><a href="#foto-A1">A1</a><a href="#foto-A2">A2</a><a href="#foto-A3">A3</a><a href="#foto-A4">A4</a><a href="#foto-B1">B1</a><a href="#foto-B2">B2</a><a href="#foto-C1">C1</a><a href="#foto-C2">C2</a><a href="#foto-C3">C3</a><a href="#foto-C4">C4</a></div></div></article><article class="lugar reveal"><img src="ref/LUG-LABORAL.jpg" alt="Laboral Ciudad de la Cultura" loading="lazy"><div class="l-txt">
+<p class="l-h">Tarde · 14:30 – 16:30</p><h3>Laboral Ciudad de la Cultura</h3><p class="l-n"><b>8 fotos</b> · Ventas trabajando en su oficina y Miguel bajo los soportales</p><div class="l-chips"><a href="#foto-D1">D1</a><a href="#foto-D2">D2</a><a href="#foto-D3">D3</a><a href="#foto-D4">D4</a><a href="#foto-E1">E1</a><a href="#foto-E2">E2</a></div></div></article></div>
+</div></section>
+
+<section id="equipo"><div class="wrap">
   <p class="eyebrow">El equipo</p>
   <h2>Confirmadnos la <em>lista</em></h2>
   <p>Es la lista con la que hemos planificado. Si falta alguien, sobra alguien o alguien no puede a esa hora, decídnoslo y lo recolocamos.</p>
-  <div class="tscroll"><table><thead><tr><th>Persona</th><th>Rol</th><th>Cuándo le necesitamos</th><th>Fotos</th></tr></thead><tbody><tr><td><img class="av" src="sbl/A1-miguel.jpg" alt="" loading="lazy">Miguel López</td><td>CEO</td><td>Todo el día</td><td>A1 · A2 · A3 · A4 · B · E</td></tr><tr><td><img class="av" src="sbl/A1-diego.jpg" alt="" loading="lazy">Diego Rollán</td><td>Director de Ventas</td><td>8:55 – 10:25 y 11:25 – 12:05</td><td>A1 · A2 · A3 · B · D</td></tr><tr><td><img class="av" src="sbl/A1-ramon.jpg" alt="" loading="lazy">Ramón Somolinos</td><td>Equipo comercial</td><td>8:55 – 10:25 y 11:25 – 12:05</td><td>A1 · A2 · B · D</td></tr><tr><td><img class="av" src="sbl/A1-nicolas.jpg" alt="" loading="lazy">Nicolás Menéndez</td><td>Equipo comercial</td><td>8:55 – 10:25 y 11:25 – 12:05</td><td>A1 · A2 · B · D</td></tr><tr><td><img class="av" src="sbl/A1-ivan.jpg" alt="" loading="lazy">Iván García</td><td>Director Tecnológico</td><td>9:25 – 11:05</td><td>A1 · A2 · B · C</td></tr><tr><td><img class="av" src="sbl/A1-alfonso.jpg" alt="" loading="lazy">Alfonso Alonso</td><td>Director de Desarrollo</td><td>9:25 – 11:05</td><td>A1 · A2 · B · C</td></tr><tr><td><img class="av" src="sbl/A1-javier.jpg" alt="" loading="lazy">Javier Novella</td><td>Programador jefe</td><td>9:25 – 11:05</td><td>A1 · A2 · B · C</td></tr><tr><td><img class="av" src="sbl/A1-pedro.jpg" alt="" loading="lazy">Pedro Limeres</td><td>Programador full stack</td><td>9:25 – 11:05</td><td>A1 · A2 · B · C</td></tr><tr><td><img class="av" src="sbl/A1-mario.jpg" alt="" loading="lazy">Mario Orviz</td><td>Programador full stack</td><td>9:25 – 11:05</td><td>A1 · A2 · B · C</td></tr><tr><td><img class="av" src="sbl/A1-alejandro.jpg" alt="" loading="lazy">Alejandro Jardón</td><td>Desarrollo</td><td>9:25 – 11:05</td><td>A1 · A2 · B · C</td></tr><tr><td><img class="av" src="sbl/A1-jose.jpg" alt="" loading="lazy">José Rodríguez</td><td>Desarrollo</td><td>9:25 – 11:05</td><td>A1 · A2 · B · C</td></tr></tbody></table></div>
+  <div class="tscroll"><table><thead><tr><th>Persona</th><th>Área</th><th>Cuándo le necesitamos</th><th>Bloques</th></tr></thead><tbody><tr><td><span class="av">ML</span>Miguel López</td><td>CEO</td><td>Todo el día</td><td>A · B · E</td></tr><tr><td><span class="av">DR</span>Diego Rollán</td><td>Ventas</td><td>9:20 – 11:35 (Impulsa) y 15:00 – 16:15 (Laboral)</td><td>A · B · D</td></tr><tr><td><span class="av">RS</span>Ramón Somolinos</td><td>Ventas</td><td>9:20 – 11:35 (Impulsa) y 15:00 – 15:45 (Laboral)</td><td>A · B · D</td></tr><tr><td><span class="av">NM</span>Nicolás Menéndez</td><td>Ventas</td><td>9:20 – 11:35 (Impulsa) y 15:00 – 15:45 (Laboral)</td><td>A · B · D</td></tr><tr><td><span class="av">IG</span>Iván García</td><td>Desarrollo</td><td>9:50 – 12:20 (Impulsa)</td><td>A · B · C</td></tr><tr><td><span class="av">AA</span>Alfonso Alonso</td><td>Desarrollo</td><td>9:50 – 12:20 (Impulsa)</td><td>A · B · C</td></tr><tr><td><span class="av">JN</span>Javier Novella</td><td>Desarrollo</td><td>9:50 – 12:20 (Impulsa)</td><td>A · B · C</td></tr><tr><td><span class="av">PL</span>Pedro Limeres</td><td>Desarrollo</td><td>9:50 – 12:20 (Impulsa)</td><td>A · B · C</td></tr><tr><td><span class="av">MO</span>Mario Orviz</td><td>Desarrollo</td><td>9:50 – 12:20 (Impulsa)</td><td>A · B · C</td></tr><tr><td><span class="av">AJ</span>Alejandro Jardón</td><td>Desarrollo</td><td>9:50 – 12:20 (Impulsa)</td><td>A · B · C</td></tr><tr><td><span class="av">JR</span>José Rodríguez</td><td>Desarrollo</td><td>9:50 – 12:20 (Impulsa)</td><td>A · B · C</td></tr></tbody></table></div>
 </div></section>
 
-<section id="lugares"><div class="wrap">
-  <p class="eyebrow">Localizaciones</p>
-  <h2>Impulsa por la mañana, la Laboral a <em>mediodía</em></h2>
-  <div class="locs reveal">
-    <figure><img src="img/loc-impulsa-exterior.jpg" alt="" loading="lazy"><figcaption><b>Exterior del Impulsa.</b> Madera y hormigón: el fondo de la foto de equipo.</figcaption></figure>
-    <figure><img src="img/loc-impulsa-oficina.jpg" alt="" loading="lazy"><figcaption><b>Vuestra oficina del Impulsa.</b> Ventanal y paredes blancas para retratos y escenas.</figcaption></figure>
-    <figure><img src="img/loc-impulsa-pasillo.jpg" alt="" loading="lazy"><figcaption><b>Pasillos de madera y patio.</b> Para los extras, si sobra tiempo.</figcaption></figure>
-    <figure><img src="img/loc-laboral-corintio.jpg" alt="" loading="lazy"><figcaption><b>Soportales de la Laboral.</b> Fondo para Miguel; el viernes, de día y a la sombra.</figcaption></figure>
-  </div>
-  <p class="sub" style="margin-top:14px">La foto de equipo de vuestra web está en el patio de la Laboral. Esta vez la hacemos en el Impulsa para que no se repita y para que se vea dónde trabajáis cada día.</p>
-</div></section>
-
-<section id="ropa" style="background:#fff"><div class="wrap">
-  <p class="eyebrow">Ropa</p>
-  <h2>Lisa, cómoda y <em>vuestra</em></h2>
-  <div class="dos reveal">
-    <div class="caja"><h3>Qué traer</h3><ul>
-      <li>Lo de un día normal de trabajo, en <b>colores lisos</b>: blanco roto, gris, azul marino, piedra o negro.</li>
-      <li>Si tenéis algo en <b>lila o violeta suave</b>, traedlo: es el color de la marca.</li>
-      <li>Una <b>segunda prenda</b> (camisa o jersey) por si la primera no funciona con el fondo.</li>
-      <li>Miguel: una <b>americana</b> para el retrato de prensa.</li></ul>
-      <div class="paleta"><i style="--c:#F6F5F9">blanco roto</i><i style="--c:#9A9AA2">gris</i><i style="--c:#1F2A44">azul marino</i><i style="--c:#CFC6B8">piedra</i><i style="--c:#C4AEEF">lila</i></div></div>
-    <div class="caja"><h3>Qué evitar</h3><ul>
-      <li><b>Rayas finas y cuadros pequeños</b>: en foto hacen un efecto de ondas.</li>
-      <li><b>Logos grandes</b>, estampados y camisetas de otras marcas, también las de Cadabit.</li>
-      <li><b>Verde lima</b> o colores fluorescentes.</li>
-      <li>Prendas arrugadas: mejor planchadas o colgadas la noche antes.</li></ul></div>
-  </div>
+<section id="ropa" class="claro"><div class="wrap">
+  <p class="eyebrow">Ropa · importante</p>
+  <h2>La ropa hace la mitad de la <em>foto</em></h2>
+  <p>Es lo único que depende solo de vosotros, y se nota en todas las fotos. Colores lisos, sin logos y planchada.</p>
+  <h3 class="r-h ok">✓ Qué traer</h3><div class="prendas"><div class="pr si reveal"><div class="pr-ic"><svg viewBox="0 0 100 100" class="prenda" aria-hidden="true"><defs></defs><path d="M30 18 L44 12 Q50 18 56 12 L70 18 L82 32 L72 40 L68 34 L68 86 L32 86 L32 34 L28 40 L18 32 Z" fill="#FFFFFF" stroke="#2C2C31" stroke-width="2.2" stroke-linejoin="round"/></svg><span class="logo-ty">tenderyou</span></div><b>La camiseta de TenderYou</b><span>Para la foto de equipo (B1 y B2). Todos con la misma.</span></div><div class="pr si reveal"><div class="pr-ic"><svg viewBox="0 0 100 100" class="prenda" aria-hidden="true"><defs></defs><path d="M30 16 L44 12 L50 22 L56 12 L70 16 L82 34 L72 40 L68 34 L68 88 L32 88 L32 34 L28 40 L18 34 Z" fill="#1F2A44" stroke="#2C2C31" stroke-width="2.2" stroke-linejoin="round"/></svg></div><b>Camisa o sobrecamisa lisa</b><span>Azul marino, gris, piedra, blanco roto o negro. Para los retratos y las escenas.</span></div><div class="pr si reveal"><div class="pr-ic"><svg viewBox="0 0 100 100" class="prenda" aria-hidden="true"><defs></defs><path d="M28 18 L44 12 Q50 20 56 12 L72 18 L84 60 L74 62 L68 38 L68 88 L32 88 L32 38 L26 62 L16 60 Z" fill="#CFC6B8" stroke="#2C2C31" stroke-width="2.2" stroke-linejoin="round"/></svg></div><b>Jersey o punto liso</b><span>Como alternativa a la camisa. Tonos tierra y neutros.</span></div><div class="pr si reveal"><div class="pr-ic"><svg viewBox="0 0 100 100" class="prenda" aria-hidden="true"><defs></defs><path d="M30 18 L44 12 Q50 18 56 12 L70 18 L82 32 L72 40 L68 34 L68 86 L32 86 L32 34 L28 40 L18 32 Z" fill="#C4AEEF" stroke="#2C2C31" stroke-width="2.2" stroke-linejoin="round"/></svg></div><b>Un toque lila, si lo tenéis</b><span>Es el color de la marca. Una prenda basta, no hace falta comprar nada.</span></div><div class="pr si reveal"><div class="pr-ic"><svg viewBox="0 0 100 100" class="prenda" aria-hidden="true"><defs></defs><path d="M28 16 L44 12 L50 40 L56 12 L72 16 L84 60 L74 62 L68 40 L68 90 L32 90 L32 40 L26 62 L16 60 Z" fill="#2C2C31" stroke="#2C2C31" stroke-width="2.2" stroke-linejoin="round"/></svg></div><b>Miguel: americana</b><span>Sin corbata, para el retrato de prensa (A4).</span></div><div class="pr si reveal"><div class="pr-ic"><svg viewBox="0 0 100 100" class="prenda" aria-hidden="true"><defs></defs><path d="M32 10 L68 10 L72 92 L56 92 L50 40 L44 92 L28 92 Z" fill="#3A3646" stroke="#2C2C31" stroke-width="2.2" stroke-linejoin="round"/></svg></div><b>Pantalón liso y calzado limpio</b><span>Salen en la foto de equipo y en los de cuerpo entero.</span></div></div>
+<h3 class="r-h no">✕ Qué evitar</h3><div class="prendas"><div class="pr no reveal"><div class="pr-ic"><svg viewBox="0 0 100 100" class="prenda" aria-hidden="true"><defs><pattern id="ry" width="5" height="5" patternUnits="userSpaceOnUse"><rect width="5" height="5" fill="#fff"/><rect width="2" height="5" fill="#2A4E7C"/></pattern></defs><path d="M30 16 L44 12 L50 22 L56 12 L70 16 L82 34 L72 40 L68 34 L68 88 L32 88 L32 34 L28 40 L18 34 Z" fill="url(#ry)" stroke="#2C2C31" stroke-width="2.2" stroke-linejoin="round"/></svg></div><b>Rayas finas y cuadros pequeños</b><span>En foto hacen un efecto de ondas.</span></div><div class="pr no reveal"><div class="pr-ic"><svg viewBox="0 0 100 100" class="prenda" aria-hidden="true"><defs></defs><path d="M30 18 L44 12 Q50 18 56 12 L70 18 L82 32 L72 40 L68 34 L68 86 L32 86 L32 34 L28 40 L18 32 Z" fill="#EDEDED" stroke="#2C2C31" stroke-width="2.2" stroke-linejoin="round"/></svg><span class="logo-x">LOGO</span></div><b>Logos grandes y estampados</b><span>Ni marcas ni dibujos. Tampoco las camisetas de Cadabit.</span></div><div class="pr no reveal"><div class="pr-ic"><svg viewBox="0 0 100 100" class="prenda" aria-hidden="true"><defs></defs><path d="M30 18 L44 12 Q50 18 56 12 L70 18 L82 32 L72 40 L68 34 L68 86 L32 86 L32 34 L28 40 L18 32 Z" fill="#D6F24B" stroke="#2C2C31" stroke-width="2.2" stroke-linejoin="round"/></svg></div><b>Verde lima y flúor</b><span>Tiñe la piel y choca con la marca.</span></div><div class="pr no reveal"><div class="pr-ic"><svg viewBox="0 0 100 100" class="prenda" aria-hidden="true"><defs></defs><path d="M30 16 L44 12 L50 22 L56 12 L70 16 L82 34 L72 40 L68 34 L68 88 L32 88 L32 34 L28 40 L18 34 Z" fill="#FFFFFF" stroke="#2C2C31" stroke-width="2.2" stroke-linejoin="round"/></svg></div><b>Blanco puro en el cuerpo entero</b><span>Sobre pared blanca no se recorta bien. Mejor un tono.</span></div><div class="pr no reveal"><div class="pr-ic"><svg viewBox="0 0 100 100" class="prenda" aria-hidden="true"><defs></defs><path d="M30 16 L44 12 L50 22 L56 12 L70 16 L82 34 L72 40 L68 34 L68 88 L32 88 L32 34 L28 40 L18 34 Z" fill="#B9B4C4" stroke="#2C2C31" stroke-width="2.2" stroke-linejoin="round"/></svg></div><b>Ropa arrugada</b><span>Planchada o colgada la noche antes.</span></div></div>
 </div></section>
 
 <section id="antes"><div class="wrap">
   <p class="eyebrow">Antes de mañana</p>
   <h2>Lo que necesitamos de <em>vosotros</em></h2>
   <p>Podéis ir marcando lo que esté hecho. <span class="progreso"></span></p>
-  <ul class="check"><li><label><input type="checkbox" data-k="c0"><span><b>Confirmar la lista del equipo</b> y a qué edificio llega cada uno a las 8:30.</span></label></li><li><label><input type="checkbox" data-k="c1"><span><b>Reservar la sala de reuniones del Impulsa</b> (planta 0) de 8:30 a 10:30, o decirnos qué pared clara junto a una ventana de vuestra oficina podemos usar.</span></label></li><li><label><input type="checkbox" data-k="c2"><span><b>Avisar en el Impulsa y en la Laboral</b> de que haremos fotos con equipo ligero (cámara, trípode y dos focos).</span></label></li><li><label><input type="checkbox" data-k="c3"><span><b>Despejar la oficina de ventas de la Laboral:</b> cajas, paneles y la tela verde fuera del fondo, y mesas recogidas.</span></label></li><li><label><input type="checkbox" data-k="c4"><span><b>Dejar TenderYou abierto en las pantallas</b> con una cuenta de prueba, sin datos de clientes. En las fotos saldrá desenfocado.</span></label></li><li><label><input type="checkbox" data-k="c5"><span><b>Tener a mano un pliego impreso</b> de una licitación y los móviles cargados.</span></label></li><li><label><input type="checkbox" data-k="c6"><span><b>Firmar la cesión de derechos de imagen</b> cada persona, para poder usar las fotos en publicidad. Si no tenéis modelo, os pasamos uno.</span></label></li><li><label><input type="checkbox" data-k="c7"><span><b>Decidir si queréis una versión de la foto de equipo con la camiseta de TenderYou.</b> Suma unos cinco minutos.</span></label></li></ul>
+  <ul class="check"><li><label><input type="checkbox" data-k="c0"><span><b>Confirmar la lista del equipo</b> y que todos llegáis al Impulsa a las horas de la tabla.</span></label></li><li><label><input type="checkbox" data-k="c1"><span><b>Reservar la sala de reuniones del Impulsa (planta 0) de 8:30 a 11:00</b> Es el plan A para el set de retratos. Abajo tenéis el plan B y el C si no está libre.</span></label></li><li><label><input type="checkbox" data-k="c2"><span><b>Traer la camiseta de TenderYou</b> para la foto de equipo.</span></label></li><li><label><input type="checkbox" data-k="c3"><span><b>Despejar la oficina de ventas de la Laboral</b> para la tarde: cajas, paneles y la tela verde fuera del fondo, y mesas recogidas.</span></label></li><li><label><input type="checkbox" data-k="c4"><span><b>Dejar TenderYou abierto en las pantallas con una cuenta de prueba</b> sin datos de clientes. En las fotos saldrá desenfocado.</span></label></li><li><label><input type="checkbox" data-k="c5"><span><b>Tener a mano un pliego impreso de una licitación</b> y los móviles cargados.</span></label></li></ul>
+  <div class="planes reveal">
+    <div class="plan a"><b>Plan A</b><h3>Sala de reuniones del Impulsa</h3><p>Planta 0, de 8:30 a 11:00. Es lo ideal: luz de ventana, una pared lisa y no molestamos a nadie.</p></div>
+    <div class="plan b"><b>Plan B</b><h3>La sala, a otra hora</h3><p>Si solo está libre más tarde, cambiamos el orden: primero la foto de equipo y las escenas de trabajo, y los retratos cuando quede libre.</p></div>
+    <div class="plan c"><b>Plan C</b><h3>Vuestra oficina</h3><p>Si no hay sala, montamos el set junto al ventanal de vuestra oficina. Necesitamos unos 3 × 3 m despejados delante de una pared clara durante esas dos horas.</p></div>
+  </div>
 </div></section>
 
-<section id="entrega" style="background:#fff"><div class="wrap">
+<section id="usos" class="claro"><div class="wrap">
+  <p class="eyebrow">Dónde se van a usar</p>
+  <h2>Cada foto sale pensando en su <em>sitio</em></h2>
+  <p>No hacemos «fotos de equipo» en general: cada toma responde a un sitio donde vuestras caras ya aparecen o van a aparecer.</p>
+  <div class="tabs" role="tablist"><button role="tab" aria-selected="true" data-t="0">Web «Sobre nosotros»</button><button role="tab" aria-selected="false" data-t="1">LinkedIn</button><button role="tab" aria-selected="false" data-t="2">Anuncios</button><button role="tab" aria-selected="false" data-t="3">Correos</button><button role="tab" aria-selected="false" data-t="4">Prensa y premios</button><button role="tab" aria-selected="false" data-t="5">Presentaciones</button></div><div class="panes"><div class="pane on" data-p="0"><p class="pane-nota">Usa A1 · vertical 4:5 · también en blanco y negro</p><div class="mock web"><div class="barra"><i></i><i></i><i></i><span>tenderyou.com/sobre-nosotros</span></div>
+<div class="web-in"><p class="w-k">Sobre nosotros</p><h4>Detrás de los datos hay un equipo al que <em>puedes llamar</em></h4><div class="team"><div class="tc"><img src="ref/A1.jpg" alt="" loading="lazy"><b>Miguel López</b><span>CEO</span></div><div class="tc"><img src="ref/A4.jpg" alt="" loading="lazy"><b>Diego Rollán</b><span>Director de Ventas</span></div><div class="tc"><img src="ref/X6.jpg" alt="" loading="lazy"><b>Iván García</b><span>Director Tecnológico</span></div><div class="tc"><img src="ref/A1b.jpg" alt="" loading="lazy"><b>Alfonso Alonso</b><span>Director de Desarrollo</span></div><div class="tc"><img src="ref/X1b.jpg" alt="" loading="lazy"><b>Javier Novella</b><span>Programador jefe</span></div><div class="tc"><img src="ref/A2.jpg" alt="" loading="lazy"><b>Ramón Somolinos</b><span>Equipo comercial</span></div></div></div></div></div><div class="pane" data-p="1"><p class="pane-nota">Usa A1 en círculo y B1 para la página de empresa</p><div class="mock lis"><div class="li" style="--d:0.0s"><div class="li-ban"></div><img src="ref/A1.jpg" alt=""><b>Miguel López</b><span>CEO en TenderYou · Licitaciones públicas con IA</span><small>Gijón, Asturias</small><em>Conectar</em></div><div class="li" style="--d:0.18s"><div class="li-ban"></div><img src="ref/A4.jpg" alt=""><b>Diego Rollán</b><span>Director de Ventas en TenderYou</span><small>Gijón, Asturias</small><em>Conectar</em></div><div class="li" style="--d:0.36s"><div class="li-ban"></div><img src="ref/X6.jpg" alt=""><b>Iván García</b><span>Director Tecnológico en TenderYou</span><small>Gijón, Asturias</small><em>Conectar</em></div></div></div><div class="pane" data-p="2"><p class="pane-nota">Usa D1 o C3 en 4:5 y E2 en 9:16</p><div class="mock ads"><div class="tel"><div class="tel-top"><b>tenderyou</b><span>Publicidad</span></div>
+<div class="ad45"><img src="ref/D1.jpg" alt=""><p>¿Te enseñamos <em>tus</em> licitaciones?</p></div><div class="tel-cta">Más información</div></div>
+<div class="tel st"><div class="ad916"><img src="ref/X3.jpg" alt=""><p>Detrás de los datos hay un equipo al que puedes llamar</p></div></div></div></div><div class="pane" data-p="3"><p class="pane-nota">Usa C3 de cabecera y A1 en la firma</p><div class="mock mail"><div class="m-h"><b>TenderYou</b> &lt;hola@tenderyou.com&gt;<span>Tienes licitaciones nuevas que encajan contigo</span></div>
+<div class="m-b"><img class="m-hero" src="ref/C3.jpg" alt=""><p>Hola, esta semana han salido expedientes que encajan con lo que hacéis…</p>
+<div class="firma"><img src="ref/A4.jpg" alt=""><div><b>Diego Rollán</b><span>Director de Ventas · TenderYou</span></div></div></div></div></div><div class="pane" data-p="4"><p class="pane-nota">Usa A4 o E1 en alta resolución</p><div class="mock prensa"><p class="p-cab">Prensa · Economía</p><h4>La startup gijonesa que quiere automatizar las licitaciones públicas</h4>
+<img src="ref/A4.jpg" alt=""><p class="p-pie">El CEO de TenderYou, en Gijón.</p></div></div><div class="pane" data-p="5"><p class="pane-nota">Usa A2 en 16:9 con aire para texto</p><div class="mock slide169"><img src="ref/A2.jpg" alt=""><div class="s-t"><p>Quién está detrás</p><h4>Un equipo de Gijón que conoce la contratación pública</h4></div></div></div></div><p class="sub" style="margin-top:12px">Simulación con fotos de referencia de otras empresas: así encajarán las vuestras en cada sitio.</p>
+</div></section>
+
+<section id="entrega"><div class="wrap">
   <p class="eyebrow">Después del rodaje</p>
-  <h2>Cómo os las <em>entregamos</em></h2>
-  <div class="entrega reveal">
-    <div><b>Un mismo color</b>Para que web, anuncios y LinkedIn se vean como una sola marca.</div>
-    <div><b>Color y B/N</b>Cada retrato en las dos versiones y cada foto en sus formatos.</div>
-    <div><b>Ya recortadas</b>Las de cuerpo entero, listas para el fondo de marca.</div>
-    <div><b>Retoque discreto</b>Fuera brillos y cables. Las caras no se tocan con IA.</div>
-    <div><b>Plazos</b>Retratos el miércoles 11 y el resto el viernes 13.</div>
-  </div>
+  <h2>Os entregamos las fotos ya <em>listas</em></h2>
+  <p class="grande">Os entregamos las fotos ya editadas y en sus formatos correspondientes, listas para usar.</p>
 </div></section>
 </main>
 <footer><div class="wrap">Billber para TenderYou · Briefing de rodaje del 6 de noviembre de 2026</div></footer>
-<div class="lb" role="dialog" aria-modal="true"><button aria-label="Cerrar">×</button><img alt=""><p></p></div>
-<script>
-const _m=location.hash.match(/^#y=(\d+)/);if(_m)setTimeout(()=>{scrollTo({top:+_m[1],behavior:'instant'});sc()},300);
-// lightbox
-const lb=document.querySelector('.lb'),lbi=lb.querySelector('img'),lbp=lb.querySelector('p');
-document.addEventListener('click',ev=>{const z=ev.target.closest('.zoom');if(z){lbi.src=z.dataset.src;lbp.textContent=z.dataset.cap||'';lb.classList.add('on');}});
-lb.addEventListener('click',ev=>{if(ev.target===lb||ev.target.tagName==='BUTTON')lb.classList.remove('on')});
+<div class="lb" role="dialog" aria-modal="true"><button aria-label="Cerrar">×</button><div class="lb-in"></div></div>
+<script>const _m=location.hash.match(/^#y=(\d+)/);
+// indicaciones sí/no
+document.addEventListener('click',ev=>{
+  const t=ev.target.closest('.o-tog');
+  if(t){ev.stopPropagation();const f=t.closest('.ref-ov');const on=f.classList.toggle('limpia');t.setAttribute('aria-pressed',on?'false':'true');t.textContent=on?'Ver indicaciones':'Indicaciones';return;}
+  const f=ev.target.closest('.foto .ref-ov');
+  if(f){const lb=document.querySelector('.lb');const c=f.cloneNode(true);c.querySelectorAll('[id]').forEach(n=>n.removeAttribute('id'));lb.querySelector('.lb-in').replaceChildren(c);lb.classList.add('on');}
+});
+const lb=document.querySelector('.lb');
+lb.addEventListener('click',ev=>{if(ev.target===lb||ev.target.matches('.lb>button'))lb.classList.remove('on')});
 document.addEventListener('keydown',ev=>{if(ev.key==='Escape')lb.classList.remove('on')});
-// carrusel
-const pista=document.querySelector('.pista'),cont=document.querySelector('.contador');
-const paso=()=>pista.querySelector('.slide').getBoundingClientRect().width+14;
-document.querySelector('.ant').onclick=()=>pista.scrollBy({left:-paso()*2,behavior:'smooth'});
-document.querySelector('.sig').onclick=()=>pista.scrollBy({left:paso()*2,behavior:'smooth'});
-const total=pista.children.length;
-pista.addEventListener('scroll',()=>{const i=Math.min(total,Math.round(pista.scrollLeft/paso())+1);cont.textContent=i+' / '+total},{passive:true});
-// pestañas de usos
+// pestañas
 document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{
   document.querySelectorAll('.tabs button').forEach(x=>x.setAttribute('aria-selected','false'));b.setAttribute('aria-selected','true');
   document.querySelectorAll('.pane').forEach(p=>p.classList.toggle('on',p.dataset.p===b.dataset.t));});
 // aparición
-const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vis');io.unobserve(x.target)}}),{threshold:.12});
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vis');io.unobserve(x.target)}}),{threshold:.08});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-// retratos: color -> blanco y negro según el scroll
+// retratos: color -> blanco y negro
 const ret=document.querySelector('.retratos'),pasos=[...document.querySelectorAll('.ret-txt p')];
 function sc(){const r=ret.getBoundingClientRect(),h=ret.offsetHeight-innerHeight;const t=Math.min(1,Math.max(0,-r.top/h));
   const k=t<.28?0:t<.6?1:2;pasos.forEach((p,i)=>p.classList.toggle('on',i===k));
   const dentro=r.top<innerHeight*.2&&r.bottom>innerHeight*.5;document.documentElement.classList.toggle('bn',dentro&&k===2);}
 addEventListener('scroll',sc,{passive:true});sc();
-// checklist con memoria local
-document.querySelectorAll('.check input').forEach(i=>{try{i.checked=localStorage.getItem('ty-'+i.dataset.k)==='1'}catch(e){}
-  i.onchange=()=>{try{localStorage.setItem('ty-'+i.dataset.k,i.checked?'1':'0')}catch(e){};prog()}});
+// checklist
+document.querySelectorAll('.check input').forEach(i=>{try{i.checked=localStorage.getItem('ty2-'+i.dataset.k)==='1'}catch(e){}
+  i.onchange=()=>{try{localStorage.setItem('ty2-'+i.dataset.k,i.checked?'1':'0')}catch(e){};prog()}});
 function prog(){const a=[...document.querySelectorAll('.check input')];document.querySelector('.progreso').textContent=a.filter(x=>x.checked).length+' de '+a.length+' listos'}prog();
 // nav activa
-const secs=[...document.querySelectorAll('section[id]')],links=[...document.querySelectorAll('.nav a[href^="#"]')];
+const secs=[...document.querySelectorAll('section[id]')],links=[...document.querySelectorAll('.nav a[href^="#"]:not(.cta)')];
 addEventListener('scroll',()=>{let cur='';secs.forEach(s=>{if(s.getBoundingClientRect().top<120)cur=s.id});links.forEach(l=>l.classList.toggle('act',l.getAttribute('href')==='#'+cur))},{passive:true});
+if(_m)setTimeout(()=>{scrollTo({top:+_m[1],behavior:'instant'});sc()},300);
 </script></body></html>
